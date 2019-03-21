@@ -1,0 +1,873 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    filmsList={
+      Array [
+        "films1",
+        "films2",
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 123,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "key": "",
+          "pathname": "",
+          "search": "",
+          "state": "",
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    peopleList={
+      Array [
+        Object {
+          "birth_year": "1234",
+          "eye_color": "eye_color",
+          "gender": "male",
+          "hair_color": "hair_color",
+          "height": "123",
+          "mass": "12",
+          "name": "name",
+        },
+        Object {
+          "birth_year": "1234232",
+          "eye_color": "black",
+          "gender": "female",
+          "hair_color": "black",
+          "height": "12333",
+          "mass": "12333",
+          "name": "name2",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="resistance mb-4"
+          onClick={[Function]}
+        />,
+        <React.Fragment>
+          <label
+            className="text-white"
+            htmlFor="showPeople"
+          >
+            Show characters
+          </label>
+          <input
+            checked={true}
+            id="showPeople"
+            onClick={[Function]}
+            type="checkbox"
+          />
+          <br />
+          <label
+            className="text-white"
+            htmlFor="showFilms"
+          >
+            Show films
+          </label>
+          <input
+            checked={true}
+            id="showFilms"
+            onClick={[Function]}
+            type="checkbox"
+          />
+          <div
+            className="text-white my-3"
+          >
+            4 RESULTS
+          </div>
+        </React.Fragment>,
+        <React.Fragment>
+          <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "selectedFilm": "",
+              }
+            }
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+          />
+          <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "selectedGender": "",
+              }
+            }
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+          />
+          <ResultList
+            list={
+              Array [
+                Object {
+                  "birth_year": "1234",
+                  "eye_color": "eye_color",
+                  "gender": "male",
+                  "hair_color": "hair_color",
+                  "height": "123",
+                  "mass": "12",
+                  "name": "name",
+                },
+                Object {
+                  "birth_year": "1234232",
+                  "eye_color": "black",
+                  "gender": "female",
+                  "hair_color": "black",
+                  "height": "12333",
+                  "mass": "12333",
+                  "name": "name2",
+                },
+              ]
+            }
+            type="Characters"
+          />
+        </React.Fragment>,
+        <ResultList
+          list={
+            Array [
+              "films1",
+              "films2",
+            ]
+          }
+          type="Films"
+        />,
+      ],
+      "className": "form-container p-5",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "resistance mb-4",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              className="text-white"
+              htmlFor="showPeople"
+            >
+              Show characters
+            </label>,
+            <input
+              checked={true}
+              id="showPeople"
+              onClick={[Function]}
+              type="checkbox"
+            />,
+            <br />,
+            <label
+              className="text-white"
+              htmlFor="showFilms"
+            >
+              Show films
+            </label>,
+            <input
+              checked={true}
+              id="showFilms"
+              onClick={[Function]}
+              type="checkbox"
+            />,
+            <div
+              className="text-white my-3"
+            >
+              4 RESULTS
+            </div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Show characters",
+              "className": "text-white",
+              "htmlFor": "showPeople",
+            },
+            "ref": null,
+            "rendered": "Show characters",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "checked": true,
+              "id": "showPeople",
+              "onClick": [Function],
+              "type": "checkbox",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": "br",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Show films",
+              "className": "text-white",
+              "htmlFor": "showFilms",
+            },
+            "ref": null,
+            "rendered": "Show films",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "checked": true,
+              "id": "showFilms",
+              "onClick": [Function],
+              "type": "checkbox",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "4 RESULTS",
+              "className": "text-white my-3",
+            },
+            "ref": null,
+            "rendered": "4 RESULTS",
+            "type": "div",
+          },
+        ],
+        "type": Symbol(react.fragment),
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "selectedFilm": "",
+                }
+              }
+              isInitialValid={false}
+              onSubmit={[Function]}
+              render={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+            />,
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "selectedGender": "",
+                }
+              }
+              isInitialValid={false}
+              onSubmit={[Function]}
+              render={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+            />,
+            <ResultList
+              list={
+                Array [
+                  Object {
+                    "birth_year": "1234",
+                    "eye_color": "eye_color",
+                    "gender": "male",
+                    "hair_color": "hair_color",
+                    "height": "123",
+                    "mass": "12",
+                    "name": "name",
+                  },
+                  Object {
+                    "birth_year": "1234232",
+                    "eye_color": "black",
+                    "gender": "female",
+                    "hair_color": "black",
+                    "height": "12333",
+                    "mass": "12333",
+                    "name": "name2",
+                  },
+                ]
+              }
+              type="Characters"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "enableReinitialize": false,
+              "initialValues": Object {
+                "selectedFilm": "",
+              },
+              "isInitialValid": false,
+              "onSubmit": [Function],
+              "render": [Function],
+              "validateOnBlur": true,
+              "validateOnChange": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "enableReinitialize": false,
+              "initialValues": Object {
+                "selectedGender": "",
+              },
+              "isInitialValid": false,
+              "onSubmit": [Function],
+              "render": [Function],
+              "validateOnBlur": true,
+              "validateOnChange": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": Array [
+                Object {
+                  "birth_year": "1234",
+                  "eye_color": "eye_color",
+                  "gender": "male",
+                  "hair_color": "hair_color",
+                  "height": "123",
+                  "mass": "12",
+                  "name": "name",
+                },
+                Object {
+                  "birth_year": "1234232",
+                  "eye_color": "black",
+                  "gender": "female",
+                  "hair_color": "black",
+                  "height": "12333",
+                  "mass": "12333",
+                  "name": "name2",
+                },
+              ],
+              "type": "Characters",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": Symbol(react.fragment),
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "list": Array [
+            "films1",
+            "films2",
+          ],
+          "type": "Films",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="resistance mb-4"
+            onClick={[Function]}
+          />,
+          <React.Fragment>
+            <label
+              className="text-white"
+              htmlFor="showPeople"
+            >
+              Show characters
+            </label>
+            <input
+              checked={true}
+              id="showPeople"
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <br />
+            <label
+              className="text-white"
+              htmlFor="showFilms"
+            >
+              Show films
+            </label>
+            <input
+              checked={true}
+              id="showFilms"
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="text-white my-3"
+            >
+              4 RESULTS
+            </div>
+          </React.Fragment>,
+          <React.Fragment>
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "selectedFilm": "",
+                }
+              }
+              isInitialValid={false}
+              onSubmit={[Function]}
+              render={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+            />
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "selectedGender": "",
+                }
+              }
+              isInitialValid={false}
+              onSubmit={[Function]}
+              render={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+            />
+            <ResultList
+              list={
+                Array [
+                  Object {
+                    "birth_year": "1234",
+                    "eye_color": "eye_color",
+                    "gender": "male",
+                    "hair_color": "hair_color",
+                    "height": "123",
+                    "mass": "12",
+                    "name": "name",
+                  },
+                  Object {
+                    "birth_year": "1234232",
+                    "eye_color": "black",
+                    "gender": "female",
+                    "hair_color": "black",
+                    "height": "12333",
+                    "mass": "12333",
+                    "name": "name2",
+                  },
+                ]
+              }
+              type="Characters"
+            />
+          </React.Fragment>,
+          <ResultList
+            list={
+              Array [
+                "films1",
+                "films2",
+              ]
+            }
+            type="Films"
+          />,
+        ],
+        "className": "form-container p-5",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "resistance mb-4",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                className="text-white"
+                htmlFor="showPeople"
+              >
+                Show characters
+              </label>,
+              <input
+                checked={true}
+                id="showPeople"
+                onClick={[Function]}
+                type="checkbox"
+              />,
+              <br />,
+              <label
+                className="text-white"
+                htmlFor="showFilms"
+              >
+                Show films
+              </label>,
+              <input
+                checked={true}
+                id="showFilms"
+                onClick={[Function]}
+                type="checkbox"
+              />,
+              <div
+                className="text-white my-3"
+              >
+                4 RESULTS
+              </div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Show characters",
+                "className": "text-white",
+                "htmlFor": "showPeople",
+              },
+              "ref": null,
+              "rendered": "Show characters",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "checked": true,
+                "id": "showPeople",
+                "onClick": [Function],
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": "br",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Show films",
+                "className": "text-white",
+                "htmlFor": "showFilms",
+              },
+              "ref": null,
+              "rendered": "Show films",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "checked": true,
+                "id": "showFilms",
+                "onClick": [Function],
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "4 RESULTS",
+                "className": "text-white my-3",
+              },
+              "ref": null,
+              "rendered": "4 RESULTS",
+              "type": "div",
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Formik
+                enableReinitialize={false}
+                initialValues={
+                  Object {
+                    "selectedFilm": "",
+                  }
+                }
+                isInitialValid={false}
+                onSubmit={[Function]}
+                render={[Function]}
+                validateOnBlur={true}
+                validateOnChange={true}
+              />,
+              <Formik
+                enableReinitialize={false}
+                initialValues={
+                  Object {
+                    "selectedGender": "",
+                  }
+                }
+                isInitialValid={false}
+                onSubmit={[Function]}
+                render={[Function]}
+                validateOnBlur={true}
+                validateOnChange={true}
+              />,
+              <ResultList
+                list={
+                  Array [
+                    Object {
+                      "birth_year": "1234",
+                      "eye_color": "eye_color",
+                      "gender": "male",
+                      "hair_color": "hair_color",
+                      "height": "123",
+                      "mass": "12",
+                      "name": "name",
+                    },
+                    Object {
+                      "birth_year": "1234232",
+                      "eye_color": "black",
+                      "gender": "female",
+                      "hair_color": "black",
+                      "height": "12333",
+                      "mass": "12333",
+                      "name": "name2",
+                    },
+                  ]
+                }
+                type="Characters"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "enableReinitialize": false,
+                "initialValues": Object {
+                  "selectedFilm": "",
+                },
+                "isInitialValid": false,
+                "onSubmit": [Function],
+                "render": [Function],
+                "validateOnBlur": true,
+                "validateOnChange": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "enableReinitialize": false,
+                "initialValues": Object {
+                  "selectedGender": "",
+                },
+                "isInitialValid": false,
+                "onSubmit": [Function],
+                "render": [Function],
+                "validateOnBlur": true,
+                "validateOnChange": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": Array [
+                  Object {
+                    "birth_year": "1234",
+                    "eye_color": "eye_color",
+                    "gender": "male",
+                    "hair_color": "hair_color",
+                    "height": "123",
+                    "mass": "12",
+                    "name": "name",
+                  },
+                  Object {
+                    "birth_year": "1234232",
+                    "eye_color": "black",
+                    "gender": "female",
+                    "hair_color": "black",
+                    "height": "12333",
+                    "mass": "12333",
+                    "name": "name2",
+                  },
+                ],
+                "type": "Characters",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "list": Array [
+              "films1",
+              "films2",
+            ],
+            "type": "Films",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

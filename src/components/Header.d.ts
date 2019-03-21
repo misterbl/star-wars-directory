@@ -11,11 +11,6 @@ export interface IHeaderDispatchToProps {
   searchFilmsAndPeople: typeof searchFilmsAndPeople;
 }
 
-// export interface IHomeMapStateToProps {
-//   peopleList: IAppState["app"]["peopleList"];
-//   filmsList: IAppState["app"]["filmsList"];
-// }
-
 export interface IHeaderComponent
   extends ISearchForm,
     RouteComponentProps<any, StaticContext>,

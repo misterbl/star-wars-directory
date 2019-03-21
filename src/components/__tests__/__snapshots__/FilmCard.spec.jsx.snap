@@ -1,0 +1,330 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmCard matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FilmCard
+    film={
+      Object {
+        "director": "name",
+        "release_date": "1222",
+        "title": "title",
+      }
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 123,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "key": "",
+          "pathname": "",
+          "search": "",
+          "state": "",
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    singleSearch={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "title",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <u
+          className="card-text"
+        >
+          TITLE
+        </u>,
+        <div
+          className="d-flex"
+        >
+          <div
+            className="avatar avatar__default card-img-top"
+          />
+          <div
+            className="ml-3"
+          >
+            <p>
+              Director: name
+            </p>
+            <p>
+              Released the 31th December 1221
+            </p>
+          </div>
+        </div>,
+      ],
+      "className": "pointer m-3 text-white",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "TITLE",
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": "TITLE",
+        "type": "u",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="avatar avatar__default card-img-top"
+            />,
+            <div
+              className="ml-3"
+            >
+              <p>
+                Director: name
+              </p>
+              <p>
+                Released the 31th December 1221
+              </p>
+            </div>,
+          ],
+          "className": "d-flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "avatar avatar__default card-img-top",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Director: name
+                </p>,
+                <p>
+                  Released the 31th December 1221
+                </p>,
+              ],
+              "className": "ml-3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Director: name",
+                },
+                "ref": null,
+                "rendered": "Director: name",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Released the 31th December 1221",
+                },
+                "ref": null,
+                "rendered": "Released the 31th December 1221",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "title",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <u
+            className="card-text"
+          >
+            TITLE
+          </u>,
+          <div
+            className="d-flex"
+          >
+            <div
+              className="avatar avatar__default card-img-top"
+            />
+            <div
+              className="ml-3"
+            >
+              <p>
+                Director: name
+              </p>
+              <p>
+                Released the 31th December 1221
+              </p>
+            </div>
+          </div>,
+        ],
+        "className": "pointer m-3 text-white",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "TITLE",
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": "TITLE",
+          "type": "u",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="avatar avatar__default card-img-top"
+              />,
+              <div
+                className="ml-3"
+              >
+                <p>
+                  Director: name
+                </p>
+                <p>
+                  Released the 31th December 1221
+                </p>
+              </div>,
+            ],
+            "className": "d-flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "avatar avatar__default card-img-top",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Director: name
+                  </p>,
+                  <p>
+                    Released the 31th December 1221
+                  </p>,
+                ],
+                "className": "ml-3",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Director: name",
+                  },
+                  "ref": null,
+                  "rendered": "Director: name",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Released the 31th December 1221",
+                  },
+                  "ref": null,
+                  "rendered": "Released the 31th December 1221",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,635 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectFilmForm matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SelectFilmForm
+    handleSubmit={[MockFunction]}
+    setFieldValue={[MockFunction]}
+    values={
+      Object {
+        "selectedFilm": "selectedFilm",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="custom-select"
+          style={
+            Object {
+              "width": "200px",
+            }
+          }
+        >
+          <select
+            onChange={[Function]}
+          >
+            <option
+              value="0"
+            >
+              Select a film
+            </option>
+            <option
+              value="https://swapi.co/api/films/1/"
+            >
+              A New Hope
+            </option>
+            <option
+              value="https://swapi.co/api/films/5/"
+            >
+              Attack of the Clones
+            </option>
+            <option
+              value="https://swapi.co/api/films/4/"
+            >
+              The Phantom Menace
+            </option>
+            <option
+              value="https://swapi.co/api/films/6/"
+            >
+              Revenge of the Sith
+            </option>
+            <option
+              value="https://swapi.co/api/films/3/"
+            >
+              Return of the Jedi
+            </option>
+            <option
+              value="https://swapi.co/api/films/2/"
+            >
+              The Empire Strikes Back
+            </option>
+            <option
+              value="https://swapi.co/api/films/7/"
+            >
+              The Force Awakens
+            </option>
+          </select>
+        </div>,
+        <button
+          type="submit"
+        >
+          Submit
+        </button>,
+      ],
+      "className": "form-group mb-0",
+      "onSubmit": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <select
+            onChange={[Function]}
+          >
+            <option
+              value="0"
+            >
+              Select a film
+            </option>
+            <option
+              value="https://swapi.co/api/films/1/"
+            >
+              A New Hope
+            </option>
+            <option
+              value="https://swapi.co/api/films/5/"
+            >
+              Attack of the Clones
+            </option>
+            <option
+              value="https://swapi.co/api/films/4/"
+            >
+              The Phantom Menace
+            </option>
+            <option
+              value="https://swapi.co/api/films/6/"
+            >
+              Revenge of the Sith
+            </option>
+            <option
+              value="https://swapi.co/api/films/3/"
+            >
+              Return of the Jedi
+            </option>
+            <option
+              value="https://swapi.co/api/films/2/"
+            >
+              The Empire Strikes Back
+            </option>
+            <option
+              value="https://swapi.co/api/films/7/"
+            >
+              The Force Awakens
+            </option>
+          </select>,
+          "className": "custom-select",
+          "style": Object {
+            "width": "200px",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <option
+                value="0"
+              >
+                Select a film
+              </option>,
+              <option
+                value="https://swapi.co/api/films/1/"
+              >
+                A New Hope
+              </option>,
+              <option
+                value="https://swapi.co/api/films/5/"
+              >
+                Attack of the Clones
+              </option>,
+              <option
+                value="https://swapi.co/api/films/4/"
+              >
+                The Phantom Menace
+              </option>,
+              <option
+                value="https://swapi.co/api/films/6/"
+              >
+                Revenge of the Sith
+              </option>,
+              <option
+                value="https://swapi.co/api/films/3/"
+              >
+                Return of the Jedi
+              </option>,
+              <option
+                value="https://swapi.co/api/films/2/"
+              >
+                The Empire Strikes Back
+              </option>,
+              <option
+                value="https://swapi.co/api/films/7/"
+              >
+                The Force Awakens
+              </option>,
+            ],
+            "onChange": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select a film",
+                "value": "0",
+              },
+              "ref": null,
+              "rendered": "Select a film",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "A New Hope",
+                "value": "https://swapi.co/api/films/1/",
+              },
+              "ref": null,
+              "rendered": "A New Hope",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Attack of the Clones",
+                "value": "https://swapi.co/api/films/5/",
+              },
+              "ref": null,
+              "rendered": "Attack of the Clones",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Phantom Menace",
+                "value": "https://swapi.co/api/films/4/",
+              },
+              "ref": null,
+              "rendered": "The Phantom Menace",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Revenge of the Sith",
+                "value": "https://swapi.co/api/films/6/",
+              },
+              "ref": null,
+              "rendered": "Revenge of the Sith",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Return of the Jedi",
+                "value": "https://swapi.co/api/films/3/",
+              },
+              "ref": null,
+              "rendered": "Return of the Jedi",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Empire Strikes Back",
+                "value": "https://swapi.co/api/films/2/",
+              },
+              "ref": null,
+              "rendered": "The Empire Strikes Back",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Force Awakens",
+                "value": "https://swapi.co/api/films/7/",
+              },
+              "ref": null,
+              "rendered": "The Force Awakens",
+              "type": "option",
+            },
+          ],
+          "type": "select",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="custom-select"
+            style={
+              Object {
+                "width": "200px",
+              }
+            }
+          >
+            <select
+              onChange={[Function]}
+            >
+              <option
+                value="0"
+              >
+                Select a film
+              </option>
+              <option
+                value="https://swapi.co/api/films/1/"
+              >
+                A New Hope
+              </option>
+              <option
+                value="https://swapi.co/api/films/5/"
+              >
+                Attack of the Clones
+              </option>
+              <option
+                value="https://swapi.co/api/films/4/"
+              >
+                The Phantom Menace
+              </option>
+              <option
+                value="https://swapi.co/api/films/6/"
+              >
+                Revenge of the Sith
+              </option>
+              <option
+                value="https://swapi.co/api/films/3/"
+              >
+                Return of the Jedi
+              </option>
+              <option
+                value="https://swapi.co/api/films/2/"
+              >
+                The Empire Strikes Back
+              </option>
+              <option
+                value="https://swapi.co/api/films/7/"
+              >
+                The Force Awakens
+              </option>
+            </select>
+          </div>,
+          <button
+            type="submit"
+          >
+            Submit
+          </button>,
+        ],
+        "className": "form-group mb-0",
+        "onSubmit": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <select
+              onChange={[Function]}
+            >
+              <option
+                value="0"
+              >
+                Select a film
+              </option>
+              <option
+                value="https://swapi.co/api/films/1/"
+              >
+                A New Hope
+              </option>
+              <option
+                value="https://swapi.co/api/films/5/"
+              >
+                Attack of the Clones
+              </option>
+              <option
+                value="https://swapi.co/api/films/4/"
+              >
+                The Phantom Menace
+              </option>
+              <option
+                value="https://swapi.co/api/films/6/"
+              >
+                Revenge of the Sith
+              </option>
+              <option
+                value="https://swapi.co/api/films/3/"
+              >
+                Return of the Jedi
+              </option>
+              <option
+                value="https://swapi.co/api/films/2/"
+              >
+                The Empire Strikes Back
+              </option>
+              <option
+                value="https://swapi.co/api/films/7/"
+              >
+                The Force Awakens
+              </option>
+            </select>,
+            "className": "custom-select",
+            "style": Object {
+              "width": "200px",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option
+                  value="0"
+                >
+                  Select a film
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/1/"
+                >
+                  A New Hope
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/5/"
+                >
+                  Attack of the Clones
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/4/"
+                >
+                  The Phantom Menace
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/6/"
+                >
+                  Revenge of the Sith
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/3/"
+                >
+                  Return of the Jedi
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/2/"
+                >
+                  The Empire Strikes Back
+                </option>,
+                <option
+                  value="https://swapi.co/api/films/7/"
+                >
+                  The Force Awakens
+                </option>,
+              ],
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Select a film",
+                  "value": "0",
+                },
+                "ref": null,
+                "rendered": "Select a film",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "A New Hope",
+                  "value": "https://swapi.co/api/films/1/",
+                },
+                "ref": null,
+                "rendered": "A New Hope",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Attack of the Clones",
+                  "value": "https://swapi.co/api/films/5/",
+                },
+                "ref": null,
+                "rendered": "Attack of the Clones",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "The Phantom Menace",
+                  "value": "https://swapi.co/api/films/4/",
+                },
+                "ref": null,
+                "rendered": "The Phantom Menace",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Revenge of the Sith",
+                  "value": "https://swapi.co/api/films/6/",
+                },
+                "ref": null,
+                "rendered": "Revenge of the Sith",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Return of the Jedi",
+                  "value": "https://swapi.co/api/films/3/",
+                },
+                "ref": null,
+                "rendered": "Return of the Jedi",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "The Empire Strikes Back",
+                  "value": "https://swapi.co/api/films/2/",
+                },
+                "ref": null,
+                "rendered": "The Empire Strikes Back",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "The Force Awakens",
+                  "value": "https://swapi.co/api/films/7/",
+                },
+                "ref": null,
+                "rendered": "The Force Awakens",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

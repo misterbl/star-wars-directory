@@ -6,9 +6,9 @@ import { connect } from "react-redux";
 import singleSearch from "../actions/thunks/singleSearch";
 import { IFilmCardComponent } from "./FilmCard.d";
 import ROUTES from "../routes";
-import formattedDate from "../formattedDate";
+import formattedDate from "../utils/formattedDate";
 
-const FilmCard = (props: IFilmCardComponent) => {
+export const FilmCard = (props: IFilmCardComponent) => {
   const {
     film,
     history: { push }

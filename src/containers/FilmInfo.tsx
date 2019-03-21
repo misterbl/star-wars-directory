@@ -1,22 +1,22 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { getInfo } from "../selectors/apiSelectors";
+import { getInfo } from "../selectors/appSelectors";
 import { IAppState } from "../state";
 import { IFIlmComponent } from "./FilmInfo.d";
 import ROUTES from "../routes";
-import formattedDate from "../formattedDate";
+import formattedDate from "../utils/formattedDate";
 
-const FilmInfo: React.StatelessComponent<IFIlmComponent> = ({
+export const FilmInfo: React.StatelessComponent<IFIlmComponent> = ({
   film,
   history: { push }
 }) => {
   if (film) {
     const { release_date, director, opening_crawl, producer, title } = film;
     return (
-      <div className="d-flex flex-wrap m-5 p-5">
-        <div className="avatar avatar__default film-image" />
-        <div className="info-details ml-3 p-3">
+      <div className="d-flex m-5 p-5">
+        <div className="avatar avatar__default film-image mr-3" />
+        <div className="info-details p-3">
           <h2 className="text-center">{title.toUpperCase()}</h2>
           <p>{opening_crawl}</p>
           <p>{`Released the ${formattedDate(release_date)}`}</p>

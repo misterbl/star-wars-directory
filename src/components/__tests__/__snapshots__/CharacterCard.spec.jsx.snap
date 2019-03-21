@@ -1,0 +1,414 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCard matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CharacterCard
+    character={
+      Object {
+        "birth_year": "1234",
+        "gender": "gender",
+        "height": "123",
+        "mass": "12",
+        "name": "name",
+      }
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 123,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "key": "",
+          "pathname": "",
+          "search": "",
+          "state": "",
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    singleSearch={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "name",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <u
+          className="card-text"
+        >
+          NAME
+        </u>,
+        <div
+          className="d-flex"
+        >
+          <div
+            className="avatar avatar__default card-img-top"
+          />
+          <div
+            className="ml-3"
+          >
+            <p
+              className="m-1 text-secondary"
+            >
+              Born in 1234
+            </p>
+            <p
+              className="m-1 text-secondary"
+            >
+              Gender: gender
+            </p>
+            <p
+              className="m-1 text-secondary"
+            >
+              Height: 123cm
+            </p>
+          </div>
+        </div>,
+      ],
+      "className": "pointer m-3 text-white",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "NAME",
+          "className": "card-text",
+        },
+        "ref": null,
+        "rendered": "NAME",
+        "type": "u",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="avatar avatar__default card-img-top"
+            />,
+            <div
+              className="ml-3"
+            >
+              <p
+                className="m-1 text-secondary"
+              >
+                Born in 1234
+              </p>
+              <p
+                className="m-1 text-secondary"
+              >
+                Gender: gender
+              </p>
+              <p
+                className="m-1 text-secondary"
+              >
+                Height: 123cm
+              </p>
+            </div>,
+          ],
+          "className": "d-flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "avatar avatar__default card-img-top",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="m-1 text-secondary"
+                >
+                  Born in 1234
+                </p>,
+                <p
+                  className="m-1 text-secondary"
+                >
+                  Gender: gender
+                </p>,
+                <p
+                  className="m-1 text-secondary"
+                >
+                  Height: 123cm
+                </p>,
+              ],
+              "className": "ml-3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Born in 1234",
+                  "className": "m-1 text-secondary",
+                },
+                "ref": null,
+                "rendered": "Born in 1234",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Gender: gender",
+                  "className": "m-1 text-secondary",
+                },
+                "ref": null,
+                "rendered": "Gender: gender",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Height: 123cm",
+                  "className": "m-1 text-secondary",
+                },
+                "ref": null,
+                "rendered": "Height: 123cm",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "name",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <u
+            className="card-text"
+          >
+            NAME
+          </u>,
+          <div
+            className="d-flex"
+          >
+            <div
+              className="avatar avatar__default card-img-top"
+            />
+            <div
+              className="ml-3"
+            >
+              <p
+                className="m-1 text-secondary"
+              >
+                Born in 1234
+              </p>
+              <p
+                className="m-1 text-secondary"
+              >
+                Gender: gender
+              </p>
+              <p
+                className="m-1 text-secondary"
+              >
+                Height: 123cm
+              </p>
+            </div>
+          </div>,
+        ],
+        "className": "pointer m-3 text-white",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "NAME",
+            "className": "card-text",
+          },
+          "ref": null,
+          "rendered": "NAME",
+          "type": "u",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="avatar avatar__default card-img-top"
+              />,
+              <div
+                className="ml-3"
+              >
+                <p
+                  className="m-1 text-secondary"
+                >
+                  Born in 1234
+                </p>
+                <p
+                  className="m-1 text-secondary"
+                >
+                  Gender: gender
+                </p>
+                <p
+                  className="m-1 text-secondary"
+                >
+                  Height: 123cm
+                </p>
+              </div>,
+            ],
+            "className": "d-flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "avatar avatar__default card-img-top",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="m-1 text-secondary"
+                  >
+                    Born in 1234
+                  </p>,
+                  <p
+                    className="m-1 text-secondary"
+                  >
+                    Gender: gender
+                  </p>,
+                  <p
+                    className="m-1 text-secondary"
+                  >
+                    Height: 123cm
+                  </p>,
+                ],
+                "className": "ml-3",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Born in 1234",
+                    "className": "m-1 text-secondary",
+                  },
+                  "ref": null,
+                  "rendered": "Born in 1234",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Gender: gender",
+                    "className": "m-1 text-secondary",
+                  },
+                  "ref": null,
+                  "rendered": "Gender: gender",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Height: 123cm",
+                    "className": "m-1 text-secondary",
+                  },
+                  "ref": null,
+                  "rendered": "Height: 123cm",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

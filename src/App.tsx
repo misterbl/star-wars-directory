@@ -9,12 +9,11 @@ import Home from "./containers/Home";
 import CharacterInfo from "./containers/CharacterInfo";
 import FilmInfo from "./containers/FilmInfo";
 import { IAppComponent } from "./App.d";
-import { isLoading } from "./selectors/apiSelectors";
+import { isLoading } from "./selectors/appSelectors";
 import { IAppState } from "./state";
 
-class App extends Component<IAppComponent> {
+export class App extends Component<IAppComponent> {
   render() {
-    console.log(this.props.isLoading);
     return (
       <div>
         <div className="loader">

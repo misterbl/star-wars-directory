@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectGenderForm matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SelectGenderForm
+    handleSubmit={[MockFunction]}
+    setFieldValue={[MockFunction]}
+    values={
+      Object {
+        "selectedGenger": "selectedGenger",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="custom-select"
+          style={
+            Object {
+              "width": "200px",
+            }
+          }
+        >
+          <select
+            onChange={[Function]}
+          >
+            <option
+              value="0"
+            >
+              Select a gender
+            </option>
+            <option
+              value="male"
+            >
+              Male
+            </option>
+            <option
+              value="female"
+            >
+              Female
+            </option>
+          </select>
+        </div>,
+        <button
+          type="submit"
+        >
+          Submit
+        </button>,
+      ],
+      "className": "form-group mb-0",
+      "onSubmit": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <select
+            onChange={[Function]}
+          >
+            <option
+              value="0"
+            >
+              Select a gender
+            </option>
+            <option
+              value="male"
+            >
+              Male
+            </option>
+            <option
+              value="female"
+            >
+              Female
+            </option>
+          </select>,
+          "className": "custom-select",
+          "style": Object {
+            "width": "200px",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <option
+                value="0"
+              >
+                Select a gender
+              </option>,
+              <option
+                value="male"
+              >
+                Male
+              </option>,
+              <option
+                value="female"
+              >
+                Female
+              </option>,
+            ],
+            "onChange": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select a gender",
+                "value": "0",
+              },
+              "ref": null,
+              "rendered": "Select a gender",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Male",
+                "value": "male",
+              },
+              "ref": null,
+              "rendered": "Male",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Female",
+                "value": "female",
+              },
+              "ref": null,
+              "rendered": "Female",
+              "type": "option",
+            },
+          ],
+          "type": "select",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Submit",
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="custom-select"
+            style={
+              Object {
+                "width": "200px",
+              }
+            }
+          >
+            <select
+              onChange={[Function]}
+            >
+              <option
+                value="0"
+              >
+                Select a gender
+              </option>
+              <option
+                value="male"
+              >
+                Male
+              </option>
+              <option
+                value="female"
+              >
+                Female
+              </option>
+            </select>
+          </div>,
+          <button
+            type="submit"
+          >
+            Submit
+          </button>,
+        ],
+        "className": "form-group mb-0",
+        "onSubmit": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <select
+              onChange={[Function]}
+            >
+              <option
+                value="0"
+              >
+                Select a gender
+              </option>
+              <option
+                value="male"
+              >
+                Male
+              </option>
+              <option
+                value="female"
+              >
+                Female
+              </option>
+            </select>,
+            "className": "custom-select",
+            "style": Object {
+              "width": "200px",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <option
+                  value="0"
+                >
+                  Select a gender
+                </option>,
+                <option
+                  value="male"
+                >
+                  Male
+                </option>,
+                <option
+                  value="female"
+                >
+                  Female
+                </option>,
+              ],
+              "onChange": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Select a gender",
+                  "value": "0",
+                },
+                "ref": null,
+                "rendered": "Select a gender",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Male",
+                  "value": "male",
+                },
+                "ref": null,
+                "rendered": "Male",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Female",
+                  "value": "female",
+                },
+                "ref": null,
+                "rendered": "Female",
+                "type": "option",
+              },
+            ],
+            "type": "select",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Submit",
+            "type": "submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

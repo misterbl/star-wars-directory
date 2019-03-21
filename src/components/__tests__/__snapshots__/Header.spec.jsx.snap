@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 123,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "key": "",
+          "pathname": "",
+          "search": "",
+          "state": "",
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    searchFilmsAndPeople={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Formik
+        enableReinitialize={false}
+        initialValues={
+          Object {
+            "searchTerm": "",
+          }
+        }
+        isInitialValid={false}
+        onSubmit={[Function]}
+        render={[Function]}
+        validateOnBlur={true}
+        validateOnChange={true}
+      />,
+      "className": "header",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "enableReinitialize": false,
+        "initialValues": Object {
+          "searchTerm": "",
+        },
+        "isInitialValid": false,
+        "onSubmit": [Function],
+        "render": [Function],
+        "validateOnBlur": true,
+        "validateOnChange": true,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Formik
+          enableReinitialize={false}
+          initialValues={
+            Object {
+              "searchTerm": "",
+            }
+          }
+          isInitialValid={false}
+          onSubmit={[Function]}
+          render={[Function]}
+          validateOnBlur={true}
+          validateOnChange={true}
+        />,
+        "className": "header",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "enableReinitialize": false,
+          "initialValues": Object {
+            "searchTerm": "",
+          },
+          "isInitialValid": false,
+          "onSubmit": [Function],
+          "render": [Function],
+          "validateOnBlur": true,
+          "validateOnChange": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

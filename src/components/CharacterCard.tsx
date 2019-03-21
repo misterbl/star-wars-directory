@@ -7,7 +7,7 @@ import singleSearch from "../actions/thunks/singleSearch";
 import { ICharacterCardComponent } from "./CharacterCard.d";
 import ROUTES from "../routes";
 
-const CharacterCard = (props: ICharacterCardComponent) => {
+export const CharacterCard = (props: ICharacterCardComponent) => {
   const {
     character,
     history: { push }

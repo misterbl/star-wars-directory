@@ -8,7 +8,7 @@ import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
 import SearchForm from "./SearchForm";
 import ROUTES from "../routes";
 
-const Header: StatelessComponent<IHeaderComponent> = ({
+export const Header: StatelessComponent<IHeaderComponent> = ({
   searchFilmsAndPeople,
   history: { push }
 }) => {
@@ -24,11 +24,7 @@ const Header: StatelessComponent<IHeaderComponent> = ({
           searchTerm: ""
         }}
         onSubmit={handleSubmit}
-        render={
-          /* istanbul ignore next */ formikProps => (
-            <SearchForm {...formikProps} />
-          )
-        }
+        render={formikProps => <SearchForm {...formikProps} />}
       />
     </div>
   );

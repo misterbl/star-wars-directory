@@ -13,10 +13,10 @@ const ResultList: StatelessComponent<IResultList> = ({ list, type }) => (
       {list.map((element: ICharacter & IFilm) => {
         if (type === "Characters") {
           // @ts-ignore
-          return <CharacterCard character={element} />;
+          return <CharacterCard key={element.name} character={element} />;
         }
         // @ts-ignore
-        return <FilmCard film={element} />;
+        return <FilmCard key={element.title} film={element} />;
       })}
     </div>
   </>
