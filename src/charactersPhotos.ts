@@ -1,4 +1,4 @@
-const charactersPhotos = {
+const charactersPhotos: any = {
   "Luke Skywalker": "-10px -1px",
   "C-3PO": "-458px -2px",
   "R2-D2": "-571px -2px",
@@ -42,8 +42,3 @@ const charactersPhotos = {
 };
 
 export default charactersPhotos;
-// width: 95px;
-// height: 95px;
-// border-radius: 100%;
-
-// <div style={{backgroundPosition: sofks[user.name]}}>

@@ -1,5 +1,4 @@
 import React from "react";
-import charactersPhotos from "../charactersPhotos";
 import { withRouter } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
@@ -13,8 +12,8 @@ export const FilmCard = (props: IFilmCardComponent) => {
     film,
     history: { push }
   } = props;
-  const onClick = () => {
-    props.singleSearch(film.url);
+  const onClick = async () => {
+    await props.singleSearch(film.url);
     push(ROUTES.FILM);
   };
 
@@ -22,8 +21,8 @@ export const FilmCard = (props: IFilmCardComponent) => {
     <div onClick={onClick} className="pointer m-3 text-white">
       <u className="card-text">{film.title.toUpperCase()}</u>
       <div className="d-flex">
-        <div className="avatar avatar__default card-img-top" />
-        <div className="ml-3">
+        <div className="avatar avatar__film" />
+        <div className="ml-3 p-3">
           <p>{`Director: ${film.director}`}</p>
           <p>{`Released the ${formattedDate(film.release_date)}`}</p>
         </div>

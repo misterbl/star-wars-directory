@@ -40,6 +40,6 @@ export interface IAppState {
     fetchingSingleResult: boolean;
     peopleList: ICharacter[];
     filmsList: IFilm[];
-    result: IFilm | ICharacter;
+    result: IFilm & ICharacter;
   };
 }

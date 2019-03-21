@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-//@ts-ignore
+import "./declaration.d";
 import ClipLoader from "react-spinners/ClipLoader";
 import ROUTES from "./routes";
 import Header from "./components/Header";

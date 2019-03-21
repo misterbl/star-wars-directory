@@ -4,11 +4,16 @@ import FilmCard from "./FilmCard";
 import { IResultList } from "./ResultList.d";
 import { ICharacter, IFilm } from "../state";
 
-const ResultList: StatelessComponent<IResultList> = ({ list, type }) => (
+const ResultList: StatelessComponent<IResultList> = ({
+  list,
+  type,
+  children
+}) => (
   <>
     <div className="grey-line" />
     <h3 className="text-white my-3">{`${type} matching your search:`}</h3>
-    <div className="grey-line" />
+    {children}
+    <div className="grey-line mt-3" />
     <div className="p-2 mt-3">
       {list.map((element: ICharacter & IFilm) => {
         if (type === "Characters") {

@@ -16,7 +16,7 @@ export const CharacterCard = (props: ICharacterCardComponent) => {
     await props.singleSearch(character.url);
     push(ROUTES.CHARACTER);
   };
-  // @ts-ignore
+
   const sprite = charactersPhotos[character.name];
   return (
     <div onClick={onClick} className="pointer m-3 text-white">

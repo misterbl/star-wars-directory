@@ -8,19 +8,24 @@ import SelectGenderForm, {
   ISelectGenderForm
 } from "../components/SelectGenderForm";
 import { getPeopleList, getFilmsList } from "../selectors/appSelectors";
-import { IAppState } from "../state";
+import { IAppState, ICharacter } from "../state";
 import { Formik } from "formik";
 
 export class Home extends Component<IHomeComponent> {
   state = {
     showPeople: true,
     showFilms: true,
-    peopleList: []
+    fetchedPeopleList: this.props.peopleList,
+    showFilters: false
   };
 
-  componentDidMount() {
-    this.setState({ peopleList: this.props.peopleList });
+  componentWillReceiveProps() {
+    this.setState({
+      fetchedPeopleList: this.props.peopleList,
+      showFilters: true
+    });
   }
+
   pushToResistance = () => {
     window.location.href =
       "https://www.starwars.com/tv-shows/star-wars-resistance";
@@ -34,43 +39,56 @@ export class Home extends Component<IHomeComponent> {
     this.setState({ showFilms: !this.state.showFilms });
   };
 
+  // TODO change any below
   handleFilmChange = async (event: any) => {
-    console.log(event.selectedFilm);
     const { peopleList } = this.props;
-    console.log(peopleList);
-
     await this.setState({
-      peopleList: peopleList.filter(character => {
-        character.films.indexOf(event.selectedFilm) !== -1;
-      })
+      fetchedPeopleList: peopleList
     });
-
-    const result =
-      (await peopleList.length) > 0 &&
-      peopleList.filter(character => {
-        character.films.indexOf(event.selectedFilm) !== -1;
+    if (event.selectedFilm === "see all") {
+      return this.setState({
+        fetchedPeopleList: peopleList
       });
-    console.log(result);
-    console.log(this.state);
+    }
+    const result = this.state.fetchedPeopleList.filter(
+      (character: ICharacter) =>
+        character.films.indexOf(event.selectedFilm) !== -1
+    );
+    this.setState({
+      fetchedPeopleList: result
+    });
   };
-
+  // TODO change any below
   handleGenderChange = async (event: any) => {
-    // console.log(event.selectedGender);
-    // const { peopleList } = this.state;
-    // await this.setState({
-    //   peopleList: peopleList.filter(
-    //     character => character.gender === event.selectedGender
-    //   )
-    // });
-    console.log(this.state);
+    const { peopleList } = this.props;
+    await this.setState({
+      fetchedPeopleList: peopleList
+    });
+    if (event.selectedGender === "see all") {
+      return this.setState({
+        fetchedPeopleList: peopleList
+      });
+    }
+    const result = this.state.fetchedPeopleList.filter(
+      (character: ICharacter) => character.gender === event.selectedGender
+    );
+    this.setState({
+      fetchedPeopleList: result
+    });
   };
 
   render() {
-    const { showPeople, showFilms } = this.state;
+    const {
+      showPeople,
+      showFilms,
+      fetchedPeopleList,
+      showFilters
+    } = this.state;
     const { filmsList, peopleList } = this.props;
-    const foundPeople = peopleList.length > 0;
+    const foundPeople = fetchedPeopleList.length > 0;
     const foundFilms = filmsList.length > 0;
-    const resultLength = peopleList.length + filmsList.length;
+    const resultLength = fetchedPeopleList.length + filmsList.length;
+
     return (
       <main className="form-container p-5">
         <div className="resistance mb-4" onClick={this.pushToResistance} />
@@ -98,23 +116,37 @@ export class Home extends Component<IHomeComponent> {
             </label>
           </div>
         )}
-        {foundPeople && showPeople && (
+        {showFilters && peopleList.length > 0 && showPeople && (
           <>
-            <Formik<ISelectFilmForm>
-              initialValues={{
-                selectedFilm: ""
-              }}
-              onSubmit={this.handleFilmChange}
-              render={formikProps => <SelectFilmForm {...formikProps} />}
-            />
-            <Formik<ISelectGenderForm>
-              initialValues={{
-                selectedGender: ""
-              }}
-              onSubmit={this.handleGenderChange}
-              render={formikProps => <SelectGenderForm {...formikProps} />}
-            />
-            <ResultList type="Characters" list={this.props.peopleList} />
+            <ResultList type="Characters" list={fetchedPeopleList}>
+              <h4 className="text-white text-center mt-4">
+                Filter the results{" "}
+              </h4>
+              <div className="d-flex flex-wrap justify-content-around text-white">
+                <div>
+                  By film
+                  <Formik<ISelectFilmForm>
+                    initialValues={{
+                      selectedFilm: ""
+                    }}
+                    onSubmit={this.handleFilmChange}
+                    render={formikProps => <SelectFilmForm {...formikProps} />}
+                  />
+                </div>
+                <div>
+                  Or by gender
+                  <Formik<ISelectGenderForm>
+                    initialValues={{
+                      selectedGender: ""
+                    }}
+                    onSubmit={this.handleGenderChange}
+                    render={formikProps => (
+                      <SelectGenderForm {...formikProps} />
+                    )}
+                  />
+                </div>
+              </div>
+            </ResultList>
           </>
         )}
         {foundFilms && showFilms && (
