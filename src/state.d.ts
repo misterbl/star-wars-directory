@@ -1,4 +1,4 @@
-export interface IPerson {
+export interface ICharacter {
   name: string;
   height: string;
   mass: string;
@@ -36,7 +36,10 @@ export interface IFilm {
 export interface IAppState {
   app: {
     fetchingPeopleAndFilms: false;
-    peopleList: IPerson[];
+    fetchingFilm: false;
+    fetchingSingleResult: false;
+    peopleList: ICharacter[];
     filmsList: IFilm[];
+    result: IFilm | ICharacter;
   };
 }

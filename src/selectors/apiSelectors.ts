@@ -12,3 +12,14 @@ export const getFilmsList = createSelector(
   appSelector,
   app => app.filmsList || []
 );
+
+export const getInfo = createSelector(
+  appSelector,
+  app => app.result
+);
+
+export const isLoading = createSelector(
+  appSelector,
+  app =>
+    app.fetchingSingleResult || app.fetchingFilm || app.fetchingPeopleAndFilms
+);
