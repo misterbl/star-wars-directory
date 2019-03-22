@@ -1,34 +1,37 @@
-import React, { StatelessComponent } from "react";
+import React, { PureComponent } from "react";
 import { bindActionCreators, Dispatch } from "redux";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
-import { ISearchForm, IHeaderComponent } from "./Header.d";
+import { IHeaderComponent } from "./Header.d";
 import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
-import SearchForm from "./SearchForm";
+import SearchForm, { ISearchForm } from "./SearchForm";
 import ROUTES from "../routes";
 
-export const Header: StatelessComponent<IHeaderComponent> = ({
-  searchFilmsAndPeople,
-  history: { push }
-}) => {
-  const handleSubmit = async (data: ISearchForm) => {
-    data && data.searchTerm && (await searchFilmsAndPeople(data.searchTerm));
+export class Header extends PureComponent<IHeaderComponent> {
+  handleSubmit = async (data: ISearchForm) => {
+    const {
+      searchFilmsAndPeople,
+      history: { push }
+    } = this.props;
+    await searchFilmsAndPeople(data.searchTerm);
     push(ROUTES.INDEX);
   };
 
-  return (
-    <div className="header">
-      <Formik<ISearchForm>
-        initialValues={{
-          searchTerm: ""
-        }}
-        onSubmit={handleSubmit}
-        render={formikProps => <SearchForm {...formikProps} />}
-      />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div className="header">
+        <Formik<ISearchForm>
+          initialValues={{
+            searchTerm: ""
+          }}
+          onSubmit={this.handleSubmit}
+          render={formikProps => <SearchForm {...formikProps} />}
+        />
+      </div>
+    );
+  }
+}
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
   searchFilmsAndPeople: bindActionCreators(searchFilmsAndPeople, dispatch)

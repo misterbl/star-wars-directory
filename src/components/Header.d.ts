@@ -3,12 +3,9 @@ import { RouteComponentProps, StaticContext } from "react-router";
 import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
 import { IAppState } from "../state";
 
-export interface ISearchForm {
-  searchTerm?: string;
-}
-
 export interface IHeaderDispatchToProps {
   searchFilmsAndPeople: typeof searchFilmsAndPeople;
+  sendVerificationCode: typeof sendVerificationCode;
 }
 
 export interface IHeaderComponent

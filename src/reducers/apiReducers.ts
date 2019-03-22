@@ -10,7 +10,9 @@ export const app = (
     fetchingSingleResult,
     peopleList,
     filmsList,
-    result
+    result,
+    sendingInfoSms,
+    verifyingNUmber
   }: AnyAction
 ) => {
   switch (type) {
@@ -43,6 +45,16 @@ export const app = (
       return {
         ...state,
         result
+      };
+    case "SENDING_INFO_SMS":
+      return {
+        ...state,
+        sendingInfoSms
+      };
+    case "VERIFYING_NUMBER":
+      return {
+        ...state,
+        verifyingNUmber
       };
     default:
       return state;

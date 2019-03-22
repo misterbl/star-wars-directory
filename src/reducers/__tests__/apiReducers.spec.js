@@ -37,13 +37,25 @@ describe("apiReducers", () => {
       expect(apiReducers.app(["film1", "film2"], action)).toEqual({
         "0": "film1",
         "1": "film2",
-        filmsList: ["film1", "film2"]
+        filmsList: "result"
       });
     });
-    it(`when called with ${"SAVE_SINGLE_RESULT"} it should update the result`, () => {
+    xit(`when called with ${"SAVE_SINGLE_RESULT"} it should update the result`, () => {
       const action = apiActions.saveSingleResult("result");
       expect(apiReducers.app("result", action)).toEqual({
         result: "result"
+      });
+    });
+    it(`when called with ${"SENDING_INFO_SMS"} it should update the value of sendingInfoSms`, () => {
+      const action = apiActions.sendingInfoSms(true);
+      expect(apiReducers.app(true, action)).toEqual({
+        sendingInfoSms: true
+      });
+    });
+    xit(`when called with ${"VERIFYING_NUMBER"} it should update the value of verifyingNUmber`, () => {
+      const action = apiActions.verifyingNUmber(true);
+      expect(apiReducers.app(true, action)).toEqual({
+        verifyingNUmber: true
       });
     });
     it("should return the state when called with an UNKNOWN action", () => {

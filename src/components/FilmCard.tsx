@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { withRouter } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
@@ -6,30 +6,36 @@ import singleSearch from "../actions/thunks/singleSearch";
 import { IFilmCardComponent } from "./FilmCard.d";
 import ROUTES from "../routes";
 import formattedDate from "../utils/formattedDate";
+import { render } from "react-dom";
 
-export const FilmCard = (props: IFilmCardComponent) => {
-  const {
-    film,
-    history: { push }
-  } = props;
-  const onClick = async () => {
-    await props.singleSearch(film.url);
+export class FilmCard extends PureComponent<IFilmCardComponent> {
+  onClick = async () => {
+    const {
+      singleSearch,
+      film,
+      history: { push }
+    } = this.props;
+    await singleSearch(film.url);
     push(ROUTES.FILM);
   };
-
-  return (
-    <div onClick={onClick} className="pointer m-3 text-white">
-      <u className="card-text">{film.title.toUpperCase()}</u>
-      <div className="d-flex">
-        <div className="avatar avatar__film" />
-        <div className="ml-3 p-3">
-          <p>{`Director: ${film.director}`}</p>
-          <p>{`Released the ${formattedDate(film.release_date)}`}</p>
+  render() {
+    const {
+      film: { title, director, release_date }
+    } = this.props;
+    return (
+      <div onClick={this.onClick} className="pointer m-3 text-white">
+        <u className="card-text">{title.toUpperCase()}</u>
+        <div className="d-flex">
+          <div className="avatar avatar__film" />
+          <div className="ml-3 p-3">
+            <p>{`Director: ${director}`}</p>
+            <p>{`Released the ${formattedDate(release_date)}`}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
   singleSearch: bindActionCreators(singleSearch, dispatch)

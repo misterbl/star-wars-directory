@@ -6,7 +6,7 @@ describe("SelectGenderForm", () => {
   const props = {
     setFieldValue: jest.fn(),
     values: {
-      selectedGenger: "selectedGenger"
+      selectedGender: "selectedGender"
     },
     handleSubmit: jest.fn()
   };
@@ -17,7 +17,7 @@ describe("SelectGenderForm", () => {
   it("calls setFieldValue on input change", () => {
     const select = wrapper.find("select");
     select.simulate("change", { target: { value: "value" } });
-    expect(props.setFieldValue).toHaveBeenCalledWith("selectedGenger", "value");
+    expect(props.setFieldValue).toHaveBeenCalledWith("selectedGender", "value");
   });
   it("calls handleSubmit on form submit", () => {
     const form = wrapper.find("form");

@@ -20,3 +20,13 @@ export const saveSingleResult = makeActionCreator(
   "SAVE_SINGLE_RESULT",
   "result"
 );
+
+export const sendingInfoSms = makeActionCreator(
+  "SENDING_INFO_SMS",
+  "sendingInfoSms"
+);
+
+export const verifyingNumber = makeActionCreator(
+  "VERIFYING_NUMBER",
+  "verifyingNUmber"
+);

@@ -31,10 +31,21 @@ code {
 }
 
 .header {
-  background-image: url("./assets/star-wars-header.jpg");
-  height: 250px;
+  background-image: url("./assets/star-wars-header-small.png");
+  height: 93px;
   background-size: cover;
   position: relative;
+  background-position: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #222;
+  @media only screen and (min-width: 1024px) {
+    height: 250px;
+    background-size: cover;
+    background-color: transparent;
+    background-position: initial;
+    background-image: url("./assets/star-wars-header.jpg");
+  }
 }
 
 .search-form {

@@ -34,8 +34,8 @@ describe("Home", () => {
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it("update the state on ComponentDidMount", () => {
-    expect(wrapper.state().peopleList).toEqual(props.peopleList);
+  it("update the state on componentWillReceiveProps", () => {
+    expect(wrapper.state().fetchedPeopleList).toEqual(props.peopleList);
   });
   it("update the state on checkbox showPeople check", () => {
     const showPeople = wrapper.find("#showPeople");

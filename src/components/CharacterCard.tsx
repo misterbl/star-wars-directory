@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import charactersPhotos from "../charactersPhotos";
 import { withRouter } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
@@ -6,45 +6,46 @@ import { connect } from "react-redux";
 import singleSearch from "../actions/thunks/singleSearch";
 import { ICharacterCardComponent } from "./CharacterCard.d";
 import ROUTES from "../routes";
+import { render } from "react-dom";
 
-export const CharacterCard = (props: ICharacterCardComponent) => {
-  const {
-    character,
-    history: { push }
-  } = props;
-  const onClick = async () => {
-    await props.singleSearch(character.url);
+export class CharacterCard extends PureComponent<ICharacterCardComponent> {
+  onClick = async () => {
+    const {
+      singleSearch,
+      character,
+      history: { push }
+    } = this.props;
+    await singleSearch(character.url);
     push(ROUTES.CHARACTER);
   };
-
-  const sprite = charactersPhotos[character.name];
-  return (
-    <div onClick={onClick} className="pointer m-3 text-white">
-      <u className="card-text">{character.name.toUpperCase()}</u>
-      <div className="d-flex">
-        {sprite ? (
-          <div
-            style={{
-              backgroundPosition: `${sprite}`
-            }}
-            className="avatar my-2"
-          />
-        ) : (
-          <div className="avatar avatar__default card-img-top" />
-        )}
-        <div className="ml-3">
-          <p className="m-1 text-secondary">{`Born in ${
-            character.birth_year
-          }`}</p>
-          <p className="m-1 text-secondary">{`Gender: ${character.gender}`}</p>
-          <p className="m-1 text-secondary">{`Height: ${
-            character.height
-          }cm`}</p>
+  render() {
+    const { character } = this.props;
+    const { name, birth_year, gender, height } = character;
+    const sprite = charactersPhotos[character.name];
+    return (
+      <div onClick={this.onClick} className="pointer m-3 text-white">
+        <u className="card-text">{name.toUpperCase()}</u>
+        <div className="d-flex">
+          {sprite ? (
+            <div
+              style={{
+                backgroundPosition: `${sprite}`
+              }}
+              className="avatar my-2"
+            />
+          ) : (
+            <div className="avatar avatar__default card-img-top" />
+          )}
+          <div className="ml-3">
+            <p className="m-1 text-secondary">{`Born in ${birth_year}`}</p>
+            <p className="m-1 text-secondary">{`Gender: ${gender}`}</p>
+            <p className="m-1 text-secondary">{`Height: ${height}cm`}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
   singleSearch: bindActionCreators(singleSearch, dispatch)

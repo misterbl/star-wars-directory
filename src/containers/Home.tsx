@@ -15,14 +15,12 @@ export class Home extends Component<IHomeComponent> {
   state = {
     showPeople: true,
     showFilms: true,
-    fetchedPeopleList: this.props.peopleList,
-    showFilters: false
+    fetchedPeopleList: this.props.peopleList
   };
 
   componentWillReceiveProps() {
     this.setState({
-      fetchedPeopleList: this.props.peopleList,
-      showFilters: true
+      fetchedPeopleList: this.props.peopleList
     });
   }
 
@@ -78,17 +76,11 @@ export class Home extends Component<IHomeComponent> {
   };
 
   render() {
-    const {
-      showPeople,
-      showFilms,
-      fetchedPeopleList,
-      showFilters
-    } = this.state;
+    const { showPeople, showFilms, fetchedPeopleList } = this.state;
     const { filmsList, peopleList } = this.props;
     const foundPeople = fetchedPeopleList.length > 0;
     const foundFilms = filmsList.length > 0;
     const resultLength = fetchedPeopleList.length + filmsList.length;
-
     return (
       <main className="form-container p-5">
         <div className="resistance mb-4" onClick={this.pushToResistance} />
@@ -116,11 +108,11 @@ export class Home extends Component<IHomeComponent> {
             </label>
           </div>
         )}
-        {showFilters && peopleList.length > 0 && showPeople && (
+        {peopleList.length > 0 && showPeople && (
           <>
             <ResultList type="Characters" list={fetchedPeopleList}>
               <h4 className="text-white text-center mt-4">
-                Filter the results{" "}
+                Filter the results
               </h4>
               <div className="d-flex flex-wrap justify-content-around text-white">
                 <div>

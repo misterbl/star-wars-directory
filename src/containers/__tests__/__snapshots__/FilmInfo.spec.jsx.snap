@@ -47,149 +47,20 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
-        <div
-          className="avatar avatar__default film-image mr-3"
+        <BackButton
+          push={[MockFunction]}
+          route="/"
+          text="Back to search result"
         />,
         <div
-          className="info-details p-3"
+          className="d-flex m-5 p-5"
         >
-          <h2
-            className="text-center"
-          >
-            TITLE
-          </h2>
-          <p>
-            1222
-          </p>
-          <p>
-            Released the NaNth undefined NaN
-          </p>
-          <p>
-            Directed by: director
-          </p>
-          <p>
-            Produced by: producer
-          </p>
-        </div>,
-      ],
-      "className": "d-flex m-5 p-5",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "avatar avatar__default film-image mr-3",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h2
-              className="text-center"
-            >
-              TITLE
-            </h2>,
-            <p>
-              1222
-            </p>,
-            <p>
-              Released the NaNth undefined NaN
-            </p>,
-            <p>
-              Directed by: director
-            </p>,
-            <p>
-              Produced by: producer
-            </p>,
-          ],
-          "className": "info-details p-3",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "TITLE",
-              "className": "text-center",
-            },
-            "ref": null,
-            "rendered": "TITLE",
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "1222",
-            },
-            "ref": null,
-            "rendered": "1222",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Released the NaNth undefined NaN",
-            },
-            "ref": null,
-            "rendered": "Released the NaNth undefined NaN",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Directed by: director",
-            },
-            "ref": null,
-            "rendered": "Directed by: director",
-            "type": "p",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Produced by: producer",
-            },
-            "ref": null,
-            "rendered": "Produced by: producer",
-            "type": "p",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
           <div
             className="avatar avatar__default film-image mr-3"
-          />,
+          />
           <div
             className="info-details p-3"
           >
@@ -210,22 +81,220 @@ ShallowWrapper {
             <p>
               Produced by: producer
             </p>
+          </div>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "push": [MockFunction],
+          "route": "/",
+          "text": "Back to search result",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="avatar avatar__default film-image mr-3"
+            />,
+            <div
+              className="info-details p-3"
+            >
+              <h2
+                className="text-center"
+              >
+                TITLE
+              </h2>
+              <p>
+                1222
+              </p>
+              <p>
+                Released the NaNth undefined NaN
+              </p>
+              <p>
+                Directed by: director
+              </p>
+              <p>
+                Produced by: producer
+              </p>
+            </div>,
+          ],
+          "className": "d-flex m-5 p-5",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "avatar avatar__default film-image mr-3",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="text-center"
+                >
+                  TITLE
+                </h2>,
+                <p>
+                  1222
+                </p>,
+                <p>
+                  Released the NaNth undefined NaN
+                </p>,
+                <p>
+                  Directed by: director
+                </p>,
+                <p>
+                  Produced by: producer
+                </p>,
+              ],
+              "className": "info-details p-3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "TITLE",
+                  "className": "text-center",
+                },
+                "ref": null,
+                "rendered": "TITLE",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "1222",
+                },
+                "ref": null,
+                "rendered": "1222",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Released the NaNth undefined NaN",
+                },
+                "ref": null,
+                "rendered": "Released the NaNth undefined NaN",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Directed by: director",
+                },
+                "ref": null,
+                "rendered": "Directed by: director",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Produced by: producer",
+                },
+                "ref": null,
+                "rendered": "Produced by: producer",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <BackButton
+            push={[MockFunction]}
+            route="/"
+            text="Back to search result"
+          />,
+          <div
+            className="d-flex m-5 p-5"
+          >
+            <div
+              className="avatar avatar__default film-image mr-3"
+            />
+            <div
+              className="info-details p-3"
+            >
+              <h2
+                className="text-center"
+              >
+                TITLE
+              </h2>
+              <p>
+                1222
+              </p>
+              <p>
+                Released the NaNth undefined NaN
+              </p>
+              <p>
+                Directed by: director
+              </p>
+              <p>
+                Produced by: producer
+              </p>
+            </div>
           </div>,
         ],
-        "className": "d-flex m-5 p-5",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "className": "avatar avatar__default film-image mr-3",
+            "push": [MockFunction],
+            "route": "/",
+            "text": "Back to search result",
           },
           "ref": null,
           "rendered": null,
-          "type": "div",
+          "type": [Function],
         },
         Object {
           "instance": null,
@@ -233,25 +302,32 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2
-                className="text-center"
+              <div
+                className="avatar avatar__default film-image mr-3"
+              />,
+              <div
+                className="info-details p-3"
               >
-                TITLE
-              </h2>,
-              <p>
-                1222
-              </p>,
-              <p>
-                Released the NaNth undefined NaN
-              </p>,
-              <p>
-                Directed by: director
-              </p>,
-              <p>
-                Produced by: producer
-              </p>,
+                <h2
+                  className="text-center"
+                >
+                  TITLE
+                </h2>
+                <p>
+                  1222
+                </p>
+                <p>
+                  Released the NaNth undefined NaN
+                </p>
+                <p>
+                  Directed by: director
+                </p>
+                <p>
+                  Produced by: producer
+                </p>
+              </div>,
             ],
-            "className": "info-details p-3",
+            "className": "d-flex m-5 p-5",
           },
           "ref": null,
           "rendered": Array [
@@ -260,62 +336,104 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "TITLE",
-                "className": "text-center",
+                "className": "avatar avatar__default film-image mr-3",
               },
               "ref": null,
-              "rendered": "TITLE",
-              "type": "h2",
+              "rendered": null,
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "1222",
+                "children": Array [
+                  <h2
+                    className="text-center"
+                  >
+                    TITLE
+                  </h2>,
+                  <p>
+                    1222
+                  </p>,
+                  <p>
+                    Released the NaNth undefined NaN
+                  </p>,
+                  <p>
+                    Directed by: director
+                  </p>,
+                  <p>
+                    Produced by: producer
+                  </p>,
+                ],
+                "className": "info-details p-3",
               },
               "ref": null,
-              "rendered": "1222",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Released the NaNth undefined NaN",
-              },
-              "ref": null,
-              "rendered": "Released the NaNth undefined NaN",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Directed by: director",
-              },
-              "ref": null,
-              "rendered": "Directed by: director",
-              "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Produced by: producer",
-              },
-              "ref": null,
-              "rendered": "Produced by: producer",
-              "type": "p",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "TITLE",
+                    "className": "text-center",
+                  },
+                  "ref": null,
+                  "rendered": "TITLE",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "1222",
+                  },
+                  "ref": null,
+                  "rendered": "1222",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Released the NaNth undefined NaN",
+                  },
+                  "ref": null,
+                  "rendered": "Released the NaNth undefined NaN",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Directed by: director",
+                  },
+                  "ref": null,
+                  "rendered": "Directed by: director",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Produced by: producer",
+                  },
+                  "ref": null,
+                  "rendered": "Produced by: producer",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",
         },
       ],
-      "type": "div",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

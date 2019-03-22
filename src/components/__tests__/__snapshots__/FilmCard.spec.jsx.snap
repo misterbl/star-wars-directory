@@ -45,7 +45,7 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": "title",
+    "key": undefined,
     "nodeType": "host",
     "props": Object {
       "children": Array [
@@ -58,10 +58,10 @@ ShallowWrapper {
           className="d-flex"
         >
           <div
-            className="avatar avatar__default card-img-top"
+            className="avatar avatar__film"
           />
           <div
-            className="ml-3"
+            className="ml-3 p-3"
           >
             <p>
               Director: name
@@ -96,10 +96,10 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="avatar avatar__default card-img-top"
+              className="avatar avatar__film"
             />,
             <div
-              className="ml-3"
+              className="ml-3 p-3"
             >
               <p>
                 Director: name
@@ -118,7 +118,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "avatar avatar__default card-img-top",
+              "className": "avatar avatar__film",
             },
             "ref": null,
             "rendered": null,
@@ -137,7 +137,7 @@ ShallowWrapper {
                   Released the 31th December 1221
                 </p>,
               ],
-              "className": "ml-3",
+              "className": "ml-3 p-3",
             },
             "ref": null,
             "rendered": Array [
@@ -175,7 +175,7 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": "title",
+      "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
@@ -188,10 +188,10 @@ ShallowWrapper {
             className="d-flex"
           >
             <div
-              className="avatar avatar__default card-img-top"
+              className="avatar avatar__film"
             />
             <div
-              className="ml-3"
+              className="ml-3 p-3"
             >
               <p>
                 Director: name
@@ -226,10 +226,10 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="avatar avatar__default card-img-top"
+                className="avatar avatar__film"
               />,
               <div
-                className="ml-3"
+                className="ml-3 p-3"
               >
                 <p>
                   Director: name
@@ -248,7 +248,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "avatar avatar__default card-img-top",
+                "className": "avatar avatar__film",
               },
               "ref": null,
               "rendered": null,
@@ -267,7 +267,7 @@ ShallowWrapper {
                     Released the 31th December 1221
                   </p>,
                 ],
-                "className": "ml-3",
+                "className": "ml-3 p-3",
               },
               "ref": null,
               "rendered": Array [

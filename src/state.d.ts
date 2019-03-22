@@ -41,5 +41,7 @@ export interface IAppState {
     peopleList: ICharacter[];
     filmsList: IFilm[];
     result: IFilm & ICharacter;
+    sendingInfoSms: boolean;
+    verifyingNUmber: boolean;
   };
 }

@@ -73,65 +73,39 @@ ShallowWrapper {
           className="resistance mb-4"
           onClick={[Function]}
         />,
-        <React.Fragment>
-          <label
-            className="text-white"
-            htmlFor="showPeople"
-          >
-            Show characters
-          </label>
-          <input
-            checked={true}
-            id="showPeople"
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <br />
-          <label
-            className="text-white"
-            htmlFor="showFilms"
-          >
-            Show films
-          </label>
-          <input
-            checked={true}
-            id="showFilms"
-            onClick={[Function]}
-            type="checkbox"
-          />
+        <div
+          className="result-filter my-4 p-3"
+        >
           <div
-            className="text-white my-3"
+            className="text-white"
           >
             4 RESULTS
           </div>
-        </React.Fragment>,
+          <label
+            htmlFor="showPeople"
+          >
+            Show characters
+            <input
+              checked={true}
+              id="showPeople"
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </label>
+          <br />
+          <label
+            htmlFor="showFilms"
+          >
+            Show films
+            <input
+              checked={true}
+              id="showFilms"
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </label>
+        </div>,
         <React.Fragment>
-          <Formik
-            enableReinitialize={false}
-            initialValues={
-              Object {
-                "selectedFilm": "",
-              }
-            }
-            isInitialValid={false}
-            onSubmit={[Function]}
-            render={[Function]}
-            validateOnBlur={true}
-            validateOnChange={true}
-          />
-          <Formik
-            enableReinitialize={false}
-            initialValues={
-              Object {
-                "selectedGender": "",
-              }
-            }
-            isInitialValid={false}
-            onSubmit={[Function]}
-            render={[Function]}
-            validateOnBlur={true}
-            validateOnChange={true}
-          />
           <ResultList
             list={
               Array [
@@ -156,7 +130,50 @@ ShallowWrapper {
               ]
             }
             type="Characters"
-          />
+          >
+            <h4
+              className="text-white text-center mt-4"
+            >
+              Filter the results
+               
+            </h4>
+            <div
+              className="d-flex flex-wrap justify-content-around text-white"
+            >
+              <div>
+                By film
+                <Formik
+                  enableReinitialize={false}
+                  initialValues={
+                    Object {
+                      "selectedFilm": "",
+                    }
+                  }
+                  isInitialValid={false}
+                  onSubmit={[Function]}
+                  render={[Function]}
+                  validateOnBlur={true}
+                  validateOnChange={true}
+                />
+              </div>
+              <div>
+                Or by gender
+                <Formik
+                  enableReinitialize={false}
+                  initialValues={
+                    Object {
+                      "selectedGender": "",
+                    }
+                  }
+                  isInitialValid={false}
+                  onSubmit={[Function]}
+                  render={[Function]}
+                  validateOnBlur={true}
+                  validateOnChange={true}
+                />
+              </div>
+            </div>
+          </ResultList>
         </React.Fragment>,
         <ResultList
           list={
@@ -187,40 +204,39 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
           "children": Array [
-            <label
-              className="text-white"
-              htmlFor="showPeople"
-            >
-              Show characters
-            </label>,
-            <input
-              checked={true}
-              id="showPeople"
-              onClick={[Function]}
-              type="checkbox"
-            />,
-            <br />,
-            <label
-              className="text-white"
-              htmlFor="showFilms"
-            >
-              Show films
-            </label>,
-            <input
-              checked={true}
-              id="showFilms"
-              onClick={[Function]}
-              type="checkbox"
-            />,
             <div
-              className="text-white my-3"
+              className="text-white"
             >
               4 RESULTS
             </div>,
+            <label
+              htmlFor="showPeople"
+            >
+              Show characters
+              <input
+                checked={true}
+                id="showPeople"
+                onChange={[Function]}
+                type="checkbox"
+              />
+            </label>,
+            <br />,
+            <label
+              htmlFor="showFilms"
+            >
+              Show films
+              <input
+                checked={true}
+                id="showFilms"
+                onChange={[Function]}
+                type="checkbox"
+              />
+            </label>,
           ],
+          "className": "result-filter my-4 p-3",
         },
         "ref": null,
         "rendered": Array [
@@ -229,27 +245,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Show characters",
+              "children": "4 RESULTS",
               "className": "text-white",
-              "htmlFor": "showPeople",
             },
             "ref": null,
-            "rendered": "Show characters",
-            "type": "label",
+            "rendered": "4 RESULTS",
+            "type": "div",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "checked": true,
-              "id": "showPeople",
-              "onClick": [Function],
-              "type": "checkbox",
+              "children": Array [
+                "Show characters",
+                <input
+                  checked={true}
+                  id="showPeople"
+                  onChange={[Function]}
+                  type="checkbox"
+                />,
+              ],
+              "htmlFor": "showPeople",
             },
             "ref": null,
-            "rendered": null,
-            "type": "input",
+            "rendered": Array [
+              "Show characters",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": true,
+                  "id": "showPeople",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
           },
           Object {
             "instance": null,
@@ -265,148 +302,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Show films",
-              "className": "text-white",
+              "children": Array [
+                "Show films",
+                <input
+                  checked={true}
+                  id="showFilms"
+                  onChange={[Function]}
+                  type="checkbox"
+                />,
+              ],
               "htmlFor": "showFilms",
             },
             "ref": null,
-            "rendered": "Show films",
+            "rendered": Array [
+              "Show films",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": true,
+                  "id": "showFilms",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
             "type": "label",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "checked": true,
-              "id": "showFilms",
-              "onClick": [Function],
-              "type": "checkbox",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "4 RESULTS",
-              "className": "text-white my-3",
-            },
-            "ref": null,
-            "rendered": "4 RESULTS",
-            "type": "div",
-          },
         ],
-        "type": Symbol(react.fragment),
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": Array [
-            <Formik
-              enableReinitialize={false}
-              initialValues={
-                Object {
-                  "selectedFilm": "",
-                }
-              }
-              isInitialValid={false}
-              onSubmit={[Function]}
-              render={[Function]}
-              validateOnBlur={true}
-              validateOnChange={true}
-            />,
-            <Formik
-              enableReinitialize={false}
-              initialValues={
-                Object {
-                  "selectedGender": "",
-                }
-              }
-              isInitialValid={false}
-              onSubmit={[Function]}
-              render={[Function]}
-              validateOnBlur={true}
-              validateOnChange={true}
-            />,
-            <ResultList
-              list={
-                Array [
-                  Object {
-                    "birth_year": "1234",
-                    "eye_color": "eye_color",
-                    "gender": "male",
-                    "hair_color": "hair_color",
-                    "height": "123",
-                    "mass": "12",
-                    "name": "name",
-                  },
-                  Object {
-                    "birth_year": "1234232",
-                    "eye_color": "black",
-                    "gender": "female",
-                    "hair_color": "black",
-                    "height": "12333",
-                    "mass": "12333",
-                    "name": "name2",
-                  },
-                ]
-              }
-              type="Characters"
-            />,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "enableReinitialize": false,
-              "initialValues": Object {
-                "selectedFilm": "",
-              },
-              "isInitialValid": false,
-              "onSubmit": [Function],
-              "render": [Function],
-              "validateOnBlur": true,
-              "validateOnChange": true,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "enableReinitialize": false,
-              "initialValues": Object {
-                "selectedGender": "",
-              },
-              "isInitialValid": false,
-              "onSubmit": [Function],
-              "render": [Function],
-              "validateOnBlur": true,
-              "validateOnChange": true,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "list": Array [
+          "children": <ResultList
+            list={
+              Array [
                 Object {
                   "birth_year": "1234",
                   "eye_color": "eye_color",
@@ -425,14 +362,289 @@ ShallowWrapper {
                   "mass": "12333",
                   "name": "name2",
                 },
-              ],
-              "type": "Characters",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+              ]
+            }
+            type="Characters"
+          >
+            <h4
+              className="text-white text-center mt-4"
+            >
+              Filter the results
+               
+            </h4>
+            <div
+              className="d-flex flex-wrap justify-content-around text-white"
+            >
+              <div>
+                By film
+                <Formik
+                  enableReinitialize={false}
+                  initialValues={
+                    Object {
+                      "selectedFilm": "",
+                    }
+                  }
+                  isInitialValid={false}
+                  onSubmit={[Function]}
+                  render={[Function]}
+                  validateOnBlur={true}
+                  validateOnChange={true}
+                />
+              </div>
+              <div>
+                Or by gender
+                <Formik
+                  enableReinitialize={false}
+                  initialValues={
+                    Object {
+                      "selectedGender": "",
+                    }
+                  }
+                  isInitialValid={false}
+                  onSubmit={[Function]}
+                  render={[Function]}
+                  validateOnBlur={true}
+                  validateOnChange={true}
+                />
+              </div>
+            </div>
+          </ResultList>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <h4
+                className="text-white text-center mt-4"
+              >
+                Filter the results
+                 
+              </h4>,
+              <div
+                className="d-flex flex-wrap justify-content-around text-white"
+              >
+                <div>
+                  By film
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "selectedFilm": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    render={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  />
+                </div>
+                <div>
+                  Or by gender
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "selectedGender": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    render={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  />
+                </div>
+              </div>,
+            ],
+            "list": Array [
+              Object {
+                "birth_year": "1234",
+                "eye_color": "eye_color",
+                "gender": "male",
+                "hair_color": "hair_color",
+                "height": "123",
+                "mass": "12",
+                "name": "name",
+              },
+              Object {
+                "birth_year": "1234232",
+                "eye_color": "black",
+                "gender": "female",
+                "hair_color": "black",
+                "height": "12333",
+                "mass": "12333",
+                "name": "name2",
+              },
+            ],
+            "type": "Characters",
           },
-        ],
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Filter the results",
+                  " ",
+                ],
+                "className": "text-white text-center mt-4",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Filter the results",
+                " ",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    By film
+                    <Formik
+                      enableReinitialize={false}
+                      initialValues={
+                        Object {
+                          "selectedFilm": "",
+                        }
+                      }
+                      isInitialValid={false}
+                      onSubmit={[Function]}
+                      render={[Function]}
+                      validateOnBlur={true}
+                      validateOnChange={true}
+                    />
+                  </div>,
+                  <div>
+                    Or by gender
+                    <Formik
+                      enableReinitialize={false}
+                      initialValues={
+                        Object {
+                          "selectedGender": "",
+                        }
+                      }
+                      isInitialValid={false}
+                      onSubmit={[Function]}
+                      render={[Function]}
+                      validateOnBlur={true}
+                      validateOnChange={true}
+                    />
+                  </div>,
+                ],
+                "className": "d-flex flex-wrap justify-content-around text-white",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "By film",
+                      <Formik
+                        enableReinitialize={false}
+                        initialValues={
+                          Object {
+                            "selectedFilm": "",
+                          }
+                        }
+                        isInitialValid={false}
+                        onSubmit={[Function]}
+                        render={[Function]}
+                        validateOnBlur={true}
+                        validateOnChange={true}
+                      />,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "By film",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "enableReinitialize": false,
+                        "initialValues": Object {
+                          "selectedFilm": "",
+                        },
+                        "isInitialValid": false,
+                        "onSubmit": [Function],
+                        "render": [Function],
+                        "validateOnBlur": true,
+                        "validateOnChange": true,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Or by gender",
+                      <Formik
+                        enableReinitialize={false}
+                        initialValues={
+                          Object {
+                            "selectedGender": "",
+                          }
+                        }
+                        isInitialValid={false}
+                        onSubmit={[Function]}
+                        render={[Function]}
+                        validateOnBlur={true}
+                        validateOnChange={true}
+                      />,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Or by gender",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "enableReinitialize": false,
+                        "initialValues": Object {
+                          "selectedGender": "",
+                        },
+                        "isInitialValid": false,
+                        "onSubmit": [Function],
+                        "render": [Function],
+                        "validateOnBlur": true,
+                        "validateOnChange": true,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": [Function],
+        },
         "type": Symbol(react.fragment),
       },
       Object {
@@ -464,65 +676,39 @@ ShallowWrapper {
             className="resistance mb-4"
             onClick={[Function]}
           />,
-          <React.Fragment>
-            <label
-              className="text-white"
-              htmlFor="showPeople"
-            >
-              Show characters
-            </label>
-            <input
-              checked={true}
-              id="showPeople"
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <br />
-            <label
-              className="text-white"
-              htmlFor="showFilms"
-            >
-              Show films
-            </label>
-            <input
-              checked={true}
-              id="showFilms"
-              onClick={[Function]}
-              type="checkbox"
-            />
+          <div
+            className="result-filter my-4 p-3"
+          >
             <div
-              className="text-white my-3"
+              className="text-white"
             >
               4 RESULTS
             </div>
-          </React.Fragment>,
+            <label
+              htmlFor="showPeople"
+            >
+              Show characters
+              <input
+                checked={true}
+                id="showPeople"
+                onChange={[Function]}
+                type="checkbox"
+              />
+            </label>
+            <br />
+            <label
+              htmlFor="showFilms"
+            >
+              Show films
+              <input
+                checked={true}
+                id="showFilms"
+                onChange={[Function]}
+                type="checkbox"
+              />
+            </label>
+          </div>,
           <React.Fragment>
-            <Formik
-              enableReinitialize={false}
-              initialValues={
-                Object {
-                  "selectedFilm": "",
-                }
-              }
-              isInitialValid={false}
-              onSubmit={[Function]}
-              render={[Function]}
-              validateOnBlur={true}
-              validateOnChange={true}
-            />
-            <Formik
-              enableReinitialize={false}
-              initialValues={
-                Object {
-                  "selectedGender": "",
-                }
-              }
-              isInitialValid={false}
-              onSubmit={[Function]}
-              render={[Function]}
-              validateOnBlur={true}
-              validateOnChange={true}
-            />
             <ResultList
               list={
                 Array [
@@ -547,7 +733,50 @@ ShallowWrapper {
                 ]
               }
               type="Characters"
-            />
+            >
+              <h4
+                className="text-white text-center mt-4"
+              >
+                Filter the results
+                 
+              </h4>
+              <div
+                className="d-flex flex-wrap justify-content-around text-white"
+              >
+                <div>
+                  By film
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "selectedFilm": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    render={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  />
+                </div>
+                <div>
+                  Or by gender
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "selectedGender": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    render={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  />
+                </div>
+              </div>
+            </ResultList>
           </React.Fragment>,
           <ResultList
             list={
@@ -578,40 +807,39 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
             "children": Array [
-              <label
-                className="text-white"
-                htmlFor="showPeople"
-              >
-                Show characters
-              </label>,
-              <input
-                checked={true}
-                id="showPeople"
-                onClick={[Function]}
-                type="checkbox"
-              />,
-              <br />,
-              <label
-                className="text-white"
-                htmlFor="showFilms"
-              >
-                Show films
-              </label>,
-              <input
-                checked={true}
-                id="showFilms"
-                onClick={[Function]}
-                type="checkbox"
-              />,
               <div
-                className="text-white my-3"
+                className="text-white"
               >
                 4 RESULTS
               </div>,
+              <label
+                htmlFor="showPeople"
+              >
+                Show characters
+                <input
+                  checked={true}
+                  id="showPeople"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </label>,
+              <br />,
+              <label
+                htmlFor="showFilms"
+              >
+                Show films
+                <input
+                  checked={true}
+                  id="showFilms"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+              </label>,
             ],
+            "className": "result-filter my-4 p-3",
           },
           "ref": null,
           "rendered": Array [
@@ -620,27 +848,48 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Show characters",
+                "children": "4 RESULTS",
                 "className": "text-white",
-                "htmlFor": "showPeople",
               },
               "ref": null,
-              "rendered": "Show characters",
-              "type": "label",
+              "rendered": "4 RESULTS",
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "checked": true,
-                "id": "showPeople",
-                "onClick": [Function],
-                "type": "checkbox",
+                "children": Array [
+                  "Show characters",
+                  <input
+                    checked={true}
+                    id="showPeople"
+                    onChange={[Function]}
+                    type="checkbox"
+                  />,
+                ],
+                "htmlFor": "showPeople",
               },
               "ref": null,
-              "rendered": null,
-              "type": "input",
+              "rendered": Array [
+                "Show characters",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "checked": true,
+                    "id": "showPeople",
+                    "onChange": [Function],
+                    "type": "checkbox",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
             },
             Object {
               "instance": null,
@@ -656,148 +905,48 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Show films",
-                "className": "text-white",
+                "children": Array [
+                  "Show films",
+                  <input
+                    checked={true}
+                    id="showFilms"
+                    onChange={[Function]}
+                    type="checkbox"
+                  />,
+                ],
                 "htmlFor": "showFilms",
               },
               "ref": null,
-              "rendered": "Show films",
+              "rendered": Array [
+                "Show films",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "checked": true,
+                    "id": "showFilms",
+                    "onChange": [Function],
+                    "type": "checkbox",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
               "type": "label",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "checked": true,
-                "id": "showFilms",
-                "onClick": [Function],
-                "type": "checkbox",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "4 RESULTS",
-                "className": "text-white my-3",
-              },
-              "ref": null,
-              "rendered": "4 RESULTS",
-              "type": "div",
-            },
           ],
-          "type": Symbol(react.fragment),
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": Array [
-              <Formik
-                enableReinitialize={false}
-                initialValues={
-                  Object {
-                    "selectedFilm": "",
-                  }
-                }
-                isInitialValid={false}
-                onSubmit={[Function]}
-                render={[Function]}
-                validateOnBlur={true}
-                validateOnChange={true}
-              />,
-              <Formik
-                enableReinitialize={false}
-                initialValues={
-                  Object {
-                    "selectedGender": "",
-                  }
-                }
-                isInitialValid={false}
-                onSubmit={[Function]}
-                render={[Function]}
-                validateOnBlur={true}
-                validateOnChange={true}
-              />,
-              <ResultList
-                list={
-                  Array [
-                    Object {
-                      "birth_year": "1234",
-                      "eye_color": "eye_color",
-                      "gender": "male",
-                      "hair_color": "hair_color",
-                      "height": "123",
-                      "mass": "12",
-                      "name": "name",
-                    },
-                    Object {
-                      "birth_year": "1234232",
-                      "eye_color": "black",
-                      "gender": "female",
-                      "hair_color": "black",
-                      "height": "12333",
-                      "mass": "12333",
-                      "name": "name2",
-                    },
-                  ]
-                }
-                type="Characters"
-              />,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "enableReinitialize": false,
-                "initialValues": Object {
-                  "selectedFilm": "",
-                },
-                "isInitialValid": false,
-                "onSubmit": [Function],
-                "render": [Function],
-                "validateOnBlur": true,
-                "validateOnChange": true,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "enableReinitialize": false,
-                "initialValues": Object {
-                  "selectedGender": "",
-                },
-                "isInitialValid": false,
-                "onSubmit": [Function],
-                "render": [Function],
-                "validateOnBlur": true,
-                "validateOnChange": true,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "list": Array [
+            "children": <ResultList
+              list={
+                Array [
                   Object {
                     "birth_year": "1234",
                     "eye_color": "eye_color",
@@ -816,14 +965,289 @@ ShallowWrapper {
                     "mass": "12333",
                     "name": "name2",
                   },
-                ],
-                "type": "Characters",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
+                ]
+              }
+              type="Characters"
+            >
+              <h4
+                className="text-white text-center mt-4"
+              >
+                Filter the results
+                 
+              </h4>
+              <div
+                className="d-flex flex-wrap justify-content-around text-white"
+              >
+                <div>
+                  By film
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "selectedFilm": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    render={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  />
+                </div>
+                <div>
+                  Or by gender
+                  <Formik
+                    enableReinitialize={false}
+                    initialValues={
+                      Object {
+                        "selectedGender": "",
+                      }
+                    }
+                    isInitialValid={false}
+                    onSubmit={[Function]}
+                    render={[Function]}
+                    validateOnBlur={true}
+                    validateOnChange={true}
+                  />
+                </div>
+              </div>
+            </ResultList>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <h4
+                  className="text-white text-center mt-4"
+                >
+                  Filter the results
+                   
+                </h4>,
+                <div
+                  className="d-flex flex-wrap justify-content-around text-white"
+                >
+                  <div>
+                    By film
+                    <Formik
+                      enableReinitialize={false}
+                      initialValues={
+                        Object {
+                          "selectedFilm": "",
+                        }
+                      }
+                      isInitialValid={false}
+                      onSubmit={[Function]}
+                      render={[Function]}
+                      validateOnBlur={true}
+                      validateOnChange={true}
+                    />
+                  </div>
+                  <div>
+                    Or by gender
+                    <Formik
+                      enableReinitialize={false}
+                      initialValues={
+                        Object {
+                          "selectedGender": "",
+                        }
+                      }
+                      isInitialValid={false}
+                      onSubmit={[Function]}
+                      render={[Function]}
+                      validateOnBlur={true}
+                      validateOnChange={true}
+                    />
+                  </div>
+                </div>,
+              ],
+              "list": Array [
+                Object {
+                  "birth_year": "1234",
+                  "eye_color": "eye_color",
+                  "gender": "male",
+                  "hair_color": "hair_color",
+                  "height": "123",
+                  "mass": "12",
+                  "name": "name",
+                },
+                Object {
+                  "birth_year": "1234232",
+                  "eye_color": "black",
+                  "gender": "female",
+                  "hair_color": "black",
+                  "height": "12333",
+                  "mass": "12333",
+                  "name": "name2",
+                },
+              ],
+              "type": "Characters",
             },
-          ],
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Filter the results",
+                    " ",
+                  ],
+                  "className": "text-white text-center mt-4",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Filter the results",
+                  " ",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      By film
+                      <Formik
+                        enableReinitialize={false}
+                        initialValues={
+                          Object {
+                            "selectedFilm": "",
+                          }
+                        }
+                        isInitialValid={false}
+                        onSubmit={[Function]}
+                        render={[Function]}
+                        validateOnBlur={true}
+                        validateOnChange={true}
+                      />
+                    </div>,
+                    <div>
+                      Or by gender
+                      <Formik
+                        enableReinitialize={false}
+                        initialValues={
+                          Object {
+                            "selectedGender": "",
+                          }
+                        }
+                        isInitialValid={false}
+                        onSubmit={[Function]}
+                        render={[Function]}
+                        validateOnBlur={true}
+                        validateOnChange={true}
+                      />
+                    </div>,
+                  ],
+                  "className": "d-flex flex-wrap justify-content-around text-white",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "By film",
+                        <Formik
+                          enableReinitialize={false}
+                          initialValues={
+                            Object {
+                              "selectedFilm": "",
+                            }
+                          }
+                          isInitialValid={false}
+                          onSubmit={[Function]}
+                          render={[Function]}
+                          validateOnBlur={true}
+                          validateOnChange={true}
+                        />,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "By film",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "enableReinitialize": false,
+                          "initialValues": Object {
+                            "selectedFilm": "",
+                          },
+                          "isInitialValid": false,
+                          "onSubmit": [Function],
+                          "render": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Or by gender",
+                        <Formik
+                          enableReinitialize={false}
+                          initialValues={
+                            Object {
+                              "selectedGender": "",
+                            }
+                          }
+                          isInitialValid={false}
+                          onSubmit={[Function]}
+                          render={[Function]}
+                          validateOnBlur={true}
+                          validateOnChange={true}
+                        />,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Or by gender",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "enableReinitialize": false,
+                          "initialValues": Object {
+                            "selectedGender": "",
+                          },
+                          "isInitialValid": false,
+                          "onSubmit": [Function],
+                          "render": [Function],
+                          "validateOnBlur": true,
+                          "validateOnChange": true,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
           "type": Symbol(react.fragment),
         },
         Object {

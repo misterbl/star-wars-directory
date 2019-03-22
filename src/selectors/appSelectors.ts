@@ -21,5 +21,9 @@ export const getInfo = createSelector(
 export const isLoading = createSelector(
   appSelector,
   app =>
-    app.fetchingSingleResult || app.fetchingFilm || app.fetchingPeopleAndFilms
+    app.fetchingSingleResult ||
+    app.fetchingFilm ||
+    app.fetchingPeopleAndFilms ||
+    app.sendingInfoSms ||
+    app.verifyingNUmber
 );

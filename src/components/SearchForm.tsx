@@ -1,14 +1,14 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { FormikProps } from "formik";
-import { ISearchForm } from "./Header.d";
+export interface ISearchForm {
+  searchTerm: string;
+}
 
-//TODO all hardcoded test could be move to react intl
-class SearchForm extends React.PureComponent<FormikProps<ISearchForm>> {
+class SearchForm extends PureComponent<FormikProps<ISearchForm>> {
   onsearchTermChange = (
     event: Pick<React.ChangeEvent<HTMLInputElement>, "target">
   ) => {
-    const { setFieldValue } = this.props;
-    setFieldValue("searchTerm", event.target.value);
+    this.props.setFieldValue("searchTerm", event.target.value);
   };
 
   render() {
