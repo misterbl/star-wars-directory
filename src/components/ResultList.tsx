@@ -8,20 +8,20 @@ const ResultList: StatelessComponent<IResultList> = ({
   list,
   type,
   children
-}) => (
+}: IResultList) => (
   <>
     <div className="grey-line" />
     <h3 className="text-white my-3 text-center">{`${type}:`}</h3>
     {children}
     <div className="grey-line mt-3" />
     <div className="p-2 mt-3">
-      {list.map((element: ICharacter & IFilm) => {
+      {list.map(element => {
         if (type === "Characters") {
-          // @ts-ignore
-          return <CharacterCard key={element.name} character={element} />;
+          const character = element as ICharacter;
+          return <CharacterCard key={character.name} character={character} />;
         }
-        // @ts-ignore
-        return <FilmCard key={element.title} film={element} />;
+        const film = element as IFilm;
+        return <FilmCard key={film.title} film={film} />;
       })}
     </div>
   </>

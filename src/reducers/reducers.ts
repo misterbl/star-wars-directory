@@ -12,7 +12,7 @@ export const app = (
     filmsList,
     result,
     sendingInfoSms,
-    verifyingNUmber
+    saveSpeciesInfo
   }: AnyAction
 ) => {
   switch (type) {
@@ -51,10 +51,10 @@ export const app = (
         ...state,
         sendingInfoSms
       };
-    case "VERIFYING_NUMBER":
+    case "SAVE_SPECIES_INFO":
       return {
         ...state,
-        verifyingNUmber
+        saveSpeciesInfo
       };
     default:
       return state;

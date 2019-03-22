@@ -1,7 +1,8 @@
 const routes = {
   INDEX: "/",
   CHARACTER: "/character",
-  FILM: "/film"
+  FILM: "/film",
+  SPECIES: "species"
 };
 
 export default routes;

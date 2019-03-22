@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const twilio = require("./credentials.ts");
+const twilio = require("./credentials");
 
 const app = express();
 
@@ -10,10 +10,7 @@ const client = require("twilio")(twilio.accountSid, twilio.authToken);
 
 app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader(
     "Access-Control-Allow-Headers",
     "X-Requested-With,content-type"

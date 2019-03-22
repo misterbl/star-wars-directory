@@ -16,7 +16,6 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
   state = {
     displaySentSuccess: false
   };
-
   handleSubmit = (e: any) => {
     const {
       sendInfoSms,
@@ -30,6 +29,11 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
   resetdisplaySentSuccess = () => {
     this.setState({ displaySentSuccess: true });
   };
+
+  pushToSpecies = () => {
+    this.props.history.push(ROUTES.SPECIES);
+  };
+
   render() {
     const {
       character,
@@ -78,6 +82,9 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
               <p>{`Eye color: ${eye_color}`}</p>
               <p>{`Born in ${birth_year}`}</p>
               <p>{`Gender: ${gender}`}</p>
+              <p onClick={this.pushToSpecies}>
+                Click here for info about their species
+              </p>
             </div>
           </div>
           <Formik

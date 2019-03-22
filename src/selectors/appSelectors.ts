@@ -28,6 +28,5 @@ export const isLoading = createSelector(
     app.fetchingSingleResult ||
     app.fetchingFilm ||
     app.fetchingPeopleAndFilms ||
-    app.sendingInfoSms ||
-    app.verifyingNUmber
+    app.sendingInfoSms
 );

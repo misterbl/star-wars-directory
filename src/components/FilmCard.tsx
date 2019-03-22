@@ -1,12 +1,11 @@
 import React, { PureComponent } from "react";
-import { withRouter } from "react-router";
+import { withRouter, RouteComponentProps } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import singleSearch from "../actions/thunks/singleSearch";
-import { IFilmCardComponent } from "./FilmCard.d";
+import { IFilmCardComponent, IFilmCard } from "./FilmCard.d";
 import ROUTES from "../const/routes";
 import formattedDate from "../utils/formattedDate";
-import { render } from "react-dom";
 
 export class FilmCard extends PureComponent<IFilmCardComponent> {
   onClick = async () => {
@@ -23,7 +22,11 @@ export class FilmCard extends PureComponent<IFilmCardComponent> {
       film: { title, director, release_date }
     } = this.props;
     return (
-      <div onClick={this.onClick} className="pointer m-3 text-white">
+      <div
+        role="button"
+        onClick={this.onClick}
+        className="pointer m-3 text-white"
+      >
         <u className="card-text">{title.toUpperCase()}</u>
         <div className="d-flex">
           <div className="avatar avatar__film" />
@@ -41,7 +44,7 @@ export const mapDispatchToProps = (dispatch: Dispatch) => ({
   singleSearch: bindActionCreators(singleSearch, dispatch)
 });
 
-export default withRouter(
+export default withRouter<IFilmCard & RouteComponentProps>(
   connect(
     null,
     mapDispatchToProps

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, SyntheticEvent } from "react";
 import { withRouter } from "react-router-dom";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
@@ -19,12 +19,14 @@ export class Home extends Component<IHomeComponent> {
   state = {
     showPeople: true,
     showFilms: true,
-    fetchedPeopleList: this.props.peopleList
+    filteredList: this.props.peopleList,
+    filmFilter: "",
+    genderFilter: ""
   };
 
   componentWillReceiveProps() {
     this.setState({
-      fetchedPeopleList: this.props.peopleList
+      filteredList: this.props.peopleList
     });
   }
 
@@ -50,50 +52,45 @@ export class Home extends Component<IHomeComponent> {
     this.setState({ showFilms: !this.state.showFilms });
   };
 
-  // TODO change any below
-  handleFilmChange = async (event: any) => {
+  filter = () => {
     const { peopleList } = this.props;
-    await this.setState({
-      fetchedPeopleList: peopleList
-    });
-    if (event.selectedFilm === "see all") {
-      return this.setState({
-        fetchedPeopleList: peopleList
-      });
+    const { filmFilter, genderFilter } = this.state;
+    let filteredList = peopleList;
+    if (filmFilter) {
+      filteredList = filteredList.filter(
+        (character: ICharacter) => character.films.indexOf(filmFilter) !== -1
+      );
     }
-    const result = this.state.fetchedPeopleList.filter(
-      (character: ICharacter) =>
-        character.films.indexOf(event.selectedFilm) !== -1
-    );
-    this.setState({
-      fetchedPeopleList: result
-    });
-  };
-  // TODO change any below
-  handleGenderChange = async (event: any) => {
-    const { peopleList } = this.props;
-    await this.setState({
-      fetchedPeopleList: peopleList
-    });
-    if (event.selectedGender === "see all") {
-      return this.setState({
-        fetchedPeopleList: peopleList
-      });
+    if (genderFilter) {
+      filteredList = filteredList.filter(
+        (character: ICharacter) => character.gender === genderFilter
+      );
     }
-    const result = this.state.fetchedPeopleList.filter(
-      (character: ICharacter) => character.gender === event.selectedGender
-    );
     this.setState({
-      fetchedPeopleList: result
+      filteredList
     });
   };
 
+  handleFilmChange = async (form: ISelectFilmForm) => {
+    this.setState({
+      filmFilter: form.selectedFilm
+    });
+    this.filter();
+  };
+
+  handleGenderChange = async (form: ISelectGenderForm) => {
+    this.setState({
+      genderFilter: form.selectedGender
+    });
+    this.filter();
+  };
+
   render() {
-    const { showPeople, showFilms, fetchedPeopleList } = this.state;
+    const { showPeople, showFilms, filteredList } = this.state;
     const { filmsList, peopleList } = this.props;
-    const foundPeople = fetchedPeopleList.length > 0;
+    const foundPeople = filteredList.length > 0;
     const foundFilms = filmsList.length > 0;
-    const resultLength = fetchedPeopleList.length + filmsList.length;
+    const resultLength = filteredList.length + filmsList.length;
     return (
       <main className="form-container p-5">
         <div className="form-group search-form search-form__body">
@@ -126,7 +123,7 @@ export class Home extends Component<IHomeComponent> {
         )}
         {peopleList.length > 0 && showPeople && (
           <>
-            <ResultList type="Characters" list={fetchedPeopleList}>
+            <ResultList type="Characters" list={filteredList}>
               <div className="d-flex flex-wrap justify-content-around text-white">
                 <h4 className="text-white text-center mt-4">
                   Filter the results

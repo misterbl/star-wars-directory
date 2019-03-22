@@ -4,7 +4,6 @@ const generateAppState = () => ({
     fetchingFilm: false,
     fetchingSingleResult: false,
     sendingInfoSms: false,
-    verifyingNUmber: false,
     peopleList: [
       {
         name: "name",

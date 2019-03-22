@@ -1,6 +1,8 @@
-import { IAppState } from "../state.d";
+import { ReactNode } from "react";
+import { IAppState, ICharacter, IFilm } from "../state.d";
 
 export interface IResultList {
-  list: IAppState["app"]["peopleList"] & IAppState["app"]["filmList"];
+  list: (ICharacter | IFilm)[];
   type: string;
+  children?: ReactNode;
 }

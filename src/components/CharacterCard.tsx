@@ -1,12 +1,11 @@
 import React, { PureComponent } from "react";
 import charactersPhotos from "../const/charactersPhotos";
-import { withRouter } from "react-router";
+import { withRouter, RouteComponentProps } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import singleSearch from "../actions/thunks/singleSearch";
-import { ICharacterCardComponent } from "./CharacterCard.d";
+import { ICharacterCardComponent, ICharacterCard } from "./CharacterCard.d";
 import ROUTES from "../const/routes";
-import { render } from "react-dom";
 
 export class CharacterCard extends PureComponent<ICharacterCardComponent> {
   onClick = async () => {
@@ -23,7 +22,11 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
     const { name, birth_year, gender, height } = character;
     const sprite = charactersPhotos[character.name];
     return (
-      <div onClick={this.onClick} className="pointer m-3 text-white">
+      <div
+        role="button"
+        onClick={this.onClick}
+        className="pointer m-3 text-white"
+      >
         <u className="card-text">{name.toUpperCase()}</u>
         <div className="d-flex">
           {sprite ? (
@@ -51,7 +54,7 @@ export const mapDispatchToProps = (dispatch: Dispatch) => ({
   singleSearch: bindActionCreators(singleSearch, dispatch)
 });
 
-export default withRouter(
+export default withRouter<ICharacterCard & RouteComponentProps>(
   connect(
     null,
     mapDispatchToProps

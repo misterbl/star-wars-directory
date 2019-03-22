@@ -25,7 +25,6 @@ const searchFilmsAndPeople = (string: string) => async (
       throw new Error("couldn't get people");
     }
     const filmsData = await filmsResponse.json();
-    // const filmsData = JSON.parse(films);
     await dispatch(saveFilms(filmsData.results));
 
     const people = await peopleResponse.text();

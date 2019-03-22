@@ -1,6 +1,16 @@
 import React, { PureComponent } from "react";
 import { FormikProps } from "formik";
 
+const movieList = [
+  { value: "https://swapi.co/api/films/1/", text: "A New Hope" },
+  { value: "https://swapi.co/api/films/2/", text: "The Empire Strikes Back" },
+  { value: "https://swapi.co/api/films/3/", text: "Return of the Jedi" },
+  { value: "https://swapi.co/api/films/4/", text: "The Phantom Menace" },
+  { value: "https://swapi.co/api/films/5/", text: "Attack of the Clones" },
+  { value: "https://swapi.co/api/films/6/", text: "Revenge of the Sith" },
+  { value: "https://swapi.co/api/films/7/", text: "The Force Awakens" }
+];
+
 export interface ISelectFilmForm {
   selectedFilm: string;
 }
@@ -19,26 +29,12 @@ class SelectFilmForm extends PureComponent<FormikProps<ISelectFilmForm>> {
           style={{ width: "200px" }}
           onChange={this.onSelectChange}
         >
-          <option value="see all">See all</option>
-          <option value="https://swapi.co/api/films/1/">A New Hope</option>
-          <option value="https://swapi.co/api/films/5/">
-            Attack of the Clones
-          </option>
-          <option value="https://swapi.co/api/films/4/">
-            The Phantom Menace
-          </option>
-          <option value="https://swapi.co/api/films/6/">
-            Revenge of the Sith
-          </option>
-          <option value="https://swapi.co/api/films/3/">
-            Return of the Jedi
-          </option>
-          <option value="https://swapi.co/api/films/2/">
-            The Empire Strikes Back
-          </option>
-          <option value="https://swapi.co/api/films/7/">
-            The Force Awakens
-          </option>
+          <option value="">See all</option>
+          {movieList.map(({ value, text }) => (
+            <option key={value} value={value}>
+              {text}
+            </option>
+          ))}
         </select>
       </form>
     );

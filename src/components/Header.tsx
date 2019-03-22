@@ -20,7 +20,7 @@ export class Header extends PureComponent<IHeaderComponent> {
 
   render() {
     return (
-      <div className="header">
+      <header>
         <div className="form-group mb-0 search-form search-form__header">
           <Formik<ISearchForm>
             initialValues={{
@@ -30,7 +30,7 @@ export class Header extends PureComponent<IHeaderComponent> {
             render={formikProps => <SearchForm {...formikProps} />}
           />
         </div>
-      </div>
+      </header>
     );
   }
 }

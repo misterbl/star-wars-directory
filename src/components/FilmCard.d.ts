@@ -1,6 +1,6 @@
 import { RouteComponentProps, StaticContext } from "react-router";
 import singleSearch from "../actions/thunks/singleSearch";
-import { ICharacter, IFilm } from "../state";
+import { IFilm } from "../state";
 
 export interface IFilmCard {
   film: IFilm;

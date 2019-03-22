@@ -7,11 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./assets/star-background.jpg");
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  background-size: contain;
 }
 
 .avatar {
@@ -30,10 +26,9 @@ code {
   }
 }
 
-.header {
+header {
   background-image: url("./assets/star-wars-header-small.png");
   height: 93px;
-  background-size: cover;
   position: relative;
   background-position: 0;
   background-size: contain;
@@ -67,13 +62,11 @@ code {
     }
     input,
     input:focus,
-    input:active,
-    input:focus-within {
+    input:active {
       outline: none;
       background-color: #222222;
       border: none;
       font-size: 30px;
-
       height: 60px;
     }
   }
@@ -93,6 +86,7 @@ code {
     display: block;
   }
 }
+
 .back-button {
   background-image: url("./assets/leftArrow.svg");
   width: 25px;
@@ -102,6 +96,7 @@ code {
   background-size: cover;
   border: none;
 }
+
 .resistance {
   background-image: url("./assets/resistance.png");
   height: 110px;
@@ -112,6 +107,7 @@ code {
 .grey-line {
   border-bottom: 1px solid #3b3b3b;
 }
+
 .info-details {
   border-left: 2px solid #9e4f60;
   background-color: #282727;
@@ -128,6 +124,7 @@ code {
 .pointer {
   cursor: pointer;
 }
+
 .loader {
   position: absolute;
   top: 50%;
@@ -145,5 +142,5 @@ code {
 .custom-select {
   background-color: #3b3b3b;
   border: none;
-  color: #010000e6;
+  color: #010000;
 }

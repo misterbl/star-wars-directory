@@ -26,7 +26,7 @@ export const sendingInfoSms = makeActionCreator(
   "sendingInfoSms"
 );
 
-export const verifyingNumber = makeActionCreator(
-  "VERIFYING_NUMBER",
-  "verifyingNUmber"
+export const saveSpeciesInfo = makeActionCreator(
+  "SAVE_SPECIES_INFO",
+  "saveSpeciesInfo"
 );

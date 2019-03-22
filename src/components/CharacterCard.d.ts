@@ -11,5 +11,5 @@ export interface ICharacterCardDispatchToProps {
 }
 export interface ICharacterCardComponent
   extends ICharacterCard,
-    RouteComponentProps<any, StaticContext>,
+    RouteComponentProps<unknown, StaticContext>,
     ICharacterCardDispatchToProps {}

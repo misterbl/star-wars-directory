@@ -18,7 +18,7 @@ class SelectGenderForm extends PureComponent<FormikProps<ISelectGenderForm>> {
           style={{ width: "200px" }}
           onChange={this.onSelectChange}
         >
-          <option value="see all">See all</option>
+          <option value="">See all</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>

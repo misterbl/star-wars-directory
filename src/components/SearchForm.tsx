@@ -5,7 +5,7 @@ export interface ISearchForm {
 }
 
 class SearchForm extends PureComponent<FormikProps<ISearchForm>> {
-  onsearchTermChange = (
+  onSearchTermChange = (
     event: Pick<React.ChangeEvent<HTMLInputElement>, "target">
   ) => {
     this.props.setFieldValue("searchTerm", event.target.value);
@@ -25,7 +25,7 @@ class SearchForm extends PureComponent<FormikProps<ISearchForm>> {
           type="text"
           name="searchTerm"
           value={values.searchTerm}
-          onChange={this.onsearchTermChange}
+          onChange={this.onSearchTermChange}
         />
         <button type="submit" className="search-button" />
       </form>

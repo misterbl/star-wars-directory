@@ -8,11 +8,11 @@ Users can filter the characters search result by gender or by movies they star i
 
 Users can switch the search result view to only see films, characters or both
 
-When clicking on a search result item, users are redirected to the informatio page of this item. At the bottom of this page, users can enter their phone number to receive the item viewed information via sms
+When clicking on a search result item, users are redirected to the information page of this item. At the bottom of this page, users can enter their phone number to receive the item viewed information via sms
 
 The app uses:
 
-- Redux is used for state management.
+- Redux for state management.
 - Bootstrap classes and components for faster development.
 - Formik for the forms instead of Redux forms, for performance purposes
 - Jest and Enzyme for testing
