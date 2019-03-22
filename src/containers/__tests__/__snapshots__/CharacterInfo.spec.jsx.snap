@@ -58,7 +58,7 @@ ShallowWrapper {
           text="Back to search result"
         />,
         <div
-          className="d-flex m-5 p-5"
+          className="d-flex ml-5 mt-5 pl-5"
         >
           <div
             className="avatar avatar__default card-img-top mr-3"
@@ -94,6 +94,19 @@ ShallowWrapper {
             </p>
           </div>
         </div>,
+        <Formik
+          enableReinitialize={false}
+          initialValues={
+            Object {
+              "phoneNumber": "",
+            }
+          }
+          isInitialValid={false}
+          onSubmit={[Function]}
+          render={[Function]}
+          validateOnBlur={true}
+          validateOnChange={true}
+        />,
       ],
     },
     "ref": null,
@@ -101,7 +114,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "push": [MockFunction],
           "route": "/",
@@ -151,7 +164,7 @@ ShallowWrapper {
               </p>
             </div>,
           ],
-          "className": "d-flex m-5 p-5",
+          "className": "d-flex ml-5 mt-5 pl-5",
         },
         "ref": null,
         "rendered": Array [
@@ -298,6 +311,25 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "enableReinitialize": false,
+          "initialValues": Object {
+            "phoneNumber": "",
+          },
+          "isInitialValid": false,
+          "onSubmit": [Function],
+          "render": [Function],
+          "validateOnBlur": true,
+          "validateOnChange": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": Symbol(react.fragment),
   },
@@ -314,7 +346,7 @@ ShallowWrapper {
             text="Back to search result"
           />,
           <div
-            className="d-flex m-5 p-5"
+            className="d-flex ml-5 mt-5 pl-5"
           >
             <div
               className="avatar avatar__default card-img-top mr-3"
@@ -350,6 +382,19 @@ ShallowWrapper {
               </p>
             </div>
           </div>,
+          <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "phoneNumber": "",
+              }
+            }
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+          />,
         ],
       },
       "ref": null,
@@ -357,7 +402,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "push": [MockFunction],
             "route": "/",
@@ -407,7 +452,7 @@ ShallowWrapper {
                 </p>
               </div>,
             ],
-            "className": "d-flex m-5 p-5",
+            "className": "d-flex ml-5 mt-5 pl-5",
           },
           "ref": null,
           "rendered": Array [
@@ -554,6 +599,25 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "enableReinitialize": false,
+            "initialValues": Object {
+              "phoneNumber": "",
+            },
+            "isInitialValid": false,
+            "onSubmit": [Function],
+            "render": [Function],
+            "validateOnBlur": true,
+            "validateOnChange": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": Symbol(react.fragment),
     },
@@ -581,5 +645,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

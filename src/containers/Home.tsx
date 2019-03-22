@@ -12,7 +12,7 @@ import SelectGenderForm, {
 import { getPeopleList, getFilmsList } from "../selectors/appSelectors";
 import { IAppState, ICharacter } from "../state";
 import SearchForm, { ISearchForm } from "../components/SearchForm";
-import ROUTES from "../routes";
+import ROUTES from "../const/routes";
 import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
 
 export class Home extends Component<IHomeComponent> {
@@ -96,8 +96,7 @@ export class Home extends Component<IHomeComponent> {
     const resultLength = fetchedPeopleList.length + filmsList.length;
     return (
       <main className="form-container p-5">
-        <div className="form-group mb-0 pl-5 search-form search-form__body">
-          <div className="black-stripe" />
+        <div className="form-group search-form search-form__body">
           <Formik<ISearchForm>
             initialValues={{
               searchTerm: ""
@@ -110,36 +109,30 @@ export class Home extends Component<IHomeComponent> {
         {foundPeople && foundFilms && (
           <div className="result-filter my-4 p-3">
             <div className="text-white">{`${resultLength} RESULTS`}</div>
-            <label htmlFor="showPeople">
-              Show characters
-              <input
-                type="checkbox"
-                id="showPeople"
-                checked={showPeople}
-                onChange={this.changePeopleView}
-              />
-            </label>
+            <button
+              onClick={this.changePeopleView}
+              className={`btn btn-${showPeople ? "light" : "dark"}`}
+            >
+              {`${showPeople ? "HIDE PEOPLE" : "SHOW PEOPLE"}`}
+            </button>
             <br />
-            <label htmlFor="showFilms">
-              Show films
-              <input
-                type="checkbox"
-                id="showFilms"
-                checked={showFilms}
-                onChange={this.changeFilmsView}
-              />
-            </label>
+            <button
+              onClick={this.changeFilmsView}
+              className={`btn btn-${showFilms ? "light" : "dark"}`}
+            >
+              {`${showPeople ? "HIDE FILMS" : "SHOW FILMS"}`}
+            </button>
           </div>
         )}
         {peopleList.length > 0 && showPeople && (
           <>
             <ResultList type="Characters" list={fetchedPeopleList}>
-              <h4 className="text-white text-center mt-4">
-                Filter the results
-              </h4>
               <div className="d-flex flex-wrap justify-content-around text-white">
+                <h4 className="text-white text-center mt-4">
+                  Filter the results
+                </h4>
                 <div>
-                  By film
+                  <p className="text-center m-0">By film</p>
                   <Formik<ISelectFilmForm>
                     initialValues={{
                       selectedFilm: ""
@@ -148,8 +141,9 @@ export class Home extends Component<IHomeComponent> {
                     render={formikProps => <SelectFilmForm {...formikProps} />}
                   />
                 </div>
+                <h4 className="text-white text-center mt-4">or</h4>
                 <div>
-                  Or by gender
+                  <p className="text-center m-0">By gender</p>
                   <Formik<ISelectGenderForm>
                     initialValues={{
                       selectedGender: ""
@@ -181,4 +175,9 @@ export const mapStateToProps = (state: IAppState) => ({
   filmsList: getFilmsList(state)
 });
 
-export default withRouter(connect(mapStateToProps)(Home));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Home)
+);

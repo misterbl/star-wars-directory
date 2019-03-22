@@ -41,45 +41,27 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Formik
-        enableReinitialize={false}
-        initialValues={
-          Object {
-            "searchTerm": "",
+      "children": <div
+        className="form-group mb-0 search-form search-form__header"
+      >
+        <Formik
+          enableReinitialize={false}
+          initialValues={
+            Object {
+              "searchTerm": "",
+            }
           }
-        }
-        isInitialValid={false}
-        onSubmit={[Function]}
-        render={[Function]}
-        validateOnBlur={true}
-        validateOnChange={true}
-      />,
+          isInitialValid={false}
+          onSubmit={[Function]}
+          render={[Function]}
+          validateOnBlur={true}
+          validateOnChange={true}
+        />
+      </div>,
       "className": "header",
     },
     "ref": null,
     "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "enableReinitialize": false,
-        "initialValues": Object {
-          "searchTerm": "",
-        },
-        "isInitialValid": false,
-        "onSubmit": [Function],
-        "render": [Function],
-        "validateOnBlur": true,
-        "validateOnChange": true,
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -97,7 +79,7 @@ ShallowWrapper {
           validateOnBlur={true}
           validateOnChange={true}
         />,
-        "className": "header",
+        "className": "form-group mb-0 search-form search-form__header",
       },
       "ref": null,
       "rendered": Object {
@@ -118,6 +100,78 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="form-group mb-0 search-form search-form__header"
+        >
+          <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "searchTerm": "",
+              }
+            }
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+          />
+        </div>,
+        "className": "header",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "searchTerm": "",
+              }
+            }
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+          />,
+          "className": "form-group mb-0 search-form search-form__header",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "enableReinitialize": false,
+            "initialValues": Object {
+              "searchTerm": "",
+            },
+            "isInitialValid": false,
+            "onSubmit": [Function],
+            "render": [Function],
+            "validateOnBlur": true,
+            "validateOnChange": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
       },
       "type": "div",
     },
@@ -145,5 +199,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

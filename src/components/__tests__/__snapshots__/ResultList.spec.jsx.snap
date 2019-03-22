@@ -31,9 +31,9 @@ ShallowWrapper {
           className="grey-line"
         />,
         <h3
-          className="text-white my-3"
+          className="text-white my-3 text-center"
         >
-          type matching your search:
+          type:
         </h3>,
         undefined,
         <div
@@ -69,11 +69,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "type matching your search:",
-          "className": "text-white my-3",
+          "children": "type:",
+          "className": "text-white my-3 text-center",
         },
         "ref": null,
-        "rendered": "type matching your search:",
+        "rendered": "type:",
         "type": "h3",
       },
       undefined,
@@ -144,9 +144,9 @@ ShallowWrapper {
             className="grey-line"
           />,
           <h3
-            className="text-white my-3"
+            className="text-white my-3 text-center"
           >
-            type matching your search:
+            type:
           </h3>,
           undefined,
           <div
@@ -182,11 +182,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "type matching your search:",
-            "className": "text-white my-3",
+            "children": "type:",
+            "className": "text-white my-3 text-center",
           },
           "ref": null,
-          "rendered": "type matching your search:",
+          "rendered": "type:",
           "type": "h3",
         },
         undefined,

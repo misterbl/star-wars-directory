@@ -2,7 +2,7 @@ import {
   fetchingPeopleAndFilms,
   savePeople,
   saveFilms
-} from "../actionCreators/apiActions";
+} from "../actionCreators/actions";
 import { ThunkDispatch } from "redux-thunk";
 import { IAppState } from "../../state";
 import { Action } from "redux";

@@ -3,7 +3,7 @@ import * as React from "react";
 import { shallow } from "enzyme";
 import history from "../../testMocks/history.mock";
 import { CharacterInfo } from "../CharacterInfo";
-import ROUTES from "../../routes";
+import ROUTES from "../../const/routes";
 
 describe("CharacterInfo", () => {
   const props = {

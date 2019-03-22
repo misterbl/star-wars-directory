@@ -4,7 +4,7 @@ import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import singleSearch from "../actions/thunks/singleSearch";
 import { IFilmCardComponent } from "./FilmCard.d";
-import ROUTES from "../routes";
+import ROUTES from "../const/routes";
 import formattedDate from "../utils/formattedDate";
 import { render } from "react-dom";
 

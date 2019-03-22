@@ -18,6 +18,7 @@ class SearchForm extends PureComponent<FormikProps<ISearchForm>> {
       <form onSubmit={handleSubmit}>
         <label htmlFor="searchTerm" />
         <input
+          autoComplete="off"
           placeholder="SEARCH STAR WARS"
           id="searchTerm"
           className="form-control mb-4"

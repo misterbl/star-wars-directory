@@ -11,7 +11,7 @@ const ResultList: StatelessComponent<IResultList> = ({
 }) => (
   <>
     <div className="grey-line" />
-    <h3 className="text-white my-3">{`${type} matching your search:`}</h3>
+    <h3 className="text-white my-3 text-center">{`${type}:`}</h3>
     {children}
     <div className="grey-line mt-3" />
     <div className="p-2 mt-3">

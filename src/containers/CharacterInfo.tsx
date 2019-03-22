@@ -1,20 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
 import { bindActionCreators, Dispatch } from "redux";
-import { getInfo } from "../selectors/appSelectors";
+import { getInfo, sendingInfoSms } from "../selectors/appSelectors";
 import { IAppState } from "../state";
 import { ICharacterInfoComponent } from "./CharacterInfo.d";
-import ROUTES from "../routes";
-import charactersPhotos from "../charactersPhotos";
+import ROUTES from "../const/routes";
+import charactersPhotos from "../const/charactersPhotos";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
 
-export class CharacterInfo extends React.PureComponent<
-  ICharacterInfoComponent
-> {
+export class CharacterInfo extends Component<ICharacterInfoComponent> {
+  state = {
+    displaySentSuccess: false
+  };
+
   handleSubmit = (e: any) => {
     const {
       sendInfoSms,
@@ -24,12 +26,17 @@ export class CharacterInfo extends React.PureComponent<
     const message = `Here is your search result from Star Wars: ${name}, ${gender}, born in ${birth_year}, height:${height}, ${hair_color} hair, ${eye_color} eyes`;
     sendInfoSms(message, number);
   };
+
+  resetdisplaySentSuccess = () => {
+    this.setState({ displaySentSuccess: true });
+  };
   render() {
     const {
       character,
-      history: { push }
+      history: { push },
+      sendingInfoSms
     } = this.props;
-
+    const { displaySentSuccess } = this.state;
     if (character) {
       const sprite = charactersPhotos[character.name];
       const {
@@ -78,7 +85,14 @@ export class CharacterInfo extends React.PureComponent<
               phoneNumber: ""
             }}
             onSubmit={this.handleSubmit}
-            render={formikProps => <SendInfoSmsForm {...formikProps} />}
+            render={formikProps => (
+              <SendInfoSmsForm
+                sendingInfoSms={sendingInfoSms}
+                displaySentSuccess={displaySentSuccess}
+                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
+                {...formikProps}
+              />
+            )}
           />
         </>
       );
@@ -88,7 +102,8 @@ export class CharacterInfo extends React.PureComponent<
   }
 }
 export const mapStateToProps = (state: IAppState) => ({
-  character: getInfo(state)
+  character: getInfo(state),
+  sendingInfoSms: sendingInfoSms(state)
 });
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({

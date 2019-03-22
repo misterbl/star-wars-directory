@@ -3,7 +3,6 @@ import * as React from "react";
 import { shallow } from "enzyme";
 import history from "../../testMocks/history.mock";
 import { Home } from "../Home";
-import ROUTES from "../../routes";
 
 describe("Home", () => {
   const props = {
@@ -37,14 +36,14 @@ describe("Home", () => {
   it("update the state on componentWillReceiveProps", () => {
     expect(wrapper.state().fetchedPeopleList).toEqual(props.peopleList);
   });
-  it("update the state on checkbox showPeople check", () => {
-    const showPeople = wrapper.find("#showPeople");
-    showPeople.simulate("change");
+  it("update the state on showPeople button click", () => {
+    const showPeople = wrapper.find("button").at(0);
+    showPeople.simulate("click");
     expect(wrapper.state().showPeople).toBeFalsy();
   });
-  it("update the state on checkbox showFilms check", () => {
-    const showFilms = wrapper.find("#showFilms");
-    showFilms.simulate("change");
+  it("update the state on showFilms button click", () => {
+    const showFilms = wrapper.find("button").at(1);
+    showFilms.simulate("click");
     expect(wrapper.state().showFilms).toBeFalsy();
   });
   it("doesn't show the checkbox showFilms nor showPeople if peopleList is empty ", () => {

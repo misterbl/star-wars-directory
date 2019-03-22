@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
@@ -6,12 +6,15 @@ import { bindActionCreators, Dispatch } from "redux";
 import { getInfo, sendingInfoSms } from "../selectors/appSelectors";
 import { IAppState } from "../state";
 import { IFilmComponent, IFilm } from "./FilmInfo.d";
-import ROUTES from "../routes";
+import ROUTES from "../const/routes";
 import formattedDate from "../utils/formattedDate";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
-export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
+export class FilmInfo extends Component<IFilm & IFilmComponent> {
+  state = {
+    displaySentSuccess: false
+  };
   backHome = () => {
     this.props.history.push(ROUTES.INDEX);
   };
@@ -28,6 +31,10 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
     )}`;
     sendInfoSms(message, number);
   };
+
+  resetdisplaySentSuccess = () => {
+    this.setState({ displaySentSuccess: true });
+  };
   render() {
     if (this.props.film) {
       const {
@@ -35,7 +42,7 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
         history: { push },
         sendingInfoSms
       } = this.props;
-
+      const { displaySentSuccess } = this.state;
       return (
         <>
           <BackButton
@@ -61,6 +68,8 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
             render={formikProps => (
               <SendInfoSmsForm
                 sendingInfoSms={sendingInfoSms}
+                displaySentSuccess={displaySentSuccess}
+                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
                 {...formikProps}
               />
             )}

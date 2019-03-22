@@ -6,7 +6,7 @@ import { Formik } from "formik";
 import { IHeaderComponent } from "./Header.d";
 import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
 import SearchForm, { ISearchForm } from "./SearchForm";
-import ROUTES from "../routes";
+import ROUTES from "../const/routes";
 
 export class Header extends PureComponent<IHeaderComponent> {
   handleSubmit = async (data: ISearchForm) => {

@@ -1,7 +1,7 @@
 import { ThunkDispatch } from "redux-thunk";
 import { IAppState } from "../../state";
 import { Action } from "redux";
-import { sendingInfoSms } from "../actionCreators/apiActions";
+import { sendingInfoSms } from "../actionCreators/actions";
 
 const sendInfoSms = (info: string, number: string) => async (
   dispatch: ThunkDispatch<IAppState, void, Action>

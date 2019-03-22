@@ -5,6 +5,7 @@ import sendInfoSms from "../actions/thunks/sendInfoSms";
 
 export interface ICharacterInfo {
   character: ICharacter;
+  sendingInfoSms: boolean;
 }
 
 export interface ICharacterInfoDispatchToProps {

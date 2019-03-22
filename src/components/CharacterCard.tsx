@@ -1,11 +1,11 @@
 import React, { PureComponent } from "react";
-import charactersPhotos from "../charactersPhotos";
+import charactersPhotos from "../const/charactersPhotos";
 import { withRouter } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import singleSearch from "../actions/thunks/singleSearch";
 import { ICharacterCardComponent } from "./CharacterCard.d";
-import ROUTES from "../routes";
+import ROUTES from "../const/routes";
 import { render } from "react-dom";
 
 export class CharacterCard extends PureComponent<ICharacterCardComponent> {
