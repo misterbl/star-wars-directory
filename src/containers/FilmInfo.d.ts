@@ -1,12 +1,16 @@
 import { ActionCreator } from "redux";
 import { RouteComponentProps, StaticContext } from "react-router";
-import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
+import sendInfoSms from "../actions/thunks/sendInfoSms";
 import { IAppState, IFilm } from "../state";
 
-export interface IFIlm {
+export interface IFilm {
   film: IFilm;
+  sendingInfoSms: boolean;
 }
-
-export interface IFIlmComponent
-  extends IFIlm,
+export interface IFilmDispatchToProps {
+  sendInfoSms: typeof sendInfoSms;
+}
+export interface IFilmComponent
+  extends IFilm,
+    IFilmDispatchToProps,
     RouteComponentProps<any, StaticContext> {}

@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { Formik } from "formik";
 import { bindActionCreators, Dispatch } from "redux";
 import { getInfo } from "../selectors/appSelectors";
 import { IAppState } from "../state";
@@ -9,7 +10,6 @@ import ROUTES from "../routes";
 import charactersPhotos from "../charactersPhotos";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
-import { Formik } from "formik";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
 
 export class CharacterInfo extends React.PureComponent<
@@ -21,7 +21,7 @@ export class CharacterInfo extends React.PureComponent<
       character: { name, height, hair_color, eye_color, birth_year, gender }
     } = this.props;
     const number = e.phoneNumber;
-    const message = `${name}, ${gender}, born in ${birth_year}, height:${height}, ${hair_color} hair, ${eye_color} eyes`;
+    const message = `Here is your search result from Star Wars: ${name}, ${gender}, born in ${birth_year}, height:${height}, ${hair_color} hair, ${eye_color} eyes`;
     sendInfoSms(message, number);
   };
   render() {
@@ -49,7 +49,7 @@ export class CharacterInfo extends React.PureComponent<
             text="Back to search result"
             push={push}
           />
-          <div className="d-flex m-5 p-5">
+          <div className="d-flex ml-5 mt-5 pl-5">
             {sprite ? (
               <div
                 style={{

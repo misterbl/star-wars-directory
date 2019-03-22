@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
+import { Formik } from "formik";
 import { IHomeComponent } from "./Home.d";
 import ResultList from "../components/ResultList";
 import SelectFilmForm, { ISelectFilmForm } from "../components/SelectFilmForm";
@@ -9,7 +11,9 @@ import SelectGenderForm, {
 } from "../components/SelectGenderForm";
 import { getPeopleList, getFilmsList } from "../selectors/appSelectors";
 import { IAppState, ICharacter } from "../state";
-import { Formik } from "formik";
+import SearchForm, { ISearchForm } from "../components/SearchForm";
+import ROUTES from "../routes";
+import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
 
 export class Home extends Component<IHomeComponent> {
   state = {
@@ -23,6 +27,15 @@ export class Home extends Component<IHomeComponent> {
       fetchedPeopleList: this.props.peopleList
     });
   }
+
+  handleSubmit = async (data: ISearchForm) => {
+    const {
+      searchFilmsAndPeople,
+      history: { push }
+    } = this.props;
+    await searchFilmsAndPeople(data.searchTerm);
+    push(ROUTES.INDEX);
+  };
 
   pushToResistance = () => {
     window.location.href =
@@ -83,7 +96,17 @@ export class Home extends Component<IHomeComponent> {
     const resultLength = fetchedPeopleList.length + filmsList.length;
     return (
       <main className="form-container p-5">
-        <div className="resistance mb-4" onClick={this.pushToResistance} />
+        <div className="form-group mb-0 pl-5 search-form search-form__body">
+          <div className="black-stripe" />
+          <Formik<ISearchForm>
+            initialValues={{
+              searchTerm: ""
+            }}
+            onSubmit={this.handleSubmit}
+            render={formikProps => <SearchForm {...formikProps} />}
+          />
+        </div>
+        <div className="resistance my-5" onClick={this.pushToResistance} />
         {foundPeople && foundFilms && (
           <div className="result-filter my-4 p-3">
             <div className="text-white">{`${resultLength} RESULTS`}</div>
@@ -148,6 +171,10 @@ export class Home extends Component<IHomeComponent> {
     );
   }
 }
+
+export const mapDispatchToProps = (dispatch: Dispatch) => ({
+  searchFilmsAndPeople: bindActionCreators(searchFilmsAndPeople, dispatch)
+});
 
 export const mapStateToProps = (state: IAppState) => ({
   peopleList: getPeopleList(state),

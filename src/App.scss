@@ -44,26 +44,65 @@ code {
     background-size: cover;
     background-color: transparent;
     background-position: initial;
-    background-image: url("./assets/star-wars-header.jpg");
+    background-image: url("./assets/star-wars-header.png");
   }
 }
 
 .search-form {
-  width: 300px;
-  position: absolute;
-  right: 20px;
-  border-radius: 4px;
+  &__header {
+    display: none;
+    @media only screen and (min-width: 1024px) {
+      display: block;
+      width: 300px;
+      position: absolute;
+      right: 20px;
+      border-radius: 4px;
+    }
+  }
+  &__body {
+    background-color: #222222;
+    height: 80px;
+    position: relative;
+    @media only screen and (min-width: 1024px) {
+      display: none;
+    }
+    input {
+      background-color: transparent;
+      border: none;
+      font-size: 35px;
+      border-bottom: 1px solid black;
+      padding-bottom: 20px;
+    }
+  }
 }
 
-.search-button {
-  background-image: url("./assets/search.svg");
-  width: 25px;
-  height: 25px;
+.black-stripe {
+  background-color: black;
+  width: 20px;
+  height: 60px;
   position: absolute;
-  right: 14px;
-  top: 30px;
-  background-size: cover;
-  border: none;
+  left: -9px;
+  top: 10px;
+}
+.send-info-form {
+  width: 500px;
+  border-radius: 4px;
+  label {
+    width: 380px;
+  }
+}
+.search-button {
+  display: none;
+  @media only screen and (min-width: 1024px) {
+    background-image: url("./assets/search.svg");
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 14px;
+    top: 30px;
+    background-size: cover;
+    border: none;
+  }
 }
 .back-button {
   background-image: url("./assets/leftArrow.svg");

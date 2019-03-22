@@ -21,13 +21,15 @@ export class Header extends PureComponent<IHeaderComponent> {
   render() {
     return (
       <div className="header">
-        <Formik<ISearchForm>
-          initialValues={{
-            searchTerm: ""
-          }}
-          onSubmit={this.handleSubmit}
-          render={formikProps => <SearchForm {...formikProps} />}
-        />
+        <div className="form-group mb-0 search-form search-form__header">
+          <Formik<ISearchForm>
+            initialValues={{
+              searchTerm: ""
+            }}
+            onSubmit={this.handleSubmit}
+            render={formikProps => <SearchForm {...formikProps} />}
+          />
+        </div>
       </div>
     );
   }

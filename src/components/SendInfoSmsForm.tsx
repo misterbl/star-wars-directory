@@ -1,11 +1,14 @@
 import React from "react";
 import { FormikProps } from "formik";
 
-interface ISendInfoSmsForm {
+interface ISendInfoSmsFormData {
   phoneNumber: string;
 }
+interface ISendInfoSmsForm {
+  sendingInfoSms?: boolean;
+}
 class SendInfoSmsForm extends React.PureComponent<
-  FormikProps<ISendInfoSmsForm>
+  FormikProps<ISendInfoSmsFormData> & ISendInfoSmsForm
 > {
   onPhoneNumberChange = (
     event: Pick<React.ChangeEvent<HTMLInputElement>, "target">
@@ -13,22 +16,27 @@ class SendInfoSmsForm extends React.PureComponent<
     this.props.setFieldValue("phoneNumber", event.target.value);
   };
   render() {
-    const { values, handleSubmit } = this.props;
+    const { values, handleSubmit, sendingInfoSms } = this.props;
     return (
-      <form onSubmit={handleSubmit} className="form-group mb-0 search-form">
-        <label htmlFor="phoneNumber">Send this information to your phone</label>
+      <form
+        onSubmit={handleSubmit}
+        className="form-group ml-5 pl-5 mt-3 mb-0 send-info-form"
+      >
+        <label htmlFor="phoneNumber" className="text-white">
+          Send this information to your phone
+        </label>
         <input
-          placeholder="PHONE NUMBER"
+          placeholder="ENTER PHONE NUMBER"
           id="phoneNumber"
-          className="form-control mb-4"
+          className="form-control"
           type="text"
           name="phoneNumber"
           value={values.phoneNumber}
           onChange={this.onPhoneNumberChange}
         />
-        <button type="submit" className="phoneNumber-button">
-          Send
-        </button>
+        {!sendingInfoSms && (
+          <p className="text-success text-center">message sent!</p>
+        )}
       </form>
     );
   }

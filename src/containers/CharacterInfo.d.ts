@@ -7,10 +7,10 @@ export interface ICharacterInfo {
   character: ICharacter;
 }
 
-export interface ICharacterCardDispatchToProps {
+export interface ICharacterInfoDispatchToProps {
   sendInfoSms: typeof sendInfoSms;
 }
 export interface ICharacterInfoComponent
   extends ICharacterInfo,
-    ICharacterCardDispatchToProps,
+    ICharacterInfoDispatchToProps,
     RouteComponentProps<any, StaticContext> {}

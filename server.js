@@ -1,13 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const twilio = require("./credentials.ts");
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-const accountSid = "ACa12d226ed28efe2f7d4fd199ac242abb";
-const authToken = "d0751fad28cac67c7231ffe72d06afb1";
-const client = require("twilio")(accountSid, authToken);
+const client = require("twilio")(twilio.accountSid, twilio.authToken);
 
 app.use(function(req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");

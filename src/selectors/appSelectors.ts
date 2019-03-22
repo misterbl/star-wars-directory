@@ -18,6 +18,10 @@ export const getInfo = createSelector(
   app => app.result
 );
 
+export const sendingInfoSms = createSelector(
+  appSelector,
+  app => app.sendingInfoSms
+);
 export const isLoading = createSelector(
   appSelector,
   app =>

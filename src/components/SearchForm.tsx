@@ -15,7 +15,7 @@ class SearchForm extends PureComponent<FormikProps<ISearchForm>> {
     const { values, handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit} className="form-group mb-0 search-form">
+      <form onSubmit={handleSubmit}>
         <label htmlFor="searchTerm" />
         <input
           placeholder="SEARCH STAR WARS"
