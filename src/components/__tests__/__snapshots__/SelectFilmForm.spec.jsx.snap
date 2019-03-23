@@ -36,7 +36,7 @@ ShallowWrapper {
         }
       >
         <option
-          value="see all"
+          value=""
         >
           See all
         </option>
@@ -46,19 +46,9 @@ ShallowWrapper {
           A New Hope
         </option>
         <option
-          value="https://swapi.co/api/films/5/"
+          value="https://swapi.co/api/films/2/"
         >
-          Attack of the Clones
-        </option>
-        <option
-          value="https://swapi.co/api/films/4/"
-        >
-          The Phantom Menace
-        </option>
-        <option
-          value="https://swapi.co/api/films/6/"
-        >
-          Revenge of the Sith
+          The Empire Strikes Back
         </option>
         <option
           value="https://swapi.co/api/films/3/"
@@ -66,9 +56,19 @@ ShallowWrapper {
           Return of the Jedi
         </option>
         <option
-          value="https://swapi.co/api/films/2/"
+          value="https://swapi.co/api/films/4/"
         >
-          The Empire Strikes Back
+          The Phantom Menace
+        </option>
+        <option
+          value="https://swapi.co/api/films/5/"
+        >
+          Attack of the Clones
+        </option>
+        <option
+          value="https://swapi.co/api/films/6/"
+        >
+          Revenge of the Sith
         </option>
         <option
           value="https://swapi.co/api/films/7/"
@@ -87,45 +87,47 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <option
-            value="see all"
+            value=""
           >
             See all
           </option>,
-          <option
-            value="https://swapi.co/api/films/1/"
-          >
-            A New Hope
-          </option>,
-          <option
-            value="https://swapi.co/api/films/5/"
-          >
-            Attack of the Clones
-          </option>,
-          <option
-            value="https://swapi.co/api/films/4/"
-          >
-            The Phantom Menace
-          </option>,
-          <option
-            value="https://swapi.co/api/films/6/"
-          >
-            Revenge of the Sith
-          </option>,
-          <option
-            value="https://swapi.co/api/films/3/"
-          >
-            Return of the Jedi
-          </option>,
-          <option
-            value="https://swapi.co/api/films/2/"
-          >
-            The Empire Strikes Back
-          </option>,
-          <option
-            value="https://swapi.co/api/films/7/"
-          >
-            The Force Awakens
-          </option>,
+          Array [
+            <option
+              value="https://swapi.co/api/films/1/"
+            >
+              A New Hope
+            </option>,
+            <option
+              value="https://swapi.co/api/films/2/"
+            >
+              The Empire Strikes Back
+            </option>,
+            <option
+              value="https://swapi.co/api/films/3/"
+            >
+              Return of the Jedi
+            </option>,
+            <option
+              value="https://swapi.co/api/films/4/"
+            >
+              The Phantom Menace
+            </option>,
+            <option
+              value="https://swapi.co/api/films/5/"
+            >
+              Attack of the Clones
+            </option>,
+            <option
+              value="https://swapi.co/api/films/6/"
+            >
+              Revenge of the Sith
+            </option>,
+            <option
+              value="https://swapi.co/api/films/7/"
+            >
+              The Force Awakens
+            </option>,
+          ],
         ],
         "className": "custom-select",
         "onChange": [Function],
@@ -141,7 +143,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "See all",
-            "value": "see all",
+            "value": "",
           },
           "ref": null,
           "rendered": "See all",
@@ -149,7 +151,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "https://swapi.co/api/films/1/",
           "nodeType": "host",
           "props": Object {
             "children": "A New Hope",
@@ -161,55 +163,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Attack of the Clones",
-            "value": "https://swapi.co/api/films/5/",
-          },
-          "ref": null,
-          "rendered": "Attack of the Clones",
-          "type": "option",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "The Phantom Menace",
-            "value": "https://swapi.co/api/films/4/",
-          },
-          "ref": null,
-          "rendered": "The Phantom Menace",
-          "type": "option",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Revenge of the Sith",
-            "value": "https://swapi.co/api/films/6/",
-          },
-          "ref": null,
-          "rendered": "Revenge of the Sith",
-          "type": "option",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Return of the Jedi",
-            "value": "https://swapi.co/api/films/3/",
-          },
-          "ref": null,
-          "rendered": "Return of the Jedi",
-          "type": "option",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
+          "key": "https://swapi.co/api/films/2/",
           "nodeType": "host",
           "props": Object {
             "children": "The Empire Strikes Back",
@@ -221,7 +175,55 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "https://swapi.co/api/films/3/",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Return of the Jedi",
+            "value": "https://swapi.co/api/films/3/",
+          },
+          "ref": null,
+          "rendered": "Return of the Jedi",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": "https://swapi.co/api/films/4/",
+          "nodeType": "host",
+          "props": Object {
+            "children": "The Phantom Menace",
+            "value": "https://swapi.co/api/films/4/",
+          },
+          "ref": null,
+          "rendered": "The Phantom Menace",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": "https://swapi.co/api/films/5/",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Attack of the Clones",
+            "value": "https://swapi.co/api/films/5/",
+          },
+          "ref": null,
+          "rendered": "Attack of the Clones",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": "https://swapi.co/api/films/6/",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Revenge of the Sith",
+            "value": "https://swapi.co/api/films/6/",
+          },
+          "ref": null,
+          "rendered": "Revenge of the Sith",
+          "type": "option",
+        },
+        Object {
+          "instance": null,
+          "key": "https://swapi.co/api/films/7/",
           "nodeType": "host",
           "props": Object {
             "children": "The Force Awakens",
@@ -252,7 +254,7 @@ ShallowWrapper {
           }
         >
           <option
-            value="see all"
+            value=""
           >
             See all
           </option>
@@ -262,19 +264,9 @@ ShallowWrapper {
             A New Hope
           </option>
           <option
-            value="https://swapi.co/api/films/5/"
+            value="https://swapi.co/api/films/2/"
           >
-            Attack of the Clones
-          </option>
-          <option
-            value="https://swapi.co/api/films/4/"
-          >
-            The Phantom Menace
-          </option>
-          <option
-            value="https://swapi.co/api/films/6/"
-          >
-            Revenge of the Sith
+            The Empire Strikes Back
           </option>
           <option
             value="https://swapi.co/api/films/3/"
@@ -282,9 +274,19 @@ ShallowWrapper {
             Return of the Jedi
           </option>
           <option
-            value="https://swapi.co/api/films/2/"
+            value="https://swapi.co/api/films/4/"
           >
-            The Empire Strikes Back
+            The Phantom Menace
+          </option>
+          <option
+            value="https://swapi.co/api/films/5/"
+          >
+            Attack of the Clones
+          </option>
+          <option
+            value="https://swapi.co/api/films/6/"
+          >
+            Revenge of the Sith
           </option>
           <option
             value="https://swapi.co/api/films/7/"
@@ -303,45 +305,47 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <option
-              value="see all"
+              value=""
             >
               See all
             </option>,
-            <option
-              value="https://swapi.co/api/films/1/"
-            >
-              A New Hope
-            </option>,
-            <option
-              value="https://swapi.co/api/films/5/"
-            >
-              Attack of the Clones
-            </option>,
-            <option
-              value="https://swapi.co/api/films/4/"
-            >
-              The Phantom Menace
-            </option>,
-            <option
-              value="https://swapi.co/api/films/6/"
-            >
-              Revenge of the Sith
-            </option>,
-            <option
-              value="https://swapi.co/api/films/3/"
-            >
-              Return of the Jedi
-            </option>,
-            <option
-              value="https://swapi.co/api/films/2/"
-            >
-              The Empire Strikes Back
-            </option>,
-            <option
-              value="https://swapi.co/api/films/7/"
-            >
-              The Force Awakens
-            </option>,
+            Array [
+              <option
+                value="https://swapi.co/api/films/1/"
+              >
+                A New Hope
+              </option>,
+              <option
+                value="https://swapi.co/api/films/2/"
+              >
+                The Empire Strikes Back
+              </option>,
+              <option
+                value="https://swapi.co/api/films/3/"
+              >
+                Return of the Jedi
+              </option>,
+              <option
+                value="https://swapi.co/api/films/4/"
+              >
+                The Phantom Menace
+              </option>,
+              <option
+                value="https://swapi.co/api/films/5/"
+              >
+                Attack of the Clones
+              </option>,
+              <option
+                value="https://swapi.co/api/films/6/"
+              >
+                Revenge of the Sith
+              </option>,
+              <option
+                value="https://swapi.co/api/films/7/"
+              >
+                The Force Awakens
+              </option>,
+            ],
           ],
           "className": "custom-select",
           "onChange": [Function],
@@ -357,7 +361,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "See all",
-              "value": "see all",
+              "value": "",
             },
             "ref": null,
             "rendered": "See all",
@@ -365,7 +369,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "https://swapi.co/api/films/1/",
             "nodeType": "host",
             "props": Object {
               "children": "A New Hope",
@@ -377,55 +381,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Attack of the Clones",
-              "value": "https://swapi.co/api/films/5/",
-            },
-            "ref": null,
-            "rendered": "Attack of the Clones",
-            "type": "option",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "The Phantom Menace",
-              "value": "https://swapi.co/api/films/4/",
-            },
-            "ref": null,
-            "rendered": "The Phantom Menace",
-            "type": "option",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Revenge of the Sith",
-              "value": "https://swapi.co/api/films/6/",
-            },
-            "ref": null,
-            "rendered": "Revenge of the Sith",
-            "type": "option",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Return of the Jedi",
-              "value": "https://swapi.co/api/films/3/",
-            },
-            "ref": null,
-            "rendered": "Return of the Jedi",
-            "type": "option",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
+            "key": "https://swapi.co/api/films/2/",
             "nodeType": "host",
             "props": Object {
               "children": "The Empire Strikes Back",
@@ -437,7 +393,55 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "https://swapi.co/api/films/3/",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Return of the Jedi",
+              "value": "https://swapi.co/api/films/3/",
+            },
+            "ref": null,
+            "rendered": "Return of the Jedi",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": "https://swapi.co/api/films/4/",
+            "nodeType": "host",
+            "props": Object {
+              "children": "The Phantom Menace",
+              "value": "https://swapi.co/api/films/4/",
+            },
+            "ref": null,
+            "rendered": "The Phantom Menace",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": "https://swapi.co/api/films/5/",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Attack of the Clones",
+              "value": "https://swapi.co/api/films/5/",
+            },
+            "ref": null,
+            "rendered": "Attack of the Clones",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": "https://swapi.co/api/films/6/",
+            "nodeType": "host",
+            "props": Object {
+              "children": "Revenge of the Sith",
+              "value": "https://swapi.co/api/films/6/",
+            },
+            "ref": null,
+            "rendered": "Revenge of the Sith",
+            "type": "option",
+          },
+          Object {
+            "instance": null,
+            "key": "https://swapi.co/api/films/7/",
             "nodeType": "host",
             "props": Object {
               "children": "The Force Awakens",

@@ -58,7 +58,6 @@ ShallowWrapper {
           validateOnChange={true}
         />
       </div>,
-      "className": "header",
     },
     "ref": null,
     "rendered": Object {
@@ -103,7 +102,7 @@ ShallowWrapper {
       },
       "type": "div",
     },
-    "type": "div",
+    "type": "header",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -128,7 +127,6 @@ ShallowWrapper {
             validateOnChange={true}
           />
         </div>,
-        "className": "header",
       },
       "ref": null,
       "rendered": Object {
@@ -173,7 +171,7 @@ ShallowWrapper {
         },
         "type": "div",
       },
-      "type": "div",
+      "type": "header",
     },
   ],
   Symbol(enzyme.__options__): Object {

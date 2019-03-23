@@ -59,21 +59,21 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
               <p>{`Directed by: ${director}`}</p>
               <p>{`Produced by: ${producer}`}</p>
             </div>
+            <Formik
+              initialValues={{
+                phoneNumber: ""
+              }}
+              onSubmit={this.handleSubmit}
+              render={formikProps => (
+                <SendInfoSmsForm
+                  sendingInfoSms={sendingInfoSms}
+                  displaySentSuccess={displaySentSuccess}
+                  resetdisplaySentSuccess={this.resetdisplaySentSuccess}
+                  {...formikProps}
+                />
+              )}
+            />
           </div>
-          <Formik
-            initialValues={{
-              phoneNumber: ""
-            }}
-            onSubmit={this.handleSubmit}
-            render={formikProps => (
-              <SendInfoSmsForm
-                sendingInfoSms={sendingInfoSms}
-                displaySentSuccess={displaySentSuccess}
-                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
-                {...formikProps}
-              />
-            )}
-          />
         </>
       );
     } else {

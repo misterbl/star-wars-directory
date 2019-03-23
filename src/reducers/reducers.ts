@@ -1,5 +1,6 @@
 import { IAppState } from "../state";
 import { AnyAction } from "redux";
+import { actionTypes } from "../actions/actionCreators/actionTypes";
 
 export const app = (
   state: IAppState | {} = {},
@@ -16,42 +17,37 @@ export const app = (
   }: AnyAction
 ) => {
   switch (type) {
-    case "FETCHING_PEOPLE_AND_FILMS":
+    case actionTypes.FETCHING_PEOPLE_AND_FILMS:
       return {
         ...state,
         fetchingPeopleAndFilms
       };
-    case "FETCHING_FILM":
-      return {
-        ...state,
-        fetchingFilm
-      };
-    case "FETCHING_SINGLE_RESULT":
+    case actionTypes.FETCHING_SINGLE_RESULT:
       return {
         ...state,
         fetchingSingleResult
       };
-    case "SAVE_PEOPLE":
+    case actionTypes.SAVE_PEOPLE:
       return {
         ...state,
         peopleList
       };
-    case "SAVE_FILMS":
+    case actionTypes.SAVE_FILMS:
       return {
         ...state,
         filmsList
       };
-    case "SAVE_SINGLE_RESULT":
+    case actionTypes.SAVE_SINGLE_RESULT:
       return {
         ...state,
         result
       };
-    case "SENDING_INFO_SMS":
+    case actionTypes.SENDING_INFO_SMS:
       return {
         ...state,
         sendingInfoSms
       };
-    case "SAVE_SPECIES_INFO":
+    case actionTypes.SAVE_SPECIES_INFO:
       return {
         ...state,
         saveSpeciesInfo

@@ -85,6 +85,7 @@ ShallowWrapper {
       ],
       "className": "pointer m-3 text-white",
       "onClick": [Function],
+      "role": "button",
     },
     "ref": null,
     "rendered": Array [
@@ -256,6 +257,7 @@ ShallowWrapper {
         ],
         "className": "pointer m-3 text-white",
         "onClick": [Function],
+        "role": "button",
       },
       "ref": null,
       "rendered": Array [

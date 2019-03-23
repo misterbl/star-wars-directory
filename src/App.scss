@@ -52,6 +52,16 @@ header {
       position: absolute;
       right: 20px;
       border-radius: 4px;
+      button {
+        background-image: url("./assets/search.svg");
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 14px;
+        top: 30px;
+        background-size: cover;
+        border: none;
+      }
     }
   }
   &__body {
@@ -59,6 +69,17 @@ header {
     border-radius: 15px;
     @media only screen and (min-width: 1024px) {
       display: none;
+    }
+    button {
+      background-image: url("./assets/search-button.png");
+      width: 120px;
+      height: 41px;
+      position: absolute;
+      right: 12px;
+      top: 34px;
+      background-size: cover;
+      border: none;
+      border-radius: 5px;
     }
     input,
     input:focus,
@@ -72,18 +93,16 @@ header {
   }
 }
 
-.search-button {
-  display: none;
-  @media only screen and (min-width: 1024px) {
-    background-image: url("./assets/search.svg");
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 14px;
-    top: 30px;
-    background-size: cover;
+.sms-form {
+  input,
+  input:focus,
+  input:active {
+    outline: none;
+    background-color: #222222;
     border: none;
-    display: block;
+    font-size: 25px;
+    height: 50px;
+    width: 260px;
   }
 }
 

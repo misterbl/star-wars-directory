@@ -25,17 +25,16 @@ class SendInfoSmsForm extends React.PureComponent<
       displaySentSuccess,
       resetdisplaySentSuccess
     } = this.props;
-    console.log(sendingInfoSms, displaySentSuccess);
     return (
       <form
         onSubmit={handleSubmit}
-        className="form-group ml-5 pl-5 mt-3 mb-0 search-form__body w-50"
+        className="ml-5 pl-5 mt-3 mb-0 sms-form w-50"
       >
         <label htmlFor="phoneNumber" className="text-white">
           Send this information to your phone
         </label>
         <input
-          placeholder="ENTER PHONE NUMBER"
+          placeholder="PHONE NUMBER"
           id="phoneNumber"
           className="form-control"
           type="text"

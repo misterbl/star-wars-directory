@@ -86,21 +86,21 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
                 Click here for info about their species
               </p>
             </div>
+            <Formik
+              initialValues={{
+                phoneNumber: ""
+              }}
+              onSubmit={this.handleSubmit}
+              render={formikProps => (
+                <SendInfoSmsForm
+                  sendingInfoSms={sendingInfoSms}
+                  displaySentSuccess={displaySentSuccess}
+                  resetdisplaySentSuccess={this.resetdisplaySentSuccess}
+                  {...formikProps}
+                />
+              )}
+            />
           </div>
-          <Formik
-            initialValues={{
-              phoneNumber: ""
-            }}
-            onSubmit={this.handleSubmit}
-            render={formikProps => (
-              <SendInfoSmsForm
-                sendingInfoSms={sendingInfoSms}
-                displaySentSuccess={displaySentSuccess}
-                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
-                {...formikProps}
-              />
-            )}
-          />
         </>
       );
     } else {

@@ -21,10 +21,14 @@ export class Home extends Component<IHomeComponent> {
     showFilms: true,
     filteredList: this.props.peopleList,
     filmFilter: "",
-    genderFilter: ""
+    genderFilter: "",
+    showResultsCount: false
   };
 
   componentWillReceiveProps() {
+    if (this.props.peopleList.length > 0) {
+      this.setState({ showResultsCount: true });
+    }
     this.setState({
       filteredList: this.props.peopleList
     });
@@ -86,7 +90,12 @@ export class Home extends Component<IHomeComponent> {
   };
 
   render() {
-    const { showPeople, showFilms, filteredList } = this.state;
+    const {
+      showPeople,
+      showFilms,
+      filteredList,
+      showResultsCount
+    } = this.state;
     const { filmsList, peopleList } = this.props;
     const foundPeople = filteredList.length > 0;
     const foundFilms = filmsList.length > 0;
@@ -102,23 +111,27 @@ export class Home extends Component<IHomeComponent> {
             render={formikProps => <SearchForm {...formikProps} />}
           />
         </div>
-        <div className="resistance my-5" onClick={this.pushToResistance} />
-        {foundPeople && foundFilms && (
+        <div className="resistance my-5" onClick={this.pushToResistance} />{" "}
+        {showResultsCount && (
           <div className="result-filter my-4 p-3">
             <div className="text-white">{`${resultLength} RESULTS`}</div>
-            <button
-              onClick={this.changePeopleView}
-              className={`btn btn-${showPeople ? "light" : "dark"}`}
-            >
-              {`${showPeople ? "HIDE PEOPLE" : "SHOW PEOPLE"}`}
-            </button>
-            <br />
-            <button
-              onClick={this.changeFilmsView}
-              className={`btn btn-${showFilms ? "light" : "dark"}`}
-            >
-              {`${showPeople ? "HIDE FILMS" : "SHOW FILMS"}`}
-            </button>
+            {foundPeople && foundFilms && (
+              <>
+                <button
+                  onClick={this.changePeopleView}
+                  className={`btn btn-${showPeople ? "light" : "dark"}`}
+                >
+                  {`${showPeople ? "HIDE PEOPLE" : "SHOW PEOPLE"}`}
+                </button>
+                <br />
+                <button
+                  onClick={this.changeFilmsView}
+                  className={`btn btn-${showFilms ? "light" : "dark"}`}
+                >
+                  {`${showPeople ? "HIDE FILMS" : "SHOW FILMS"}`}
+                </button>
+              </>
+            )}
           </div>
         )}
         {peopleList.length > 0 && showPeople && (

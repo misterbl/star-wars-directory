@@ -36,7 +36,7 @@ ShallowWrapper {
         }
       >
         <option
-          value="see all"
+          value=""
         >
           See all
         </option>
@@ -62,7 +62,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <option
-            value="see all"
+            value=""
           >
             See all
           </option>,
@@ -91,7 +91,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "See all",
-            "value": "see all",
+            "value": "",
           },
           "ref": null,
           "rendered": "See all",
@@ -142,7 +142,7 @@ ShallowWrapper {
           }
         >
           <option
-            value="see all"
+            value=""
           >
             See all
           </option>
@@ -168,7 +168,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <option
-              value="see all"
+              value=""
             >
               See all
             </option>,
@@ -197,7 +197,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "See all",
-              "value": "see all",
+              "value": "",
             },
             "ref": null,
             "rendered": "See all",

@@ -92,6 +92,11 @@ ShallowWrapper {
             <p>
               Gender: gender
             </p>
+            <p
+              onClick={[Function]}
+            >
+              Click here for info about their species
+            </p>
           </div>
         </div>,
         <Formik
@@ -162,6 +167,11 @@ ShallowWrapper {
               <p>
                 Gender: gender
               </p>
+              <p
+                onClick={[Function]}
+              >
+                Click here for info about their species
+              </p>
             </div>,
           ],
           "className": "d-flex ml-5 mt-5 pl-5",
@@ -210,6 +220,11 @@ ShallowWrapper {
                 </p>,
                 <p>
                   Gender: gender
+                </p>,
+                <p
+                  onClick={[Function]}
+                >
+                  Click here for info about their species
                 </p>,
               ],
               "className": "info-details p-3",
@@ -305,6 +320,18 @@ ShallowWrapper {
                 "rendered": "Gender: gender",
                 "type": "p",
               },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Click here for info about their species",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Click here for info about their species",
+                "type": "p",
+              },
             ],
             "type": "div",
           },
@@ -380,6 +407,11 @@ ShallowWrapper {
               <p>
                 Gender: gender
               </p>
+              <p
+                onClick={[Function]}
+              >
+                Click here for info about their species
+              </p>
             </div>
           </div>,
           <Formik
@@ -450,6 +482,11 @@ ShallowWrapper {
                 <p>
                   Gender: gender
                 </p>
+                <p
+                  onClick={[Function]}
+                >
+                  Click here for info about their species
+                </p>
               </div>,
             ],
             "className": "d-flex ml-5 mt-5 pl-5",
@@ -498,6 +535,11 @@ ShallowWrapper {
                   </p>,
                   <p>
                     Gender: gender
+                  </p>,
+                  <p
+                    onClick={[Function]}
+                  >
+                    Click here for info about their species
                   </p>,
                 ],
                 "className": "info-details p-3",
@@ -591,6 +633,18 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Gender: gender",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Click here for info about their species",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Click here for info about their species",
                   "type": "p",
                 },
               ],

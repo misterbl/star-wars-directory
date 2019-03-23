@@ -1,11 +1,11 @@
 import * as actions from "../actions";
-
+import { actionTypes } from "../actionTypes";
 describe("actions", () => {
   describe("fetchingSingleResult", () => {
     it("should return the registered fetchingSingleResult value", () => {
       const actual = actions.fetchingSingleResult(true);
       expect(actual).toEqual({
-        type: "FETCHING_SINGLE_RESULT",
+        type: actionTypes.FETCHING_SINGLE_RESULT,
         fetchingSingleResult: true
       });
     });
@@ -14,7 +14,7 @@ describe("actions", () => {
     it("should return the fetchingPeopleAndFilms value", () => {
       const actual = actions.fetchingPeopleAndFilms(true);
       expect(actual).toEqual({
-        type: "FETCHING_PEOPLE_AND_FILMS",
+        type: actionTypes.FETCHING_PEOPLE_AND_FILMS,
         fetchingPeopleAndFilms: true
       });
     });
@@ -23,7 +23,7 @@ describe("actions", () => {
     it("should return the peopleList Data", () => {
       const actual = actions.savePeople("peopleList");
       expect(actual).toEqual({
-        type: "SAVE_PEOPLE",
+        type: actionTypes.SAVE_PEOPLE,
         peopleList: "peopleList"
       });
     });
@@ -32,7 +32,7 @@ describe("actions", () => {
     it("should return the filmsList Data", () => {
       const actual = actions.saveFilms("filmsList");
       expect(actual).toEqual({
-        type: "SAVE_FILMS",
+        type: actionTypes.SAVE_FILMS,
         filmsList: "filmsList"
       });
     });
@@ -41,7 +41,7 @@ describe("actions", () => {
     it("should return the result Data", () => {
       const actual = actions.saveSingleResult("result");
       expect(actual).toEqual({
-        type: "SAVE_SINGLE_RESULT",
+        type: actionTypes.SAVE_SINGLE_RESULT,
         result: "result"
       });
     });
