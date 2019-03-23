@@ -13,7 +13,8 @@ export const app = (
     filmsList,
     result,
     sendingInfoSms,
-    saveSpeciesInfo
+    saveSpeciesInfo,
+    isFatalError
   }: AnyAction
 ) => {
   switch (type) {
@@ -51,6 +52,11 @@ export const app = (
       return {
         ...state,
         saveSpeciesInfo
+      };
+    case actionTypes.SET_FATAL_ERROR:
+      return {
+        ...state,
+        isFatalError
       };
     default:
       return state;

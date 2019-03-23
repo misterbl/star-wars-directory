@@ -14,6 +14,7 @@ import { IAppState, ICharacter } from "../state";
 import SearchForm, { ISearchForm } from "../components/SearchForm";
 import ROUTES from "../const/routes";
 import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
+import { setFatalError } from "../actions/actionCreators/actions";
 
 export class Home extends Component<IHomeComponent> {
   state = {
@@ -33,7 +34,9 @@ export class Home extends Component<IHomeComponent> {
       filteredList: this.props.peopleList
     });
   }
-
+  componentDidMount() {
+    setFatalError(false);
+  }
   handleSubmit = async (data: ISearchForm) => {
     const {
       searchFilmsAndPeople,

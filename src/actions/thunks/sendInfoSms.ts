@@ -1,7 +1,7 @@
 import { ThunkDispatch } from "redux-thunk";
 import { IAppState } from "../../state";
 import { Action } from "redux";
-import { sendingInfoSms } from "../actionCreators/actions";
+import { sendingInfoSms, setFatalError } from "../actionCreators/actions";
 
 const sendInfoSms = (info: string, number: string) => async (
   dispatch: ThunkDispatch<IAppState, void, Action>
@@ -16,11 +16,15 @@ const sendInfoSms = (info: string, number: string) => async (
       body: JSON.stringify({ info, number })
     });
     if (response && response.status === 400) {
-      throw new Error("couldn't send info via sms");
+      dispatch(sendingInfoSms(false));
+      dispatch(setFatalError(true));
+      console.log("couldn't send info via sms");
     }
     dispatch(sendingInfoSms(false));
   } catch (error) {
-    throw new Error("couldn't send info via sms");
+    dispatch(sendingInfoSms(false));
+    dispatch(setFatalError(true));
+    console.log("couldn't send info via sms");
   }
 };
 

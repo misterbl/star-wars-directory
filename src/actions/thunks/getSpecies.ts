@@ -1,6 +1,7 @@
 import {
   saveSpeciesInfo,
-  fetchingSingleResult
+  fetchingSingleResult,
+  setFatalError
 } from "../actionCreators/actions";
 import { ThunkDispatch } from "redux-thunk";
 import { IAppState } from "../../state";
@@ -13,6 +14,7 @@ const getSpecies = (url: string) => async (
     dispatch(fetchingSingleResult(true));
     const response = await fetch(url);
     if (response && response.status === 404) {
+      dispatch(setFatalError(true));
       throw new Error("couldn't get species info");
     }
     const data = await response.json();
@@ -20,6 +22,7 @@ const getSpecies = (url: string) => async (
 
     dispatch(fetchingSingleResult(false));
   } catch (error) {
+    dispatch(setFatalError(true));
     throw new Error("couldn't get species info");
   }
 };

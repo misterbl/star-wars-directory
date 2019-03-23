@@ -7,5 +7,6 @@ export const actionTypes = keymirror({
   SAVE_FILMS: null,
   SAVE_SINGLE_RESULT: null,
   SENDING_INFO_SMS: null,
-  SAVE_SPECIES_INFO: null
+  SAVE_SPECIES_INFO: null,
+  SET_FATAL_ERROR: null
 });

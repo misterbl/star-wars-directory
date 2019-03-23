@@ -1,7 +1,8 @@
 import {
   fetchingPeopleAndFilms,
   savePeople,
-  saveFilms
+  saveFilms,
+  setFatalError
 } from "../actionCreators/actions";
 import { ThunkDispatch } from "redux-thunk";
 import { IAppState } from "../../state";
@@ -19,10 +20,14 @@ const searchFilmsAndPeople = (string: string) => async (
       `https://swapi.co/api/people/?search=${string}`
     );
     if (filmsResponse && filmsResponse.status === 404) {
-      throw new Error("couldn't get films");
+      dispatch(fetchingPeopleAndFilms(false));
+      dispatch(setFatalError(true));
+      console.log("couldn't get films");
     }
     if (peopleResponse && peopleResponse.status === 404) {
-      throw new Error("couldn't get people");
+      dispatch(fetchingPeopleAndFilms(false));
+      dispatch(setFatalError(true));
+      console.log("couldn't get people");
     }
     const filmsData = await filmsResponse.json();
     await dispatch(saveFilms(filmsData.results));
@@ -33,7 +38,9 @@ const searchFilmsAndPeople = (string: string) => async (
 
     dispatch(fetchingPeopleAndFilms(false));
   } catch (error) {
-    throw new Error("couldn't get people and films");
+    dispatch(fetchingPeopleAndFilms(false));
+    dispatch(setFatalError(true));
+    console.log("couldn't get people and films");
   }
 };
 

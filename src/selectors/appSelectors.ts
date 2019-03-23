@@ -30,3 +30,8 @@ export const isLoading = createSelector(
     app.fetchingPeopleAndFilms ||
     app.sendingInfoSms
 );
+
+export const isFatalError = createSelector(
+  appSelector,
+  app => app.isFatalError
+);

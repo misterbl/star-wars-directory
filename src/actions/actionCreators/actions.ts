@@ -33,3 +33,8 @@ export const saveSpeciesInfo = makeActionCreator(
   actionTypes.SAVE_SPECIES_INFO,
   "saveSpeciesInfo"
 );
+
+export const setFatalError = makeActionCreator(
+  actionTypes.SET_FATAL_ERROR,
+  "isFatalError"
+);

@@ -10,11 +10,13 @@ import CharacterInfo from "./containers/CharacterInfo";
 import FilmInfo from "./containers/FilmInfo";
 import SpeciesInfo from "./containers/SpeciesInfo";
 import { IAppComponent } from "./App.d";
-import { isLoading } from "./selectors/appSelectors";
+import { isLoading, isFatalError } from "./selectors/appSelectors";
 import { IAppState } from "./state";
-
+import FatalError from "./components/FatalError";
 export class App extends Component<IAppComponent> {
   render() {
+    console.log(this.props.isFatalError);
+
     return (
       <>
         <div className="loader">
@@ -24,20 +26,28 @@ export class App extends Component<IAppComponent> {
             loading={this.props.isLoading === true}
           />
         </div>
-        <Header />
-        <Switch>
-          <Route exact path={ROUTES.INDEX} component={Home} />
-          <Route path={ROUTES.CHARACTER} component={CharacterInfo} />
-          <Route path={ROUTES.FILM} component={FilmInfo} />
-          <Route path={ROUTES.SPECIES} component={SpeciesInfo} />
-        </Switch>
+
+        {this.props.isFatalError === true ? (
+          <FatalError />
+        ) : (
+          <>
+            <Header />
+            <Switch>
+              <Route exact path={ROUTES.INDEX} component={Home} />
+              <Route path={ROUTES.CHARACTER} component={CharacterInfo} />
+              <Route path={ROUTES.FILM} component={FilmInfo} />
+              <Route path={ROUTES.SPECIES} component={SpeciesInfo} />
+            </Switch>
+          </>
+        )}
       </>
     );
   }
 }
 
 export const mapStateToProps = (state: IAppState) => ({
-  isLoading: isLoading(state)
+  isLoading: isLoading(state),
+  isFatalError: isFatalError(state)
 });
 
 export default withRouter(connect(mapStateToProps)(App));

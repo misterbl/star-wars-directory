@@ -42,5 +42,6 @@ export interface IAppState {
     filmsList: IFilm[];
     result: IFilm & ICharacter;
     sendingInfoSms: boolean;
+    isFatalError: boolean;
   };
 }

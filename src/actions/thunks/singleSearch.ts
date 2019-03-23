@@ -1,6 +1,7 @@
 import {
   saveSingleResult,
-  fetchingSingleResult
+  fetchingSingleResult,
+  setFatalError
 } from "../actionCreators/actions";
 import { ThunkDispatch } from "redux-thunk";
 import { IAppState } from "../../state";
@@ -13,14 +14,18 @@ const singleSearch = (url: string) => async (
     dispatch(fetchingSingleResult(true));
     const response = await fetch(url);
     if (response && response.status === 404) {
-      throw new Error("couldn't get information");
+      dispatch(fetchingSingleResult(true));
+      dispatch(setFatalError(true));
+      console.log("couldn't get information");
     }
     const data = await response.json();
     await dispatch(saveSingleResult(data));
 
     dispatch(fetchingSingleResult(false));
   } catch (error) {
-    throw new Error("couldn't get information");
+    dispatch(fetchingSingleResult(true));
+    dispatch(setFatalError(true));
+    console.log("couldn't get information");
   }
 };
 
