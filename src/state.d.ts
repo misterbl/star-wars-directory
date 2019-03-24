@@ -36,7 +36,6 @@ export interface IFilm {
 export interface IAppState {
   app: {
     fetchingPeopleAndFilms: boolean;
-    fetchingSingleResult: boolean;
     peopleList: ICharacter[];
     filmsList: IFilm[];
     currentView: any;

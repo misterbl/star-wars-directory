@@ -13,14 +13,6 @@ describe("reducers", () => {
       });
     });
     it(`when called with ${
-      actionTypes.FETCHING_SINGLE_RESULT
-    } it should update the fetchingSingleResult state`, () => {
-      const action = actions.fetchingSingleResult(true);
-      expect(reducers.app({}, action)).toEqual({
-        fetchingSingleResult: true
-      });
-    });
-    it(`when called with ${
       actionTypes.SAVE_PEOPLE
     } it should update the peopleList`, () => {
       const action = actions.savePeople(["person1", "person2"]);

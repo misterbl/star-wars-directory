@@ -4,7 +4,6 @@ import { actionTypes } from "../actions/actionCreators/actionTypes";
 
 const intialState = {
   fetchingPeopleAndFilms: false,
-  fetchingSingleResult: false,
   peopleList: [],
   filmsList: [],
   currentView: {},
@@ -24,7 +23,6 @@ export const app = (
   {
     type,
     fetchingPeopleAndFilms,
-    fetchingSingleResult,
     peopleList,
     filmsList,
     currentView,
@@ -44,11 +42,6 @@ export const app = (
       return {
         ...state,
         fetchingPeopleAndFilms
-      };
-    case actionTypes.FETCHING_SINGLE_RESULT:
-      return {
-        ...state,
-        fetchingSingleResult
       };
     case actionTypes.SAVE_PEOPLE:
       return {

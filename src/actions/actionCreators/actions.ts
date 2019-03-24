@@ -1,11 +1,6 @@
 import makeActionCreator from "../../utils/actionCreator";
 import { actionTypes } from "./actionTypes";
 
-export const fetchingSingleResult = makeActionCreator(
-  actionTypes.FETCHING_SINGLE_RESULT,
-  "fetchingSingleResult"
-);
-
 export const fetchingPeopleAndFilms = makeActionCreator(
   actionTypes.FETCHING_PEOPLE_AND_FILMS,
   "fetchingPeopleAndFilms"

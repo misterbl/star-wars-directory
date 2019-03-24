@@ -1,7 +1,6 @@
 const generateAppState = () => ({
   app: {
     fetchingPeopleAndFilms: false,
-    fetchingSingleResult: false,
     sendingInfoSms: false,
     peopleList: [
       {

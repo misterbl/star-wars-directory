@@ -10,6 +10,8 @@ Users can switch the search result view to only see films, characters or both
 
 When clicking on a search result item, users are redirected to the information page of this item. At the bottom of this page, users can enter their phone number to receive the item viewed information via sms
 
+A customised error message page is shown in case of a fatal error happening (eg. when api calls fail).
+
 The app uses:
 
 - Redux for state management.

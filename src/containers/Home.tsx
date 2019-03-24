@@ -103,8 +103,8 @@ export class Home extends Component<IHomeComponent> {
     const resultLength = filteredList.length + filmsList.length;
 
     return (
-      <main className="form-container p-5">
-        <div className="form-group search-form search-form__body">
+      <main className="p-5">
+        <div className="search-form search-form__body">
           <Formik<ISearchForm>
             initialValues={{
               searchTerm: ""

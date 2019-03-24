@@ -57,53 +57,48 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
     if (character.name) {
       const sprite = charactersPhotos[character.name];
       const { name, height, gender } = character;
-      console.log(this.props);
       return (
-        <>
+        <main className="p-5">
           <BackButton
             route={ROUTES.INDEX}
             text="Back to search result"
             push={push}
           />
-          <div className="d-flex justify-content-around ml-5 mt-5 pl-5">
-            <div>
-              <h2 className="text-center text-white p-3">
-                {name.toUpperCase()}
-              </h2>
-
-              {sprite ? (
-                <div
-                  style={{
-                    backgroundPosition: `${sprite}`,
-                    zoom: 3
-                  }}
-                  className="avatar my-2 mr-3"
-                />
-              ) : (
-                <div className="avatar avatar__default card-img-top mr-3" />
-              )}
+          <Formik
+            validationSchema={Yup.object().shape({
+              phoneNumber: Yup.string()
+                .required("Phone number required")
+                .length(11)
+                .matches(phoneRegExp, "Phone number is not valid")
+            })}
+            initialValues={{
+              phoneNumber: ""
+            }}
+            onSubmit={this.handleSubmit}
+            render={formikProps => (
+              <SendInfoSmsForm
+                sendingInfoSms={sendingInfoSms}
+                displaySentSuccess={displaySentSuccess}
+                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
+                {...formikProps}
+              />
+            )}
+          />
+          <h2 className="text-center text-white ml-5 mt-5 p-3">
+            {name.toUpperCase()}
+          </h2>
+          {sprite ? (
+            <div className="avatar avatar__current-view my-2">
+              <div
+                style={{
+                  backgroundPosition: `${sprite}`,
+                  zoom: 2
+                }}
+              />
             </div>
-            <Formik
-              validationSchema={Yup.object().shape({
-                phoneNumber: Yup.string()
-                  .required("Phone number required")
-                  .length(11)
-                  .matches(phoneRegExp, "Phone number is not valid")
-              })}
-              initialValues={{
-                phoneNumber: ""
-              }}
-              onSubmit={this.handleSubmit}
-              render={formikProps => (
-                <SendInfoSmsForm
-                  sendingInfoSms={sendingInfoSms}
-                  displaySentSuccess={displaySentSuccess}
-                  resetdisplaySentSuccess={this.resetdisplaySentSuccess}
-                  {...formikProps}
-                />
-              )}
-            />
-          </div>
+          ) : (
+            <div className="avatar avatar__default mr-3" />
+          )}
           <div className="d-flex p-4">
             <InfoCategory list={characterFilms} title="APPARENCIES" />
             <InfoCategory list={[homeworld]} title="HOMEWORLD" />
@@ -114,7 +109,7 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
             <InfoCategory list={starShips} title="STARSHIPS" />
           </div>
           )
-        </>
+        </main>
       );
     } else {
       return <>{push(ROUTES.INDEX)}</>;

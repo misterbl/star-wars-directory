@@ -32,16 +32,6 @@ header {
   }
 }
 
-// input[type="number"]::-webkit-outer-spin-button,
-// input[type="number"]::-webkit-inner-spin-button {
-//   -webkit-appearance: none;
-//   margin: 0;
-// }
-
-// input[type="number"] {
-//   -moz-appearance: textfield;
-// }
-
 .form-control::-webkit-inner-spin-button,
 .form-control::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -52,6 +42,9 @@ header {
   background-image: url("./assets/error-page.jpg");
   background-size: cover;
   height: 110%;
+  .back-button {
+    left: 15px;
+  }
 }
 
 #root {
@@ -59,20 +52,29 @@ header {
 }
 
 .avatar {
-  background-image: url("./assets/star-war-characters-grid.jpg");
-  height: 90px;
-  width: 90px;
-  border-radius: 15%;
-  min-width: 95px;
+  &__current-view {
+    margin-left: 300px;
+  }
 
   &__default {
     background-image: url("./assets//star-wars_characters.jpg");
     background-size: cover;
+    height: 90px;
+    width: 90px;
+    border-radius: 15%;
+    min-width: 95px;
   }
   &__film {
     background-image: url("./assets/star_wars.png");
     background-size: cover;
-    width: 160px;
+    width: 190px;
+  }
+  div {
+    background-image: url("./assets/star-war-characters-grid.jpg");
+    height: 90px;
+    width: 90px;
+    border-radius: 15%;
+    min-width: 95px;
   }
 }
 
@@ -126,16 +128,20 @@ header {
   }
 }
 
+.btn-dark {
+  background-color: #222222;
+}
+
 .sms-form {
+  border-radius: 15px;
   input,
   input:focus,
   input:active {
     outline: none;
     background-color: #222222;
     border: none;
-    font-size: 25px;
-    height: 50px;
-    width: 260px;
+    font-size: 30px;
+    height: 60px;
   }
 }
 
@@ -144,7 +150,7 @@ header {
   width: 25px;
   height: 25px;
   position: absolute;
-  left: 15px;
+  left: 63px;
   background-size: cover;
   border: none;
 }

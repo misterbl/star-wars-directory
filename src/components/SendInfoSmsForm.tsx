@@ -31,10 +31,10 @@ class SendInfoSmsForm extends React.PureComponent<
     return (
       <form onSubmit={handleSubmit} className="ml-3 mt-3 mb-0 sms-form w-50">
         <label htmlFor="phoneNumber" className="text-white">
-          Send this information to your mobile phone
+          Enter your number to get this information sent to you
         </label>
         <input
-          placeholder="PHONE NUMBER"
+          placeholder="MOBILE NUMBER"
           autoComplete="off"
           id="phoneNumber"
           className="form-control"

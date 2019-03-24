@@ -42,14 +42,15 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
         <u className="card-text">{name.toUpperCase()}</u>
         <div className="d-flex">
           {sprite ? (
-            <div
-              style={{
-                backgroundPosition: `${sprite}`
-              }}
-              className="avatar my-2"
-            />
+            <div className="avatar my-2">
+              <div
+                style={{
+                  backgroundPosition: `${sprite}`
+                }}
+              />
+            </div>
           ) : (
-            <div className="avatar avatar__default card-img-top" />
+            <div className="avatar avatar__default my-2" />
           )}
           <div className="ml-3">
             <p className="m-1 text-secondary">{`Born in ${birth_year}`}</p>
