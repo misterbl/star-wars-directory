@@ -136,7 +136,7 @@ ShallowWrapper {
           }
         />,
         <h2
-          className="text-center text-white ml-5 mt-5 p-3"
+          className="text-white ml-5 mt-5 p-3"
         >
           NAME
         </h2>,
@@ -295,7 +295,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "NAME",
-          "className": "text-center text-white ml-5 mt-5 p-3",
+          "className": "text-white ml-5 mt-5 p-3",
         },
         "ref": null,
         "rendered": "NAME",
@@ -554,7 +554,7 @@ ShallowWrapper {
             }
           />,
           <h2
-            className="text-center text-white ml-5 mt-5 p-3"
+            className="text-white ml-5 mt-5 p-3"
           >
             NAME
           </h2>,
@@ -713,7 +713,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "NAME",
-            "className": "text-center text-white ml-5 mt-5 p-3",
+            "className": "text-white ml-5 mt-5 p-3",
           },
           "ref": null,
           "rendered": "NAME",

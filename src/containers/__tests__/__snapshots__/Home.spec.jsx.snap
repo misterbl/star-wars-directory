@@ -124,7 +124,7 @@ ShallowWrapper {
               <h4
                 className="text-white text-center mt-4"
               >
-                Filter the results
+                Filter results
               </h4>
               <div>
                 <p
@@ -280,7 +280,7 @@ ShallowWrapper {
               <h4
                 className="text-white text-center mt-4"
               >
-                Filter the results
+                Filter results
               </h4>
               <div>
                 <p
@@ -342,7 +342,7 @@ ShallowWrapper {
               <h4
                 className="text-white text-center mt-4"
               >
-                Filter the results
+                Filter results
               </h4>
               <div>
                 <p
@@ -422,7 +422,7 @@ ShallowWrapper {
                 <h4
                   className="text-white text-center mt-4"
                 >
-                  Filter the results
+                  Filter results
                 </h4>,
                 <div>
                   <p
@@ -479,11 +479,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Filter the results",
+                  "children": "Filter results",
                   "className": "text-white text-center mt-4",
                 },
                 "ref": null,
-                "rendered": "Filter the results",
+                "rendered": "Filter results",
                 "type": "h4",
               },
               Object {
@@ -709,7 +709,7 @@ ShallowWrapper {
                 <h4
                   className="text-white text-center mt-4"
                 >
-                  Filter the results
+                  Filter results
                 </h4>
                 <div>
                   <p
@@ -865,7 +865,7 @@ ShallowWrapper {
                 <h4
                   className="text-white text-center mt-4"
                 >
-                  Filter the results
+                  Filter results
                 </h4>
                 <div>
                   <p
@@ -927,7 +927,7 @@ ShallowWrapper {
                 <h4
                   className="text-white text-center mt-4"
                 >
-                  Filter the results
+                  Filter results
                 </h4>
                 <div>
                   <p
@@ -1007,7 +1007,7 @@ ShallowWrapper {
                   <h4
                     className="text-white text-center mt-4"
                   >
-                    Filter the results
+                    Filter results
                   </h4>,
                   <div>
                     <p
@@ -1064,11 +1064,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Filter the results",
+                    "children": "Filter results",
                     "className": "text-white text-center mt-4",
                   },
                   "ref": null,
-                  "rendered": "Filter the results",
+                  "rendered": "Filter results",
                   "type": "h4",
                 },
                 Object {

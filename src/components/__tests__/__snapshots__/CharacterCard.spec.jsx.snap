@@ -84,7 +84,7 @@ ShallowWrapper {
           </div>
         </div>,
       ],
-      "className": "pointer m-3 text-white",
+      "className": "pointer m-3 text-white border border-dark p-3",
       "onClick": [Function],
       "role": "button",
     },
@@ -256,7 +256,7 @@ ShallowWrapper {
             </div>
           </div>,
         ],
-        "className": "pointer m-3 text-white",
+        "className": "pointer m-3 text-white border border-dark p-3",
         "onClick": [Function],
         "role": "button",
       },

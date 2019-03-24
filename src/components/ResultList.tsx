@@ -1,9 +1,13 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactNode } from "react";
 import CharacterCard from "./CharacterCard";
 import FilmCard from "./FilmCard";
-import { IResultList } from "./ResultList.d";
 import { ICharacter, IFilm } from "../state";
 
+interface IResultList {
+  list: (ICharacter | IFilm)[];
+  type: string;
+  children?: ReactNode;
+}
 const ResultList: FunctionComponent<IResultList> = ({
   list,
   type,
