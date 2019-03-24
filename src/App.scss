@@ -63,9 +63,6 @@ header {
   background-image: url("./assets/error-page.jpg");
   background-size: cover;
   height: 110%;
-  .back-button {
-    left: 15px;
-  }
 }
 
 #root {
@@ -148,7 +145,8 @@ header {
   width: 25px;
   height: 25px;
   position: absolute;
-  left: 63px;
+  left: 15px;
+  top: 6px;
   background-size: cover;
   border: none;
 }

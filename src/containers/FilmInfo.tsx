@@ -18,11 +18,21 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
   state = {
     displaySentSuccess: false
   };
+
+  componentWillReceiveProps() {
+    const {
+      film: { title },
+      history: { push }
+    } = this.props;
+    if (!title) {
+      push(ROUTES.INDEX);
+    }
+  }
   backHome = () => {
     this.props.history.push(ROUTES.INDEX);
   };
 
-  handleSubmit = (e: any) => {
+  handleSubmit = async (e: any) => {
     const {
       sendInfoSms,
       film: { release_date, director, opening_crawl, producer, title }
@@ -32,65 +42,65 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
     const message = `Here is your search result from Star Wars: ${title}, directed by ${director}, produced by in ${producer}, released the :${formattedDate(
       release_date
     )}, brief summary: ${summary}`;
-    sendInfoSms(message, number);
+    await sendInfoSms(message, number);
     this.setState({ displaySentSuccess: true });
   };
 
-  resetdisplaySentSuccess = () => {
+  resetDisplaySentSuccess = () => {
     this.setState({ displaySentSuccess: false });
   };
   render() {
-    if (this.props.film.title) {
-      const {
-        film: { release_date, director, opening_crawl, producer, title },
-        history: { push },
-        sendingInfoSms
-      } = this.props;
-      const { displaySentSuccess } = this.state;
-      return (
-        <main className="p-5">
-          <BackButton
-            route={ROUTES.INDEX}
-            text="Back to search result"
-            push={push}
-          />
-          <Formik
-            validationSchema={Yup.object().shape({
-              phoneNumber: Yup.string()
-                .required("Phone number required")
-                .length(11)
-                .matches(phoneRegExp, "Phone number is not valid")
-            })}
-            initialValues={{
-              phoneNumber: ""
-            }}
-            onSubmit={this.handleSubmit}
-            render={formikProps => (
-              <SendInfoSmsForm
-                sendingInfoSms={sendingInfoSms}
-                displaySentSuccess={displaySentSuccess}
-                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
-                {...formikProps}
-              />
-            )}
-          />
-          <div className="info-details w-75  ml-5 mt-5 p-3">
-            <h2 className="text-center">{title.toUpperCase()}</h2>
-            <p>{opening_crawl}</p>
-          </div>
-          <div className="d-flex ml-5">
-            <InfoCategory
-              list={[formattedDate(release_date)]}
-              title="RELEASED"
+    const {
+      film: { release_date, director, opening_crawl, producer, title },
+      history: { push },
+      sendingInfoSms
+    } = this.props;
+    const { displaySentSuccess } = this.state;
+    return (
+      <>
+        {title && (
+          <main className="p-5">
+            <BackButton
+              route={ROUTES.INDEX}
+              text="Back to search result"
+              push={push}
             />
-            <InfoCategory list={[director]} title="DIRECTOR" />
-            <InfoCategory list={[producer]} title="PRODUCER" />
-          </div>
-        </main>
-      );
-    } else {
-      return <>{this.backHome()}</>;
-    }
+            <Formik
+              validationSchema={Yup.object().shape({
+                phoneNumber: Yup.string()
+                  .required("Phone number required")
+                  .length(11)
+                  .matches(phoneRegExp, "Phone number is not valid")
+              })}
+              initialValues={{
+                phoneNumber: ""
+              }}
+              onSubmit={this.handleSubmit}
+              render={formikProps => (
+                <SendInfoSmsForm
+                  sendingInfoSms={sendingInfoSms}
+                  displaySentSuccess={displaySentSuccess}
+                  resetDisplaySentSuccess={this.resetDisplaySentSuccess}
+                  {...formikProps}
+                />
+              )}
+            />
+            <div className="info-details w-75  ml-5 mt-5 p-3">
+              <h2 className="text-center">{title.toUpperCase()}</h2>
+              <p>{opening_crawl}</p>
+            </div>
+            <div className="d-flex ml-5">
+              <InfoCategory
+                list={[formattedDate(release_date)]}
+                title="RELEASED"
+              />
+              <InfoCategory list={[director]} title="DIRECTOR" />
+              <InfoCategory list={[producer]} title="PRODUCER" />
+            </div>
+          </main>
+        )}
+      </>
+    );
   }
 }
 export const mapStateToProps = (state: IAppState) => ({

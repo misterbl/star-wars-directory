@@ -11,7 +11,7 @@ ShallowWrapper {
       }
     }
     handleSubmit={[MockFunction]}
-    resetdisplaySentSuccess={[MockFunction]}
+    resetDisplaySentSuccess={[MockFunction]}
     sendingInfoSms={false}
     setFieldValue={[MockFunction]}
     touched={

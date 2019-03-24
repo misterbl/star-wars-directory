@@ -26,7 +26,15 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
   state = {
     displaySentSuccess: false
   };
-
+  componentWillReceiveProps() {
+    const {
+      character: { name },
+      history: { push }
+    } = this.props;
+    if (!name) {
+      push(ROUTES.INDEX);
+    }
+  }
   handleSubmit = (e: any) => {
     const {
       sendInfoSms,
@@ -38,7 +46,7 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
     this.setState({ displaySentSuccess: true });
   };
 
-  resetdisplaySentSuccess = () => {
+  resetDisplaySentSuccess = () => {
     this.setState({ displaySentSuccess: false });
   };
 
@@ -54,66 +62,68 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
       starShips
     } = this.props;
     const { displaySentSuccess } = this.state;
-    if (character.name) {
-      const sprite = charactersPhotos[character.name];
-      const { name, height, gender } = character;
-      return (
-        <main className="p-5">
-          <BackButton
-            route={ROUTES.INDEX}
-            text="Back to search result"
-            push={push}
-          />
-          <Formik
-            validationSchema={Yup.object().shape({
-              phoneNumber: Yup.string()
-                .required("Phone number required")
-                .length(11)
-                .matches(phoneRegExp, "Phone number is not valid")
-            })}
-            initialValues={{
-              phoneNumber: ""
-            }}
-            onSubmit={this.handleSubmit}
-            render={formikProps => (
-              <SendInfoSmsForm
-                sendingInfoSms={sendingInfoSms}
-                displaySentSuccess={displaySentSuccess}
-                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
-                {...formikProps}
-              />
+
+    const sprite = charactersPhotos[character.name];
+    const { name, height, gender } = character;
+
+    return (
+      <>
+        {name && (
+          <main className="p-5">
+            <BackButton
+              route={ROUTES.INDEX}
+              text="Back to search result"
+              push={push}
+            />
+            <Formik
+              validationSchema={Yup.object().shape({
+                phoneNumber: Yup.string()
+                  .required("Phone number required")
+                  .length(11)
+                  .matches(phoneRegExp, "Phone number is not valid")
+              })}
+              initialValues={{
+                phoneNumber: ""
+              }}
+              onSubmit={this.handleSubmit}
+              render={formikProps => (
+                <SendInfoSmsForm
+                  sendingInfoSms={sendingInfoSms}
+                  displaySentSuccess={displaySentSuccess}
+                  resetDisplaySentSuccess={this.resetDisplaySentSuccess}
+                  {...formikProps}
+                />
+              )}
+            />
+            <h2 className="text-white ml-5 mt-5 p-3">{name.toUpperCase()}</h2>
+            {sprite ? (
+              <div className="ml-5 avatar my-2">
+                <div
+                  style={{
+                    backgroundPosition: `${sprite}`,
+                    zoom: 2
+                  }}
+                />
+              </div>
+            ) : (
+              <div className="avatar avatar__default mr-3" />
             )}
-          />
-          <h2 className="text-white ml-5 mt-5 p-3">{name.toUpperCase()}</h2>
-          {sprite ? (
-            <div className="ml-5 avatar my-2">
-              <div
-                style={{
-                  backgroundPosition: `${sprite}`,
-                  zoom: 2
-                }}
-              />
+            <div className="d-flex p-4">
+              <InfoCategory list={characterFilms} title="APPARENCIES" />
+              <InfoCategory list={[homeworld]} title="HOMEWORLD" />
+              <InfoCategory list={[gender]} title="GENDER" />
+              <InfoCategory list={[`Height: ${height}cm`]} title="DIMENSION" />
+              <InfoCategory list={[species]} title="SPECIES" />
+              <InfoCategory list={vehicles} title="VEHICLES" />
+              <InfoCategory list={starShips} title="STARSHIPS" />
             </div>
-          ) : (
-            <div className="avatar avatar__default mr-3" />
-          )}
-          <div className="d-flex p-4">
-            <InfoCategory list={characterFilms} title="APPARENCIES" />
-            <InfoCategory list={[homeworld]} title="HOMEWORLD" />
-            <InfoCategory list={[gender]} title="GENDER" />
-            <InfoCategory list={[`Height: ${height}cm`]} title="DIMENSION" />
-            <InfoCategory list={[species]} title="SPECIES" />
-            <InfoCategory list={vehicles} title="VEHICLES" />
-            <InfoCategory list={starShips} title="STARSHIPS" />
-          </div>
-          )
-        </main>
-      );
-    } else {
-      return <>{push(ROUTES.INDEX)}</>;
-    }
+          </main>
+        )}
+      </>
+    );
   }
 }
+
 export const mapStateToProps = (state: IAppState) => ({
   character: getInfo(state),
   sendingInfoSms: sendingInfoSms(state),

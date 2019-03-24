@@ -16,7 +16,7 @@ describe("SendInfoSmsForm", () => {
     },
     handleSubmit: jest.fn(),
     displaySentSuccess: false,
-    resetdisplaySentSuccess: jest.fn(),
+    resetDisplaySentSuccess: jest.fn(),
     setFieldValue: jest.fn()
   };
   const wrapper = shallow(<SendInfoSmsForm {...props} />);

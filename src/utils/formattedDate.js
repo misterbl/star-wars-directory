@@ -16,14 +16,20 @@ const monthNames = [
 const formattedDate = date => {
   const newDate = new Date(date);
   let day;
-  if (newDate.getDate() === 1) {
-    day = `${newDate.getDate()}st`;
-  } else if (newDate.getDate() === 2) {
-    day = `${newDate.getDate()}nd`;
-  } else if (newDate.getDate() === 3) {
-    day = `${newDate.getDate()}rd`;
+  const getDate = newDate.getDate();
+  const lastDigit = getDate
+    .toString()
+    .split("")
+    .pop();
+
+  if (lastDigit === "1") {
+    day = `${getDate}st`;
+  } else if (lastDigit === "2") {
+    day = `${getDate}nd`;
+  } else if (lastDigit === "3") {
+    day = `${getDate}rd`;
   } else {
-    day = `${newDate.getDate()}th`;
+    day = `${getDate}th`;
   }
 
   return `${day} ${monthNames[newDate.getMonth()]} ${newDate.getFullYear()}`;

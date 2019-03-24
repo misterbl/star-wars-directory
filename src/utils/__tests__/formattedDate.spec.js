@@ -2,8 +2,8 @@ import formattedDate from "../formattedDate";
 
 describe("formattedDate", () => {
   it("format the date properly", () => {
-    const date1 = "2002-05-01";
-    expect(formattedDate(date1)).toEqual("1st May 2002");
+    const date1 = "2002-05-21";
+    expect(formattedDate(date1)).toEqual("21st May 2002");
     const date2 = "2002-05-02";
     expect(formattedDate(date2)).toEqual("2nd May 2002");
     const date3 = "2002-05-03";

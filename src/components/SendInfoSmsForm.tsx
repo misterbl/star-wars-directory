@@ -7,7 +7,7 @@ interface ISendInfoSmsFormData {
 interface ISendInfoSmsForm {
   sendingInfoSms?: boolean;
   displaySentSuccess?: boolean;
-  resetdisplaySentSuccess?: () => void;
+  resetDisplaySentSuccess?: () => void;
 }
 class SendInfoSmsForm extends React.PureComponent<
   FormikProps<ISendInfoSmsFormData> & ISendInfoSmsForm
@@ -23,7 +23,7 @@ class SendInfoSmsForm extends React.PureComponent<
       handleSubmit,
       sendingInfoSms,
       displaySentSuccess,
-      resetdisplaySentSuccess,
+      resetDisplaySentSuccess,
       errors,
       touched
     } = this.props;
@@ -41,7 +41,7 @@ class SendInfoSmsForm extends React.PureComponent<
           type="number"
           name="phoneNumber"
           value={values.phoneNumber}
-          onFocus={resetdisplaySentSuccess}
+          onFocus={resetDisplaySentSuccess}
           onChange={this.onPhoneNumberChange}
           aria-invalid={phoneNumberError}
         />

@@ -14,9 +14,11 @@ class BackButton extends PureComponent<IBackButton> {
   };
   render() {
     return (
-      <div className="btn btn-dark mt-3 ml-3 pl-4" onClick={this.pushToPage}>
+      <div className="position-relative">
         <div className="back-button" />
-        {this.props.text}
+        <button className="btn btn-dark ml-3 pl-4" onClick={this.pushToPage}>
+          {this.props.text}
+        </button>
       </div>
     );
   }
