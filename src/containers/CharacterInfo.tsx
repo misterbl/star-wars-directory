@@ -6,7 +6,6 @@ import * as Yup from "yup";
 import { bindActionCreators, Dispatch } from "redux";
 import {
   getInfo,
-  sendingInfoSms,
   getSpecies,
   getHomeWorld,
   getCharacterFilms,
@@ -47,7 +46,6 @@ export class CharacterInfo extends PureComponent<ICharacterInfoComponent> {
     const {
       character,
       history: { push },
-      sendingInfoSms,
       species,
       homeworld,
       characterFilms,
@@ -91,7 +89,7 @@ export class CharacterInfo extends PureComponent<ICharacterInfoComponent> {
             ) : (
               <div className="avatar avatar__default mr-3" />
             )}
-            <div className="d-flex p-4">
+            <div className="d-flex flex-wrap p-4">
               <InfoCategory list={characterFilms} title="APPARENCIES" />
               <InfoCategory list={[homeworld]} title="HOMEWORLD" />
               <InfoCategory list={[gender]} title="GENDER" />
