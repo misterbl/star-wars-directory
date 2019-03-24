@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators, Dispatch } from "redux";
-import ClipLoader from "react-spinners/ClipLoader";
-import "./declaration.d";
 import ROUTES from "./const/routes";
 import Header from "./components/Header";
 import Home from "./containers/Home";
@@ -14,6 +12,7 @@ import { isLoading, isFatalError } from "./selectors/appSelectors";
 import { IAppState } from "./state";
 import FatalError from "./components/FatalError";
 import { setFatalError } from "./actions/actionCreators/actions";
+import lightSaber from "./assets/lightsaber.gif";
 export class App extends Component<IAppComponent> {
   resetFatalError = () => {
     this.props.setFatalError(false);
@@ -29,7 +28,7 @@ export class App extends Component<IAppComponent> {
     } else if (isLoading) {
       return (
         <div className="loader">
-          <ClipLoader size={100} color="#9e4f60" loading={isLoading === true} />
+          <img src={lightSaber} alt="loading..." />
         </div>
       );
     }

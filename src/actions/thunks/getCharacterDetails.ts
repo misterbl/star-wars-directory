@@ -21,7 +21,7 @@ const getCharacterDetails = (
   starships: string[]
 ) => async (dispatch: ThunkDispatch<IAppState, void, Action>) => {
   try {
-    // dispatch(resetCharacterDetails());
+    dispatch(resetCharacterDetails());
     dispatch(fetchingCharacterDetails(true));
 
     await getSingleInfo(species, saveSpecies, "name", dispatch);
