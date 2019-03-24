@@ -134,10 +134,10 @@ export class Home extends Component<IHomeComponent> {
         {peopleList.length > 0 && showPeople && (
           <>
             <ResultList type="Characters" list={filteredList}>
-              <div className="d-flex flex-wrap justify-content-around text-white">
+              <div className="filter-result d-flex flex-wrap justify-content-around text-white">
                 <h4 className="text-white text-center mt-4">Filter results</h4>
                 <div>
-                  <p className="text-center m-0">By film</p>
+                  <p className="m-0">By film</p>
                   <Formik<ISelectFilmForm>
                     initialValues={{
                       selectedFilm: ""
@@ -147,7 +147,7 @@ export class Home extends Component<IHomeComponent> {
                   />
                 </div>
                 <div>
-                  <p className="text-center m-0">By gender</p>
+                  <p className="m-0">By gender</p>
                   <Formik<ISelectGenderForm>
                     initialValues={{
                       selectedGender: ""

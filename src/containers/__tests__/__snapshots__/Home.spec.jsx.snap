@@ -97,7 +97,7 @@ ShallowWrapper {
           <div
             className="text-white"
           >
-            4 RESULTS
+            4 RESULTS 
           </div>
           <React.Fragment>
             <button
@@ -142,7 +142,7 @@ ShallowWrapper {
             type="Characters"
           >
             <div
-              className="d-flex flex-wrap justify-content-around text-white"
+              className="filter-result d-flex flex-wrap justify-content-around text-white"
             >
               <h4
                 className="text-white text-center mt-4"
@@ -151,7 +151,7 @@ ShallowWrapper {
               </h4>
               <div>
                 <p
-                  className="text-center m-0"
+                  className="m-0"
                 >
                   By film
                 </p>
@@ -171,7 +171,7 @@ ShallowWrapper {
               </div>
               <div>
                 <p
-                  className="text-center m-0"
+                  className="m-0"
                 >
                   By gender
                 </p>
@@ -270,7 +270,7 @@ ShallowWrapper {
             <div
               className="text-white"
             >
-              4 RESULTS
+              4 RESULTS 
             </div>,
             <React.Fragment>
               <button
@@ -297,11 +297,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "4 RESULTS",
+              "children": "4 RESULTS ",
               "className": "text-white",
             },
             "ref": null,
-            "rendered": "4 RESULTS",
+            "rendered": "4 RESULTS ",
             "type": "div",
           },
           Object {
@@ -399,7 +399,7 @@ ShallowWrapper {
             type="Characters"
           >
             <div
-              className="d-flex flex-wrap justify-content-around text-white"
+              className="filter-result d-flex flex-wrap justify-content-around text-white"
             >
               <h4
                 className="text-white text-center mt-4"
@@ -408,7 +408,7 @@ ShallowWrapper {
               </h4>
               <div>
                 <p
-                  className="text-center m-0"
+                  className="m-0"
                 >
                   By film
                 </p>
@@ -428,7 +428,7 @@ ShallowWrapper {
               </div>
               <div>
                 <p
-                  className="text-center m-0"
+                  className="m-0"
                 >
                   By gender
                 </p>
@@ -456,7 +456,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <div
-              className="d-flex flex-wrap justify-content-around text-white"
+              className="filter-result d-flex flex-wrap justify-content-around text-white"
             >
               <h4
                 className="text-white text-center mt-4"
@@ -465,7 +465,7 @@ ShallowWrapper {
               </h4>
               <div>
                 <p
-                  className="text-center m-0"
+                  className="m-0"
                 >
                   By film
                 </p>
@@ -485,7 +485,7 @@ ShallowWrapper {
               </div>
               <div>
                 <p
-                  className="text-center m-0"
+                  className="m-0"
                 >
                   By gender
                 </p>
@@ -540,7 +540,7 @@ ShallowWrapper {
                 </h4>,
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By film
                   </p>
@@ -560,7 +560,7 @@ ShallowWrapper {
                 </div>,
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By gender
                   </p>
@@ -579,7 +579,7 @@ ShallowWrapper {
                   />
                 </div>,
               ],
-              "className": "d-flex flex-wrap justify-content-around text-white",
+              "className": "filter-result d-flex flex-wrap justify-content-around text-white",
             },
             "ref": null,
             "rendered": Array [
@@ -602,7 +602,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <p
-                      className="text-center m-0"
+                      className="m-0"
                     >
                       By film
                     </p>,
@@ -629,7 +629,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "By film",
-                      "className": "text-center m-0",
+                      "className": "m-0",
                     },
                     "ref": null,
                     "rendered": "By film",
@@ -664,7 +664,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <p
-                      className="text-center m-0"
+                      className="m-0"
                     >
                       By gender
                     </p>,
@@ -691,7 +691,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "By gender",
-                      "className": "text-center m-0",
+                      "className": "m-0",
                     },
                     "ref": null,
                     "rendered": "By gender",
@@ -779,7 +779,7 @@ ShallowWrapper {
             <div
               className="text-white"
             >
-              4 RESULTS
+              4 RESULTS 
             </div>
             <React.Fragment>
               <button
@@ -824,7 +824,7 @@ ShallowWrapper {
               type="Characters"
             >
               <div
-                className="d-flex flex-wrap justify-content-around text-white"
+                className="filter-result d-flex flex-wrap justify-content-around text-white"
               >
                 <h4
                   className="text-white text-center mt-4"
@@ -833,7 +833,7 @@ ShallowWrapper {
                 </h4>
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By film
                   </p>
@@ -853,7 +853,7 @@ ShallowWrapper {
                 </div>
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By gender
                   </p>
@@ -952,7 +952,7 @@ ShallowWrapper {
               <div
                 className="text-white"
               >
-                4 RESULTS
+                4 RESULTS 
               </div>,
               <React.Fragment>
                 <button
@@ -979,11 +979,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "4 RESULTS",
+                "children": "4 RESULTS ",
                 "className": "text-white",
               },
               "ref": null,
-              "rendered": "4 RESULTS",
+              "rendered": "4 RESULTS ",
               "type": "div",
             },
             Object {
@@ -1081,7 +1081,7 @@ ShallowWrapper {
               type="Characters"
             >
               <div
-                className="d-flex flex-wrap justify-content-around text-white"
+                className="filter-result d-flex flex-wrap justify-content-around text-white"
               >
                 <h4
                   className="text-white text-center mt-4"
@@ -1090,7 +1090,7 @@ ShallowWrapper {
                 </h4>
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By film
                   </p>
@@ -1110,7 +1110,7 @@ ShallowWrapper {
                 </div>
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By gender
                   </p>
@@ -1138,7 +1138,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <div
-                className="d-flex flex-wrap justify-content-around text-white"
+                className="filter-result d-flex flex-wrap justify-content-around text-white"
               >
                 <h4
                   className="text-white text-center mt-4"
@@ -1147,7 +1147,7 @@ ShallowWrapper {
                 </h4>
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By film
                   </p>
@@ -1167,7 +1167,7 @@ ShallowWrapper {
                 </div>
                 <div>
                   <p
-                    className="text-center m-0"
+                    className="m-0"
                   >
                     By gender
                   </p>
@@ -1222,7 +1222,7 @@ ShallowWrapper {
                   </h4>,
                   <div>
                     <p
-                      className="text-center m-0"
+                      className="m-0"
                     >
                       By film
                     </p>
@@ -1242,7 +1242,7 @@ ShallowWrapper {
                   </div>,
                   <div>
                     <p
-                      className="text-center m-0"
+                      className="m-0"
                     >
                       By gender
                     </p>
@@ -1261,7 +1261,7 @@ ShallowWrapper {
                     />
                   </div>,
                 ],
-                "className": "d-flex flex-wrap justify-content-around text-white",
+                "className": "filter-result d-flex flex-wrap justify-content-around text-white",
               },
               "ref": null,
               "rendered": Array [
@@ -1284,7 +1284,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <p
-                        className="text-center m-0"
+                        className="m-0"
                       >
                         By film
                       </p>,
@@ -1311,7 +1311,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "By film",
-                        "className": "text-center m-0",
+                        "className": "m-0",
                       },
                       "ref": null,
                       "rendered": "By film",
@@ -1346,7 +1346,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <p
-                        className="text-center m-0"
+                        className="m-0"
                       >
                         By gender
                       </p>,
@@ -1373,7 +1373,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "By gender",
-                        "className": "text-center m-0",
+                        "className": "m-0",
                       },
                       "ref": null,
                       "rendered": "By gender",

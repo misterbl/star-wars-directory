@@ -232,3 +232,18 @@ header {
 .info-category:first-child {
   border: none;
 }
+
+.filter-result {
+  @media only screen and (max-width: 641px) {
+    p {
+      text-align: center;
+      margin: 0;
+    }
+    flex-direction: column;
+    p {
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
