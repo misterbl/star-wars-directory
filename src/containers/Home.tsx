@@ -109,7 +109,9 @@ export class Home extends Component<IHomeComponent> {
         <div className="resistance my-5" onClick={this.pushToResistance} />{" "}
         {(filmsList.length > 0 || peopleList.length > 0) && (
           <div className="result-filter my-4 p-3">
-            <div className="text-white">{`${resultLength} RESULTS`}</div>
+            <div className="text-white">{`${resultLength} RESULT${
+              resultLength > 1 ? "S" : ""
+            } `}</div>
             {foundPeople && foundFilms && (
               <>
                 <button
