@@ -169,11 +169,6 @@ ShallowWrapper {
                   validateOnChange={true}
                 />
               </div>
-              <h4
-                className="text-white text-center mt-4"
-              >
-                or
-              </h4>
               <div>
                 <p
                   className="text-center m-0"
@@ -431,11 +426,6 @@ ShallowWrapper {
                   validateOnChange={true}
                 />
               </div>
-              <h4
-                className="text-white text-center mt-4"
-              >
-                or
-              </h4>
               <div>
                 <p
                   className="text-center m-0"
@@ -493,11 +483,6 @@ ShallowWrapper {
                   validateOnChange={true}
                 />
               </div>
-              <h4
-                className="text-white text-center mt-4"
-              >
-                or
-              </h4>
               <div>
                 <p
                   className="text-center m-0"
@@ -573,11 +558,6 @@ ShallowWrapper {
                     validateOnChange={true}
                   />
                 </div>,
-                <h4
-                  className="text-white text-center mt-4"
-                >
-                  or
-                </h4>,
                 <div>
                   <p
                     className="text-center m-0"
@@ -676,18 +656,6 @@ ShallowWrapper {
                   },
                 ],
                 "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "or",
-                  "className": "text-white text-center mt-4",
-                },
-                "ref": null,
-                "rendered": "or",
-                "type": "h4",
               },
               Object {
                 "instance": null,
@@ -883,11 +851,6 @@ ShallowWrapper {
                     validateOnChange={true}
                   />
                 </div>
-                <h4
-                  className="text-white text-center mt-4"
-                >
-                  or
-                </h4>
                 <div>
                   <p
                     className="text-center m-0"
@@ -1145,11 +1108,6 @@ ShallowWrapper {
                     validateOnChange={true}
                   />
                 </div>
-                <h4
-                  className="text-white text-center mt-4"
-                >
-                  or
-                </h4>
                 <div>
                   <p
                     className="text-center m-0"
@@ -1207,11 +1165,6 @@ ShallowWrapper {
                     validateOnChange={true}
                   />
                 </div>
-                <h4
-                  className="text-white text-center mt-4"
-                >
-                  or
-                </h4>
                 <div>
                   <p
                     className="text-center m-0"
@@ -1287,11 +1240,6 @@ ShallowWrapper {
                       validateOnChange={true}
                     />
                   </div>,
-                  <h4
-                    className="text-white text-center mt-4"
-                  >
-                    or
-                  </h4>,
                   <div>
                     <p
                       className="text-center m-0"
@@ -1390,18 +1338,6 @@ ShallowWrapper {
                     },
                   ],
                   "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "or",
-                    "className": "text-white text-center mt-4",
-                  },
-                  "ref": null,
-                  "rendered": "or",
-                  "type": "h4",
                 },
                 Object {
                   "instance": null,

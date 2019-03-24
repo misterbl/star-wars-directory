@@ -67,7 +67,7 @@ ShallowWrapper {
               Director: name
             </p>
             <p>
-              Released the 31th December 1221
+              Released the 31st December 1221
             </p>
           </div>
         </div>,
@@ -106,7 +106,7 @@ ShallowWrapper {
                 Director: name
               </p>
               <p>
-                Released the 31th December 1221
+                Released the 31st December 1221
               </p>
             </div>,
           ],
@@ -135,7 +135,7 @@ ShallowWrapper {
                   Director: name
                 </p>,
                 <p>
-                  Released the 31th December 1221
+                  Released the 31st December 1221
                 </p>,
               ],
               "className": "ml-3 p-3",
@@ -158,10 +158,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Released the 31th December 1221",
+                  "children": "Released the 31st December 1221",
                 },
                 "ref": null,
-                "rendered": "Released the 31th December 1221",
+                "rendered": "Released the 31st December 1221",
                 "type": "p",
               },
             ],
@@ -198,7 +198,7 @@ ShallowWrapper {
                 Director: name
               </p>
               <p>
-                Released the 31th December 1221
+                Released the 31st December 1221
               </p>
             </div>
           </div>,
@@ -237,7 +237,7 @@ ShallowWrapper {
                   Director: name
                 </p>
                 <p>
-                  Released the 31th December 1221
+                  Released the 31st December 1221
                 </p>
               </div>,
             ],
@@ -266,7 +266,7 @@ ShallowWrapper {
                     Director: name
                   </p>,
                   <p>
-                    Released the 31th December 1221
+                    Released the 31st December 1221
                   </p>,
                 ],
                 "className": "ml-3 p-3",
@@ -289,10 +289,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Released the 31th December 1221",
+                    "children": "Released the 31st December 1221",
                   },
                   "ref": null,
-                  "rendered": "Released the 31th December 1221",
+                  "rendered": "Released the 31st December 1221",
                   "type": "p",
                 },
               ],

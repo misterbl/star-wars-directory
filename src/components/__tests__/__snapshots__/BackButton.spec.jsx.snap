@@ -26,10 +26,14 @@ ShallowWrapper {
         <div
           className="back-button"
         />,
-        "text",
+        <button
+          className="btn btn-dark ml-3 pl-4"
+          onClick={[Function]}
+        >
+          text
+        </button>,
       ],
-      "className": "btn btn-dark mt-3 ml-3 pl-4",
-      "onClick": [Function],
+      "className": "position-relative",
     },
     "ref": null,
     "rendered": Array [
@@ -44,7 +48,19 @@ ShallowWrapper {
         "rendered": null,
         "type": "div",
       },
-      "text",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "text",
+          "className": "btn btn-dark ml-3 pl-4",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "text",
+        "type": "button",
+      },
     ],
     "type": "div",
   },
@@ -58,10 +74,14 @@ ShallowWrapper {
           <div
             className="back-button"
           />,
-          "text",
+          <button
+            className="btn btn-dark ml-3 pl-4"
+            onClick={[Function]}
+          >
+            text
+          </button>,
         ],
-        "className": "btn btn-dark mt-3 ml-3 pl-4",
-        "onClick": [Function],
+        "className": "position-relative",
       },
       "ref": null,
       "rendered": Array [
@@ -76,7 +96,19 @@ ShallowWrapper {
           "rendered": null,
           "type": "div",
         },
-        "text",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "text",
+            "className": "btn btn-dark ml-3 pl-4",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "text",
+          "type": "button",
+        },
       ],
       "type": "div",
     },

@@ -3,7 +3,6 @@ import * as React from "react";
 import { shallow } from "enzyme";
 import history from "../../testMocks/history.mock";
 import { CharacterInfo } from "../CharacterInfo";
-import ROUTES from "../../const/routes";
 
 describe("CharacterInfo", () => {
   const props = {
@@ -21,9 +20,5 @@ describe("CharacterInfo", () => {
   const wrapper = shallow(<CharacterInfo {...props} />);
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
-  });
-  it("redirect to index if there is no character", () => {
-    wrapper.setProps({ character: { name: null } });
-    expect(props.history.push).toHaveBeenCalledWith(ROUTES.INDEX);
   });
 });

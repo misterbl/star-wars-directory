@@ -153,10 +153,11 @@ header {
 
 .resistance {
   background-image: url("./assets/resistance.png");
-  height: 110px;
-  background-size: cover;
+  height: 200px;
+  background-size: contain;
   border-radius: 10px;
   cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .grey-line {

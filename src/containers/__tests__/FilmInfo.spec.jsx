@@ -3,7 +3,6 @@ import * as React from "react";
 import { shallow } from "enzyme";
 import history from "../../testMocks/history.mock";
 import { FilmInfo } from "../FilmInfo";
-import ROUTES from "../../const/routes";
 
 describe("FilmInfo", () => {
   const props = {
@@ -19,9 +18,5 @@ describe("FilmInfo", () => {
   const wrapper = shallow(<FilmInfo {...props} />);
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
-  });
-  it("redirect to index if there is no film", () => {
-    wrapper.setProps({ film: { title: null } });
-    expect(props.history.push).toHaveBeenCalledWith(ROUTES.INDEX);
   });
 });

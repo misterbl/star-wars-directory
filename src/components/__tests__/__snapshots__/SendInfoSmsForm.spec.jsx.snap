@@ -4,14 +4,12 @@ exports[`SendInfoSmsForm matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SendInfoSmsForm
-    displaySentSuccess={false}
     errors={
       Object {
         "phoneNumber": false,
       }
     }
     handleSubmit={[MockFunction]}
-    resetDisplaySentSuccess={[MockFunction]}
     sendingInfoSms={false}
     setFieldValue={[MockFunction]}
     touched={
@@ -53,12 +51,10 @@ ShallowWrapper {
           id="phoneNumber"
           name="phoneNumber"
           onChange={[Function]}
-          onFocus={[MockFunction]}
           placeholder="MOBILE NUMBER"
           type="number"
           value="phoneNumber"
         />,
-        false,
         false,
       ],
       "className": "ml-5 mt-3 mb-0 sms-form w-50",
@@ -90,7 +86,6 @@ ShallowWrapper {
           "id": "phoneNumber",
           "name": "phoneNumber",
           "onChange": [Function],
-          "onFocus": [MockFunction],
           "placeholder": "MOBILE NUMBER",
           "type": "number",
           "value": "phoneNumber",
@@ -99,7 +94,6 @@ ShallowWrapper {
         "rendered": null,
         "type": "input",
       },
-      false,
       false,
     ],
     "type": "form",
@@ -124,12 +118,10 @@ ShallowWrapper {
             id="phoneNumber"
             name="phoneNumber"
             onChange={[Function]}
-            onFocus={[MockFunction]}
             placeholder="MOBILE NUMBER"
             type="number"
             value="phoneNumber"
           />,
-          false,
           false,
         ],
         "className": "ml-5 mt-3 mb-0 sms-form w-50",
@@ -161,7 +153,6 @@ ShallowWrapper {
             "id": "phoneNumber",
             "name": "phoneNumber",
             "onChange": [Function],
-            "onFocus": [MockFunction],
             "placeholder": "MOBILE NUMBER",
             "type": "number",
             "value": "phoneNumber",
@@ -170,7 +161,6 @@ ShallowWrapper {
           "rendered": null,
           "type": "input",
         },
-        false,
         false,
       ],
       "type": "form",

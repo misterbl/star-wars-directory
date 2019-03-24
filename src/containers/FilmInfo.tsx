@@ -24,9 +24,6 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
       push(ROUTES.INDEX);
     }
   }
-  backHome = () => {
-    this.props.history.push(ROUTES.INDEX);
-  };
 
   handleSubmit = async (e: any) => {
     const {
@@ -38,12 +35,8 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
       release_date
     )}, brief summary: ${summary}`;
     await sendInfoSms(message, number);
-    this.setState({ displaySentSuccess: true });
   };
 
-  resetDisplaySentSuccess = () => {
-    this.setState({ displaySentSuccess: false });
-  };
   render() {
     const {
       film: { release_date, director, opening_crawl, producer, title },

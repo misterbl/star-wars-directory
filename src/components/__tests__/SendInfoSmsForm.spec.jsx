@@ -15,8 +15,6 @@ describe("SendInfoSmsForm", () => {
       phoneNumber: false
     },
     handleSubmit: jest.fn(),
-    displaySentSuccess: false,
-    resetDisplaySentSuccess: jest.fn(),
     setFieldValue: jest.fn()
   };
   const wrapper = shallow(<SendInfoSmsForm {...props} />);
@@ -48,16 +46,5 @@ describe("SendInfoSmsForm", () => {
     const input = wrapperWithError.find("input");
     input.simulate("change", { target: { value: "value" } });
     expect(errorMessage.length).toEqual(1);
-  });
-  it("shows the sms sent succes correctly", () => {
-    const propsWithSucces = {
-      ...props,
-      displaySentSuccess: true
-    };
-    const wrapperWithSuccess = shallow(
-      <SendInfoSmsForm {...propsWithSucces} />
-    );
-    const successMessage = wrapperWithSuccess.find(".text-success");
-    expect(successMessage.length).toEqual(1);
   });
 });

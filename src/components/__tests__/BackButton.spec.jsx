@@ -14,8 +14,8 @@ describe("BackButton", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("calls push() onClick ", () => {
-    const mainDiv = wrapper.find("div").at(0);
-    mainDiv.simulate("click");
+    const button = wrapper.find("button").at(0);
+    button.simulate("click");
     expect(props.push).toHaveBeenCalled();
   });
 });
