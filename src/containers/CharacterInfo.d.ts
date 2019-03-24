@@ -13,11 +13,6 @@ export interface ICharacterInfo {
   vehicles: string[];
   starShips: string[];
 }
-
-export interface ICharacterInfoState {
-  displaySentSuccess: boolean;
-}
-
 export interface ICharacterInfoDispatchToProps {
   sendInfoSms: typeof sendInfoSms;
 }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
@@ -22,11 +22,8 @@ import SendInfoSmsForm from "../components/SendInfoSmsForm";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
 import { phoneRegExp } from "../const/regex";
 import InfoCategory from "../components/InfoCategory";
-export class CharacterInfo extends Component<ICharacterInfoComponent> {
-  state = {
-    displaySentSuccess: false
-  };
-  componentWillReceiveProps() {
+export class CharacterInfo extends PureComponent<ICharacterInfoComponent> {
+  componentDidMount() {
     const {
       character: { name },
       history: { push }
@@ -35,7 +32,8 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
       push(ROUTES.INDEX);
     }
   }
-  handleSubmit = (e: any) => {
+
+  handleSubmit = async (e: any) => {
     const {
       sendInfoSms,
       character: { name, height, hair_color, eye_color, birth_year, gender }
@@ -43,11 +41,6 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
     const number = e.phoneNumber;
     const message = `Here is your search result from Star Wars: ${name}, ${gender}, born in ${birth_year}, mass: ${height}cm, ${hair_color} hair, ${eye_color} eyes`;
     sendInfoSms(message, number);
-    this.setState({ displaySentSuccess: true });
-  };
-
-  resetDisplaySentSuccess = () => {
-    this.setState({ displaySentSuccess: false });
   };
 
   render() {
@@ -61,11 +54,8 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
       vehicles,
       starShips
     } = this.props;
-    const { displaySentSuccess } = this.state;
-
     const sprite = charactersPhotos[character.name];
     const { name, height, gender } = character;
-
     return (
       <>
         {name && (
@@ -86,14 +76,7 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
                 phoneNumber: ""
               }}
               onSubmit={this.handleSubmit}
-              render={formikProps => (
-                <SendInfoSmsForm
-                  sendingInfoSms={sendingInfoSms}
-                  displaySentSuccess={displaySentSuccess}
-                  resetDisplaySentSuccess={this.resetDisplaySentSuccess}
-                  {...formikProps}
-                />
-              )}
+              render={formikProps => <SendInfoSmsForm {...formikProps} />}
             />
             <h2 className="text-white ml-5 mt-5 p-3">{name.toUpperCase()}</h2>
             {sprite ? (
@@ -126,7 +109,6 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
 
 export const mapStateToProps = (state: IAppState) => ({
   character: getInfo(state),
-  sendingInfoSms: sendingInfoSms(state),
   species: getSpecies(state),
   homeworld: getHomeWorld(state),
   characterFilms: getCharacterFilms(state),

@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import charactersPhotos from "../const/charactersPhotos";
-import { withRouter, RouteComponentProps } from "react-router";
+import { withRouter, RouteComponentProps, StaticContext } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import { ICharacterCardComponent, ICharacterCard } from "./CharacterCard.d";
@@ -68,7 +68,9 @@ export const mapDispatchToProps = (dispatch: Dispatch) => ({
   assignCurrentView: bindActionCreators(assignCurrentView, dispatch)
 });
 
-export default withRouter<ICharacterCard & RouteComponentProps>(
+export default withRouter<
+  ICharacterCard & RouteComponentProps<any, StaticContext>
+>(
   connect(
     null,
     mapDispatchToProps

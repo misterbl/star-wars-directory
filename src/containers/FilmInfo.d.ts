@@ -5,11 +5,8 @@ import { IAppState, IFilm } from "../state";
 
 export interface IFilm {
   film: IFilm;
-  sendingInfoSms: boolean;
 }
-export interface IFilmDispatchToProps {
-  sendInfoSms: typeof sendInfoSms;
-}
+
 export interface IFilmComponent
   extends IFilm,
     IFilmDispatchToProps,

@@ -4,13 +4,8 @@ import { FormikProps } from "formik";
 interface ISendInfoSmsFormData {
   phoneNumber: string;
 }
-interface ISendInfoSmsForm {
-  sendingInfoSms?: boolean;
-  displaySentSuccess?: boolean;
-  resetDisplaySentSuccess?: () => void;
-}
 class SendInfoSmsForm extends React.PureComponent<
-  FormikProps<ISendInfoSmsFormData> & ISendInfoSmsForm
+  FormikProps<ISendInfoSmsFormData>
 > {
   onPhoneNumberChange = (
     event: Pick<React.ChangeEvent<HTMLInputElement>, "target">
@@ -18,15 +13,7 @@ class SendInfoSmsForm extends React.PureComponent<
     this.props.setFieldValue("phoneNumber", event.target.value);
   };
   render() {
-    const {
-      values,
-      handleSubmit,
-      sendingInfoSms,
-      displaySentSuccess,
-      resetDisplaySentSuccess,
-      errors,
-      touched
-    } = this.props;
+    const { values, handleSubmit, errors, touched } = this.props;
     const phoneNumberError = Boolean(errors.phoneNumber && touched.phoneNumber);
     return (
       <form onSubmit={handleSubmit} className="ml-5 mt-3 mb-0 sms-form w-50">
@@ -41,7 +28,6 @@ class SendInfoSmsForm extends React.PureComponent<
           type="number"
           name="phoneNumber"
           value={values.phoneNumber}
-          onFocus={resetDisplaySentSuccess}
           onChange={this.onPhoneNumberChange}
           aria-invalid={phoneNumberError}
         />
@@ -53,9 +39,6 @@ class SendInfoSmsForm extends React.PureComponent<
           >
             {errors.phoneNumber}
           </span>
-        )}
-        {sendingInfoSms === false && displaySentSuccess && (
-          <p className="text-success">message sent!</p>
         )}
       </form>
     );

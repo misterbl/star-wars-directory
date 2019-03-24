@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { bindActionCreators, Dispatch } from "redux";
-import { getInfo, sendingInfoSms } from "../selectors/appSelectors";
+import { getInfo } from "../selectors/appSelectors";
 import { IAppState } from "../state";
 import { IFilmComponent, IFilm } from "./FilmInfo.d";
 import ROUTES from "../const/routes";
@@ -14,11 +14,7 @@ import SendInfoSmsForm from "../components/SendInfoSmsForm";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
 import { phoneRegExp } from "../const/regex";
 import InfoCategory from "../components/InfoCategory";
-export class FilmInfo extends Component<IFilm & IFilmComponent> {
-  state = {
-    displaySentSuccess: false
-  };
-
+export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
   componentWillReceiveProps() {
     const {
       film: { title },
@@ -34,7 +30,6 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
 
   handleSubmit = async (e: any) => {
     const {
-      sendInfoSms,
       film: { release_date, director, opening_crawl, producer, title }
     } = this.props;
     const summary = `${opening_crawl.substring(0, 100)}...`;
@@ -52,10 +47,8 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
   render() {
     const {
       film: { release_date, director, opening_crawl, producer, title },
-      history: { push },
-      sendingInfoSms
+      history: { push }
     } = this.props;
-    const { displaySentSuccess } = this.state;
     return (
       <>
         {title && (
@@ -76,14 +69,7 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
                 phoneNumber: ""
               }}
               onSubmit={this.handleSubmit}
-              render={formikProps => (
-                <SendInfoSmsForm
-                  sendingInfoSms={sendingInfoSms}
-                  displaySentSuccess={displaySentSuccess}
-                  resetDisplaySentSuccess={this.resetDisplaySentSuccess}
-                  {...formikProps}
-                />
-              )}
+              render={formikProps => <SendInfoSmsForm {...formikProps} />}
             />
             <div className="info-details w-75  ml-5 mt-5 p-3">
               <h2 className="text-center">{title.toUpperCase()}</h2>
@@ -104,8 +90,7 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
   }
 }
 export const mapStateToProps = (state: IAppState) => ({
-  film: getInfo(state),
-  sendingInfoSms: sendingInfoSms(state)
+  film: getInfo(state)
 });
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
