@@ -79,9 +79,12 @@ header {
     background-size: cover;
   }
   &__film {
-    background-image: url("./assets/star_wars.png");
-    background-size: cover;
-    width: 190px;
+    @media only screen and (min-width: 641px) {
+      background-image: url("./assets/star_wars.png");
+      background-size: 200px 119px;
+      height: 105px;
+      width: 224px;
+    }
   }
   div {
     background-image: url("./assets/star-war-characters-grid.jpg");
@@ -167,9 +170,12 @@ header {
   background-color: $dark-grey-color;
   color: white;
   opacity: 0.7;
-  p {
-    margin-bottom: 3px;
+  p:first-of-type {
     font-size: 18px;
+  }
+  p {
+    margin-bottom: 10px;
+    font-size: 16px;
   }
 }
 

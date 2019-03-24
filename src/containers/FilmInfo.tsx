@@ -13,6 +13,7 @@ import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
 import { phoneRegExp } from "../const/regex";
+import InfoCategory from "../components/InfoCategory";
 export class FilmInfo extends Component<IFilm & IFilmComponent> {
   state = {
     displaySentSuccess: false
@@ -73,12 +74,17 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
               />
             )}
           />
-          <div className="info-details w-75  ml-5 my-5 p-3">
+          <div className="info-details w-75  ml-5 mt-5 p-3">
             <h2 className="text-center">{title.toUpperCase()}</h2>
             <p>{opening_crawl}</p>
-            <p>{`Released the ${formattedDate(release_date)}`}</p>
-            <p>{`Directed by: ${director}`}</p>
-            <p>{`Produced by: ${producer}`}</p>
+          </div>
+          <div className="d-flex ml-5">
+            <InfoCategory
+              list={[formattedDate(release_date)]}
+              title="RELEASED"
+            />
+            <InfoCategory list={[director]} title="DIRECTOR" />
+            <InfoCategory list={[producer]} title="PRODUCER" />
           </div>
         </main>
       );

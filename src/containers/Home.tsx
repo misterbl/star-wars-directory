@@ -144,7 +144,6 @@ export class Home extends Component<IHomeComponent> {
                     render={formikProps => <SelectFilmForm {...formikProps} />}
                   />
                 </div>
-                <h4 className="text-white text-center mt-4">or</h4>
                 <div>
                   <p className="text-center m-0">By gender</p>
                   <Formik<ISelectGenderForm>
