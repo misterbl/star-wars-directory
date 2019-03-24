@@ -34,12 +34,12 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
     const { name, birth_year, gender, height } = character;
     const sprite = charactersPhotos[character.name];
     return (
-      <div
+      <li
         role="button"
         onClick={this.onClick}
         className="pointer m-3 text-white border border-dark p-3"
       >
-        <u className="card-text">{name.toUpperCase()}</u>
+        <span className="card-text">{name.toUpperCase()}</span>
         <div className="d-flex">
           {sprite ? (
             <div className="avatar my-2">
@@ -58,7 +58,7 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
             <p className="m-1 text-secondary">{`Height: ${height}cm`}</p>
           </div>
         </div>
-      </div>
+      </li>
     );
   }
 }

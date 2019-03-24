@@ -11,17 +11,24 @@ $pink-color: #9e4f60;
     border: none;
     font-size: 30px;
     height: 60px;
+    font-size: 30px;
+    @media only screen and (max-width: 550px) {
+      font-size: 15px;
+    }
   }
 }
+
 %avatar-container {
   height: 90px;
   width: 90px;
   border-radius: 15%;
   min-width: 95px;
 }
+
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   margin: 0px 0px 50px 0px;
@@ -51,6 +58,10 @@ header {
     background-position: initial;
     background-image: url("./assets/star-wars-header.png");
   }
+}
+
+ul {
+  list-style-type: none;
 }
 
 .form-control::-webkit-inner-spin-button,
@@ -193,6 +204,12 @@ header {
   left: 40%;
   img {
     width: 300px;
+  }
+  @media only screen and (max-width: 461px) {
+    left: 20%;
+  }
+  @media only screen and (max-width: 900px) {
+    left: 30%;
   }
 }
 

@@ -39,7 +39,7 @@ ShallowWrapper {
         <div
           className="grey-line mt-3"
         />,
-        <div
+        <ul
           className="d-flex flex-wrap p-2 mt-3"
         >
           <withRouter(Connect(FilmCard))
@@ -48,7 +48,7 @@ ShallowWrapper {
           <withRouter(Connect(FilmCard))
             film="element2"
           />
-        </div>,
+        </ul>,
       ],
     },
     "ref": null,
@@ -128,7 +128,7 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
-        "type": "div",
+        "type": "ul",
       },
     ],
     "type": Symbol(react.fragment),
@@ -152,7 +152,7 @@ ShallowWrapper {
           <div
             className="grey-line mt-3"
           />,
-          <div
+          <ul
             className="d-flex flex-wrap p-2 mt-3"
           >
             <withRouter(Connect(FilmCard))
@@ -161,7 +161,7 @@ ShallowWrapper {
             <withRouter(Connect(FilmCard))
               film="element2"
             />
-          </div>,
+          </ul>,
         ],
       },
       "ref": null,
@@ -241,7 +241,7 @@ ShallowWrapper {
               "type": [Function],
             },
           ],
-          "type": "div",
+          "type": "ul",
         },
       ],
       "type": Symbol(react.fragment),

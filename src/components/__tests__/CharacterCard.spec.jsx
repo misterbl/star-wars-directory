@@ -24,13 +24,13 @@ describe("CharacterCard", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("calls assignCurrentView() onClick ", () => {
-    const mainDiv = wrapper.find("div").at(0);
-    mainDiv.simulate("click");
+    const li = wrapper.find("li").at(0);
+    li.simulate("click");
     expect(props.assignCurrentView).toHaveBeenCalled();
   });
   it("calls assignCurrentView() onClick ", () => {
-    const mainDiv = wrapper.find("div").at(0);
-    mainDiv.simulate("click");
+    const li = wrapper.find("li").at(0);
+    li.simulate("click");
     expect(props.assignCurrentView).toHaveBeenCalledWith(props.character);
   });
 });

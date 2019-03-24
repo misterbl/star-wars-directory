@@ -22,12 +22,12 @@ export class FilmCard extends PureComponent<IFilmCardComponent> {
       film: { title, director, release_date }
     } = this.props;
     return (
-      <div
+      <li
         role="button"
         onClick={this.onClick}
         className="pointer film-card m-3 text-white border border-dark p-3"
       >
-        <u className="card-text">{title.toUpperCase()}</u>
+        <span className="card-text">{title.toUpperCase()}</span>
         <div className="d-flex">
           <div className="avatar avatar__film" />
           <div className="ml-3 p-3">
@@ -35,7 +35,7 @@ export class FilmCard extends PureComponent<IFilmCardComponent> {
             <p>{`Released the ${formattedDate(release_date)}`}</p>
           </div>
         </div>
-      </div>
+      </li>
     );
   }
 }

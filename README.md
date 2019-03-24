@@ -56,3 +56,5 @@ Start the application.
 ```bash
 yarn start
 ```
+
+The app should open automatically in the browser. If not, navigate to http://localhost:3000/

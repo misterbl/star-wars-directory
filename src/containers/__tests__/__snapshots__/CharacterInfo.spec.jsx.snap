@@ -146,7 +146,7 @@ ShallowWrapper {
           className="avatar avatar__default mr-3"
         />
         <div
-          className="d-flex p-4"
+          className="d-flex flex-wrap p-4"
         >
           <InfoCategory
             title="APPARENCIES"
@@ -291,7 +291,7 @@ ShallowWrapper {
             className="avatar avatar__default mr-3"
           />,
           <div
-            className="d-flex p-4"
+            className="d-flex flex-wrap p-4"
           >
             <InfoCategory
               title="APPARENCIES"
@@ -506,7 +506,7 @@ ShallowWrapper {
                 title="STARSHIPS"
               />,
             ],
-            "className": "d-flex p-4",
+            "className": "d-flex flex-wrap p-4",
           },
           "ref": null,
           "rendered": Array [
@@ -711,7 +711,7 @@ ShallowWrapper {
             className="avatar avatar__default mr-3"
           />
           <div
-            className="d-flex p-4"
+            className="d-flex flex-wrap p-4"
           >
             <InfoCategory
               title="APPARENCIES"
@@ -856,7 +856,7 @@ ShallowWrapper {
               className="avatar avatar__default mr-3"
             />,
             <div
-              className="d-flex p-4"
+              className="d-flex flex-wrap p-4"
             >
               <InfoCategory
                 title="APPARENCIES"
@@ -1071,7 +1071,7 @@ ShallowWrapper {
                   title="STARSHIPS"
                 />,
               ],
-              "className": "d-flex p-4",
+              "className": "d-flex flex-wrap p-4",
             },
             "ref": null,
             "rendered": Array [

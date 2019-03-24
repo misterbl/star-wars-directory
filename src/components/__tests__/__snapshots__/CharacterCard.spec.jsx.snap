@@ -52,11 +52,11 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <u
+        <span
           className="card-text"
         >
           NAME
-        </u>,
+        </span>,
         <div
           className="d-flex"
         >
@@ -100,7 +100,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "NAME",
-        "type": "u",
+        "type": "span",
       },
       Object {
         "instance": null,
@@ -215,7 +215,7 @@ ShallowWrapper {
         "type": "div",
       },
     ],
-    "type": "div",
+    "type": "li",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -224,11 +224,11 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <u
+          <span
             className="card-text"
           >
             NAME
-          </u>,
+          </span>,
           <div
             className="d-flex"
           >
@@ -272,7 +272,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "NAME",
-          "type": "u",
+          "type": "span",
         },
         Object {
           "instance": null,
@@ -387,7 +387,7 @@ ShallowWrapper {
           "type": "div",
         },
       ],
-      "type": "div",
+      "type": "li",
     },
   ],
   Symbol(enzyme.__options__): Object {
