@@ -35,7 +35,7 @@ describe("Home", () => {
   });
   it("update the state on componentWillReceiveProps", () => {
     wrapper.setProps({ filmsList: ["films1", "films2"] });
-    expect(wrapper.state().showResultsCount).toEqual(true);
+    expect(wrapper.state().filteredList).toEqual(props.peopleList);
   });
   it("update the state on showPeople button click", () => {
     const showPeople = wrapper.find("button").at(0);

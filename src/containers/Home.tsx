@@ -22,14 +22,12 @@ export class Home extends Component<IHomeComponent> {
     showFilms: true,
     filteredList: this.props.peopleList,
     filmFilter: "",
-    genderFilter: "",
-    showResultsCount: false
+    genderFilter: ""
   };
 
   componentWillReceiveProps() {
     this.setState({
-      filteredList: this.props.peopleList,
-      showResultsCount: true
+      filteredList: this.props.peopleList
     });
   }
   componentDidMount() {
@@ -91,12 +89,7 @@ export class Home extends Component<IHomeComponent> {
   };
 
   render() {
-    const {
-      showPeople,
-      showFilms,
-      filteredList,
-      showResultsCount
-    } = this.state;
+    const { showPeople, showFilms, filteredList } = this.state;
     const { filmsList, peopleList } = this.props;
     const foundPeople = filteredList.length > 0;
     const foundFilms = filmsList.length > 0;
@@ -114,7 +107,7 @@ export class Home extends Component<IHomeComponent> {
           />
         </div>
         <div className="resistance my-5" onClick={this.pushToResistance} />{" "}
-        {showResultsCount && (
+        {(filmsList.length > 0 || peopleList.length > 0) && (
           <div className="result-filter my-4 p-3">
             <div className="text-white">{`${resultLength} RESULTS`}</div>
             {foundPeople && foundFilms && (
