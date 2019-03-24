@@ -1,3 +1,24 @@
+$dark-grey-color: #282727;
+
+$pink-color: #9e4f60;
+
+%grey-input {
+  input,
+  input:focus,
+  input:active {
+    outline: none;
+    background-color: $dark-grey-color;
+    border: none;
+    font-size: 30px;
+    height: 60px;
+  }
+}
+%avatar-container {
+  height: 90px;
+  width: 90px;
+  border-radius: 15%;
+  min-width: 95px;
+}
 html {
   height: 100%;
 }
@@ -22,7 +43,7 @@ header {
   background-position: 0;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #222;
+  background-color: #222222;
   @media only screen and (min-width: 1024px) {
     height: 250px;
     background-size: cover;
@@ -52,17 +73,10 @@ header {
 }
 
 .avatar {
-  &__current-view {
-    margin-left: 300px;
-  }
-
   &__default {
+    @extend %avatar-container;
     background-image: url("./assets//star-wars_characters.jpg");
     background-size: cover;
-    height: 90px;
-    width: 90px;
-    border-radius: 15%;
-    min-width: 95px;
   }
   &__film {
     background-image: url("./assets/star_wars.png");
@@ -71,10 +85,7 @@ header {
   }
   div {
     background-image: url("./assets/star-war-characters-grid.jpg");
-    height: 90px;
-    width: 90px;
-    border-radius: 15%;
-    min-width: 95px;
+    @extend %avatar-container;
   }
 }
 
@@ -100,6 +111,7 @@ header {
     }
   }
   &__body {
+    @extend %grey-input;
     position: relative;
     border-radius: 15px;
     @media only screen and (min-width: 1024px) {
@@ -116,33 +128,16 @@ header {
       border: none;
       border-radius: 5px;
     }
-    input,
-    input:focus,
-    input:active {
-      outline: none;
-      background-color: #222222;
-      border: none;
-      font-size: 30px;
-      height: 60px;
-    }
   }
 }
 
 .btn-dark {
-  background-color: #222222;
+  background-color: $dark-grey-color;
 }
 
 .sms-form {
+  @extend %grey-input;
   border-radius: 15px;
-  input,
-  input:focus,
-  input:active {
-    outline: none;
-    background-color: #222222;
-    border: none;
-    font-size: 30px;
-    height: 60px;
-  }
 }
 
 .back-button {
@@ -160,15 +155,16 @@ header {
   height: 110px;
   background-size: cover;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .grey-line {
-  border-bottom: 1px solid #3b3b3b;
+  border-bottom: 1px solid $dark-grey-color;
 }
 
 .info-details {
-  border-left: 2px solid #9e4f60;
-  background-color: #282727;
+  border-left: 2px solid $pink-color;
+  background-color: $dark-grey-color;
   color: white;
   opacity: 0.7;
   p {
@@ -193,7 +189,7 @@ header {
 }
 
 .result-filter {
-  background-color: #282727;
+  background-color: $dark-grey-color;
   color: white;
   opacity: 0.7;
   display: flex;
@@ -201,13 +197,13 @@ header {
 }
 
 .custom-select {
-  background-color: #3b3b3b;
+  background-color: $dark-grey-color;
   border: none;
-  color: #010000;
+  color: white;
 }
 
 .info-category {
-  border-left: 2px solid #282727;
+  border-left: 2px solid $dark-grey-color;
   padding: 0px 15px 0px 15px;
   margin-top: 15px;
   div {
@@ -216,7 +212,7 @@ header {
     margin-bottom: 8px;
   }
   p {
-    color: #b6687a;
+    color: $pink-color;
     font-size: 14px;
   }
 }

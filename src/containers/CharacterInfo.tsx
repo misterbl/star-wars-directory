@@ -84,11 +84,9 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
               />
             )}
           />
-          <h2 className="text-center text-white ml-5 mt-5 p-3">
-            {name.toUpperCase()}
-          </h2>
+          <h2 className="text-white ml-5 mt-5 p-3">{name.toUpperCase()}</h2>
           {sprite ? (
-            <div className="avatar avatar__current-view my-2">
+            <div className="ml-5 avatar my-2">
               <div
                 style={{
                   backgroundPosition: `${sprite}`,
