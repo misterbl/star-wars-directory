@@ -49,7 +49,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
       "children": Array [
         <BackButton
@@ -57,98 +57,92 @@ ShallowWrapper {
           route="/"
           text="Back to search result"
         />,
-        <div
-          className="d-flex justify-content-around ml-5 mt-5 pl-5"
-        >
-          <div>
-            <h2
-              className="text-center text-white p-3"
-            >
-              NAME
-            </h2>
-            <div
-              className="avatar avatar__default card-img-top mr-3"
-            />
-          </div>
-          <Formik
-            enableReinitialize={false}
-            initialValues={
-              Object {
-                "phoneNumber": "",
-              }
+        <Formik
+          enableReinitialize={false}
+          initialValues={
+            Object {
+              "phoneNumber": "",
             }
-            isInitialValid={false}
-            onSubmit={[Function]}
-            render={[Function]}
-            validateOnBlur={true}
-            validateOnChange={true}
-            validationSchema={
-              ObjectSchema {
-                "_blacklist": RefSet {
-                  "list": Set {},
-                  "refs": Map {},
-                },
-                "_conditions": Array [],
-                "_defaultDefault": [Function],
-                "_deps": Array [],
-                "_excludedEdges": Array [],
-                "_exclusive": Object {},
-                "_mutate": undefined,
-                "_nodes": Array [
-                  "phoneNumber",
-                ],
-                "_options": Object {
-                  "abortEarly": true,
-                  "recursive": true,
-                },
-                "_type": "object",
-                "_typeError": [Function],
-                "_whitelist": RefSet {
-                  "list": Set {},
-                  "refs": Map {},
-                },
-                "fields": Object {
-                  "phoneNumber": StringSchema {
-                    "_blacklist": RefSet {
-                      "list": Set {},
-                      "refs": Map {},
-                    },
-                    "_conditions": Array [],
-                    "_deps": Array [],
-                    "_exclusive": Object {
-                      "length": true,
-                      "required": true,
-                      "undefined": false,
-                    },
-                    "_mutate": undefined,
-                    "_options": Object {
-                      "abortEarly": true,
-                      "recursive": true,
-                    },
-                    "_type": "string",
-                    "_typeError": [Function],
-                    "_whitelist": RefSet {
-                      "list": Set {},
-                      "refs": Map {},
-                    },
-                    "tests": Array [
-                      [Function],
-                      [Function],
-                      [Function],
-                    ],
-                    "transforms": Array [
-                      [Function],
-                    ],
+          }
+          isInitialValid={false}
+          onSubmit={[Function]}
+          render={[Function]}
+          validateOnBlur={true}
+          validateOnChange={true}
+          validationSchema={
+            ObjectSchema {
+              "_blacklist": RefSet {
+                "list": Set {},
+                "refs": Map {},
+              },
+              "_conditions": Array [],
+              "_defaultDefault": [Function],
+              "_deps": Array [],
+              "_excludedEdges": Array [],
+              "_exclusive": Object {},
+              "_mutate": undefined,
+              "_nodes": Array [
+                "phoneNumber",
+              ],
+              "_options": Object {
+                "abortEarly": true,
+                "recursive": true,
+              },
+              "_type": "object",
+              "_typeError": [Function],
+              "_whitelist": RefSet {
+                "list": Set {},
+                "refs": Map {},
+              },
+              "fields": Object {
+                "phoneNumber": StringSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
                   },
+                  "_conditions": Array [],
+                  "_deps": Array [],
+                  "_exclusive": Object {
+                    "length": true,
+                    "required": true,
+                    "undefined": false,
+                  },
+                  "_mutate": undefined,
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "string",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "tests": Array [
+                    [Function],
+                    [Function],
+                    [Function],
+                  ],
+                  "transforms": Array [
+                    [Function],
+                  ],
                 },
-                "tests": Array [],
-                "transforms": Array [
-                  [Function],
-                ],
-              }
+              },
+              "tests": Array [],
+              "transforms": Array [
+                [Function],
+              ],
             }
-          />
-        </div>,
+          }
+        />,
+        <h2
+          className="text-center text-white ml-5 mt-5 p-3"
+        >
+          NAME
+        </h2>,
+        <div
+          className="avatar avatar__default mr-3"
+        />,
         <div
           className="d-flex p-4"
         >
@@ -196,6 +190,7 @@ ShallowWrapper {
         </div>,
         ")",
       ],
+      "className": "p-5",
     },
     "ref": null,
     "rendered": Array [
@@ -215,229 +210,106 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <div>
-              <h2
-                className="text-center text-white p-3"
-              >
-                NAME
-              </h2>
-              <div
-                className="avatar avatar__default card-img-top mr-3"
-              />
-            </div>,
-            <Formik
-              enableReinitialize={false}
-              initialValues={
-                Object {
-                  "phoneNumber": "",
-                }
-              }
-              isInitialValid={false}
-              onSubmit={[Function]}
-              render={[Function]}
-              validateOnBlur={true}
-              validateOnChange={true}
-              validationSchema={
-                ObjectSchema {
-                  "_blacklist": RefSet {
-                    "list": Set {},
-                    "refs": Map {},
-                  },
-                  "_conditions": Array [],
-                  "_defaultDefault": [Function],
-                  "_deps": Array [],
-                  "_excludedEdges": Array [],
-                  "_exclusive": Object {},
-                  "_mutate": undefined,
-                  "_nodes": Array [
-                    "phoneNumber",
-                  ],
-                  "_options": Object {
-                    "abortEarly": true,
-                    "recursive": true,
-                  },
-                  "_type": "object",
-                  "_typeError": [Function],
-                  "_whitelist": RefSet {
-                    "list": Set {},
-                    "refs": Map {},
-                  },
-                  "fields": Object {
-                    "phoneNumber": StringSchema {
-                      "_blacklist": RefSet {
-                        "list": Set {},
-                        "refs": Map {},
-                      },
-                      "_conditions": Array [],
-                      "_deps": Array [],
-                      "_exclusive": Object {
-                        "length": true,
-                        "required": true,
-                        "undefined": false,
-                      },
-                      "_mutate": undefined,
-                      "_options": Object {
-                        "abortEarly": true,
-                        "recursive": true,
-                      },
-                      "_type": "string",
-                      "_typeError": [Function],
-                      "_whitelist": RefSet {
-                        "list": Set {},
-                        "refs": Map {},
-                      },
-                      "tests": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                      "transforms": Array [
-                        [Function],
-                      ],
-                    },
-                  },
-                  "tests": Array [],
-                  "transforms": Array [
-                    [Function],
-                  ],
-                }
-              }
-            />,
-          ],
-          "className": "d-flex justify-content-around ml-5 mt-5 pl-5",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h2
-                  className="text-center text-white p-3"
-                >
-                  NAME
-                </h2>,
-                <div
-                  className="avatar avatar__default card-img-top mr-3"
-                />,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "NAME",
-                  "className": "text-center text-white p-3",
-                },
-                "ref": null,
-                "rendered": "NAME",
-                "type": "h2",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "className": "avatar avatar__default card-img-top mr-3",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "div",
-              },
-            ],
-            "type": "div",
+          "enableReinitialize": false,
+          "initialValues": Object {
+            "phoneNumber": "",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "enableReinitialize": false,
-              "initialValues": Object {
-                "phoneNumber": "",
-              },
-              "isInitialValid": false,
-              "onSubmit": [Function],
-              "render": [Function],
-              "validateOnBlur": true,
-              "validateOnChange": true,
-              "validationSchema": ObjectSchema {
+          "isInitialValid": false,
+          "onSubmit": [Function],
+          "render": [Function],
+          "validateOnBlur": true,
+          "validateOnChange": true,
+          "validationSchema": ObjectSchema {
+            "_blacklist": RefSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "_conditions": Array [],
+            "_defaultDefault": [Function],
+            "_deps": Array [],
+            "_excludedEdges": Array [],
+            "_exclusive": Object {},
+            "_mutate": undefined,
+            "_nodes": Array [
+              "phoneNumber",
+            ],
+            "_options": Object {
+              "abortEarly": true,
+              "recursive": true,
+            },
+            "_type": "object",
+            "_typeError": [Function],
+            "_whitelist": RefSet {
+              "list": Set {},
+              "refs": Map {},
+            },
+            "fields": Object {
+              "phoneNumber": StringSchema {
                 "_blacklist": RefSet {
                   "list": Set {},
                   "refs": Map {},
                 },
                 "_conditions": Array [],
-                "_defaultDefault": [Function],
                 "_deps": Array [],
-                "_excludedEdges": Array [],
-                "_exclusive": Object {},
+                "_exclusive": Object {
+                  "length": true,
+                  "required": true,
+                  "undefined": false,
+                },
                 "_mutate": undefined,
-                "_nodes": Array [
-                  "phoneNumber",
-                ],
                 "_options": Object {
                   "abortEarly": true,
                   "recursive": true,
                 },
-                "_type": "object",
+                "_type": "string",
                 "_typeError": [Function],
                 "_whitelist": RefSet {
                   "list": Set {},
                   "refs": Map {},
                 },
-                "fields": Object {
-                  "phoneNumber": StringSchema {
-                    "_blacklist": RefSet {
-                      "list": Set {},
-                      "refs": Map {},
-                    },
-                    "_conditions": Array [],
-                    "_deps": Array [],
-                    "_exclusive": Object {
-                      "length": true,
-                      "required": true,
-                      "undefined": false,
-                    },
-                    "_mutate": undefined,
-                    "_options": Object {
-                      "abortEarly": true,
-                      "recursive": true,
-                    },
-                    "_type": "string",
-                    "_typeError": [Function],
-                    "_whitelist": RefSet {
-                      "list": Set {},
-                      "refs": Map {},
-                    },
-                    "tests": Array [
-                      [Function],
-                      [Function],
-                      [Function],
-                    ],
-                    "transforms": Array [
-                      [Function],
-                    ],
-                  },
-                },
-                "tests": Array [],
+                "tests": Array [
+                  [Function],
+                  [Function],
+                  [Function],
+                ],
                 "transforms": Array [
                   [Function],
                 ],
               },
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "tests": Array [],
+            "transforms": Array [
+              [Function],
+            ],
           },
-        ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "NAME",
+          "className": "text-center text-white ml-5 mt-5 p-3",
+        },
+        "ref": null,
+        "rendered": "NAME",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "avatar avatar__default mr-3",
+        },
+        "ref": null,
+        "rendered": null,
         "type": "div",
       },
       Object {
@@ -589,13 +461,13 @@ ShallowWrapper {
       },
       ")",
     ],
-    "type": Symbol(react.fragment),
+    "type": "main",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
         "children": Array [
           <BackButton
@@ -603,98 +475,92 @@ ShallowWrapper {
             route="/"
             text="Back to search result"
           />,
-          <div
-            className="d-flex justify-content-around ml-5 mt-5 pl-5"
-          >
-            <div>
-              <h2
-                className="text-center text-white p-3"
-              >
-                NAME
-              </h2>
-              <div
-                className="avatar avatar__default card-img-top mr-3"
-              />
-            </div>
-            <Formik
-              enableReinitialize={false}
-              initialValues={
-                Object {
-                  "phoneNumber": "",
-                }
+          <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "phoneNumber": "",
               }
-              isInitialValid={false}
-              onSubmit={[Function]}
-              render={[Function]}
-              validateOnBlur={true}
-              validateOnChange={true}
-              validationSchema={
-                ObjectSchema {
-                  "_blacklist": RefSet {
-                    "list": Set {},
-                    "refs": Map {},
-                  },
-                  "_conditions": Array [],
-                  "_defaultDefault": [Function],
-                  "_deps": Array [],
-                  "_excludedEdges": Array [],
-                  "_exclusive": Object {},
-                  "_mutate": undefined,
-                  "_nodes": Array [
-                    "phoneNumber",
-                  ],
-                  "_options": Object {
-                    "abortEarly": true,
-                    "recursive": true,
-                  },
-                  "_type": "object",
-                  "_typeError": [Function],
-                  "_whitelist": RefSet {
-                    "list": Set {},
-                    "refs": Map {},
-                  },
-                  "fields": Object {
-                    "phoneNumber": StringSchema {
-                      "_blacklist": RefSet {
-                        "list": Set {},
-                        "refs": Map {},
-                      },
-                      "_conditions": Array [],
-                      "_deps": Array [],
-                      "_exclusive": Object {
-                        "length": true,
-                        "required": true,
-                        "undefined": false,
-                      },
-                      "_mutate": undefined,
-                      "_options": Object {
-                        "abortEarly": true,
-                        "recursive": true,
-                      },
-                      "_type": "string",
-                      "_typeError": [Function],
-                      "_whitelist": RefSet {
-                        "list": Set {},
-                        "refs": Map {},
-                      },
-                      "tests": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                      "transforms": Array [
-                        [Function],
-                      ],
+            }
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+            validationSchema={
+              ObjectSchema {
+                "_blacklist": RefSet {
+                  "list": Set {},
+                  "refs": Map {},
+                },
+                "_conditions": Array [],
+                "_defaultDefault": [Function],
+                "_deps": Array [],
+                "_excludedEdges": Array [],
+                "_exclusive": Object {},
+                "_mutate": undefined,
+                "_nodes": Array [
+                  "phoneNumber",
+                ],
+                "_options": Object {
+                  "abortEarly": true,
+                  "recursive": true,
+                },
+                "_type": "object",
+                "_typeError": [Function],
+                "_whitelist": RefSet {
+                  "list": Set {},
+                  "refs": Map {},
+                },
+                "fields": Object {
+                  "phoneNumber": StringSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
                     },
+                    "_conditions": Array [],
+                    "_deps": Array [],
+                    "_exclusive": Object {
+                      "length": true,
+                      "required": true,
+                      "undefined": false,
+                    },
+                    "_mutate": undefined,
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "string",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "tests": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "transforms": Array [
+                      [Function],
+                    ],
                   },
-                  "tests": Array [],
-                  "transforms": Array [
-                    [Function],
-                  ],
-                }
+                },
+                "tests": Array [],
+                "transforms": Array [
+                  [Function],
+                ],
               }
-            />
-          </div>,
+            }
+          />,
+          <h2
+            className="text-center text-white ml-5 mt-5 p-3"
+          >
+            NAME
+          </h2>,
+          <div
+            className="avatar avatar__default mr-3"
+          />,
           <div
             className="d-flex p-4"
           >
@@ -742,6 +608,7 @@ ShallowWrapper {
           </div>,
           ")",
         ],
+        "className": "p-5",
       },
       "ref": null,
       "rendered": Array [
@@ -761,229 +628,106 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <div>
-                <h2
-                  className="text-center text-white p-3"
-                >
-                  NAME
-                </h2>
-                <div
-                  className="avatar avatar__default card-img-top mr-3"
-                />
-              </div>,
-              <Formik
-                enableReinitialize={false}
-                initialValues={
-                  Object {
-                    "phoneNumber": "",
-                  }
-                }
-                isInitialValid={false}
-                onSubmit={[Function]}
-                render={[Function]}
-                validateOnBlur={true}
-                validateOnChange={true}
-                validationSchema={
-                  ObjectSchema {
-                    "_blacklist": RefSet {
-                      "list": Set {},
-                      "refs": Map {},
-                    },
-                    "_conditions": Array [],
-                    "_defaultDefault": [Function],
-                    "_deps": Array [],
-                    "_excludedEdges": Array [],
-                    "_exclusive": Object {},
-                    "_mutate": undefined,
-                    "_nodes": Array [
-                      "phoneNumber",
-                    ],
-                    "_options": Object {
-                      "abortEarly": true,
-                      "recursive": true,
-                    },
-                    "_type": "object",
-                    "_typeError": [Function],
-                    "_whitelist": RefSet {
-                      "list": Set {},
-                      "refs": Map {},
-                    },
-                    "fields": Object {
-                      "phoneNumber": StringSchema {
-                        "_blacklist": RefSet {
-                          "list": Set {},
-                          "refs": Map {},
-                        },
-                        "_conditions": Array [],
-                        "_deps": Array [],
-                        "_exclusive": Object {
-                          "length": true,
-                          "required": true,
-                          "undefined": false,
-                        },
-                        "_mutate": undefined,
-                        "_options": Object {
-                          "abortEarly": true,
-                          "recursive": true,
-                        },
-                        "_type": "string",
-                        "_typeError": [Function],
-                        "_whitelist": RefSet {
-                          "list": Set {},
-                          "refs": Map {},
-                        },
-                        "tests": Array [
-                          [Function],
-                          [Function],
-                          [Function],
-                        ],
-                        "transforms": Array [
-                          [Function],
-                        ],
-                      },
-                    },
-                    "tests": Array [],
-                    "transforms": Array [
-                      [Function],
-                    ],
-                  }
-                }
-              />,
-            ],
-            "className": "d-flex justify-content-around ml-5 mt-5 pl-5",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h2
-                    className="text-center text-white p-3"
-                  >
-                    NAME
-                  </h2>,
-                  <div
-                    className="avatar avatar__default card-img-top mr-3"
-                  />,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "NAME",
-                    "className": "text-center text-white p-3",
-                  },
-                  "ref": null,
-                  "rendered": "NAME",
-                  "type": "h2",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "avatar avatar__default card-img-top mr-3",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-              ],
-              "type": "div",
+            "enableReinitialize": false,
+            "initialValues": Object {
+              "phoneNumber": "",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "enableReinitialize": false,
-                "initialValues": Object {
-                  "phoneNumber": "",
-                },
-                "isInitialValid": false,
-                "onSubmit": [Function],
-                "render": [Function],
-                "validateOnBlur": true,
-                "validateOnChange": true,
-                "validationSchema": ObjectSchema {
+            "isInitialValid": false,
+            "onSubmit": [Function],
+            "render": [Function],
+            "validateOnBlur": true,
+            "validateOnChange": true,
+            "validationSchema": ObjectSchema {
+              "_blacklist": RefSet {
+                "list": Set {},
+                "refs": Map {},
+              },
+              "_conditions": Array [],
+              "_defaultDefault": [Function],
+              "_deps": Array [],
+              "_excludedEdges": Array [],
+              "_exclusive": Object {},
+              "_mutate": undefined,
+              "_nodes": Array [
+                "phoneNumber",
+              ],
+              "_options": Object {
+                "abortEarly": true,
+                "recursive": true,
+              },
+              "_type": "object",
+              "_typeError": [Function],
+              "_whitelist": RefSet {
+                "list": Set {},
+                "refs": Map {},
+              },
+              "fields": Object {
+                "phoneNumber": StringSchema {
                   "_blacklist": RefSet {
                     "list": Set {},
                     "refs": Map {},
                   },
                   "_conditions": Array [],
-                  "_defaultDefault": [Function],
                   "_deps": Array [],
-                  "_excludedEdges": Array [],
-                  "_exclusive": Object {},
+                  "_exclusive": Object {
+                    "length": true,
+                    "required": true,
+                    "undefined": false,
+                  },
                   "_mutate": undefined,
-                  "_nodes": Array [
-                    "phoneNumber",
-                  ],
                   "_options": Object {
                     "abortEarly": true,
                     "recursive": true,
                   },
-                  "_type": "object",
+                  "_type": "string",
                   "_typeError": [Function],
                   "_whitelist": RefSet {
                     "list": Set {},
                     "refs": Map {},
                   },
-                  "fields": Object {
-                    "phoneNumber": StringSchema {
-                      "_blacklist": RefSet {
-                        "list": Set {},
-                        "refs": Map {},
-                      },
-                      "_conditions": Array [],
-                      "_deps": Array [],
-                      "_exclusive": Object {
-                        "length": true,
-                        "required": true,
-                        "undefined": false,
-                      },
-                      "_mutate": undefined,
-                      "_options": Object {
-                        "abortEarly": true,
-                        "recursive": true,
-                      },
-                      "_type": "string",
-                      "_typeError": [Function],
-                      "_whitelist": RefSet {
-                        "list": Set {},
-                        "refs": Map {},
-                      },
-                      "tests": Array [
-                        [Function],
-                        [Function],
-                        [Function],
-                      ],
-                      "transforms": Array [
-                        [Function],
-                      ],
-                    },
-                  },
-                  "tests": Array [],
+                  "tests": Array [
+                    [Function],
+                    [Function],
+                    [Function],
+                  ],
                   "transforms": Array [
                     [Function],
                   ],
                 },
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "tests": Array [],
+              "transforms": Array [
+                [Function],
+              ],
             },
-          ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "NAME",
+            "className": "text-center text-white ml-5 mt-5 p-3",
+          },
+          "ref": null,
+          "rendered": "NAME",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "avatar avatar__default mr-3",
+          },
+          "ref": null,
+          "rendered": null,
           "type": "div",
         },
         Object {
@@ -1135,7 +879,7 @@ ShallowWrapper {
         },
         ")",
       ],
-      "type": Symbol(react.fragment),
+      "type": "main",
     },
   ],
   Symbol(enzyme.__options__): Object {

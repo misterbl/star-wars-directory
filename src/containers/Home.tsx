@@ -171,6 +171,7 @@ export class Home extends Component<IHomeComponent> {
           </>
         )}
         {foundFilms && showFilms && (
+          // @ts-ignore
           <ResultList type="Films" list={filmsList} />
         )}
       </main>

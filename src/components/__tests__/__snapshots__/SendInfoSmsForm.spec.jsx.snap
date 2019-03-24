@@ -44,7 +44,7 @@ ShallowWrapper {
           className="text-white"
           htmlFor="phoneNumber"
         >
-          Send this information to your mobile phone
+          Enter your number to get this information sent to you
         </label>,
         <input
           aria-invalid={false}
@@ -54,14 +54,14 @@ ShallowWrapper {
           name="phoneNumber"
           onChange={[Function]}
           onFocus={[MockFunction]}
-          placeholder="PHONE NUMBER"
+          placeholder="MOBILE NUMBER"
           type="number"
           value="phoneNumber"
         />,
         false,
         false,
       ],
-      "className": "ml-3 mt-3 mb-0 sms-form w-50",
+      "className": "ml-5 mt-3 mb-0 sms-form w-50",
       "onSubmit": [MockFunction],
     },
     "ref": null,
@@ -71,12 +71,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Send this information to your mobile phone",
+          "children": "Enter your number to get this information sent to you",
           "className": "text-white",
           "htmlFor": "phoneNumber",
         },
         "ref": null,
-        "rendered": "Send this information to your mobile phone",
+        "rendered": "Enter your number to get this information sent to you",
         "type": "label",
       },
       Object {
@@ -91,7 +91,7 @@ ShallowWrapper {
           "name": "phoneNumber",
           "onChange": [Function],
           "onFocus": [MockFunction],
-          "placeholder": "PHONE NUMBER",
+          "placeholder": "MOBILE NUMBER",
           "type": "number",
           "value": "phoneNumber",
         },
@@ -115,7 +115,7 @@ ShallowWrapper {
             className="text-white"
             htmlFor="phoneNumber"
           >
-            Send this information to your mobile phone
+            Enter your number to get this information sent to you
           </label>,
           <input
             aria-invalid={false}
@@ -125,14 +125,14 @@ ShallowWrapper {
             name="phoneNumber"
             onChange={[Function]}
             onFocus={[MockFunction]}
-            placeholder="PHONE NUMBER"
+            placeholder="MOBILE NUMBER"
             type="number"
             value="phoneNumber"
           />,
           false,
           false,
         ],
-        "className": "ml-3 mt-3 mb-0 sms-form w-50",
+        "className": "ml-5 mt-3 mb-0 sms-form w-50",
         "onSubmit": [MockFunction],
       },
       "ref": null,
@@ -142,12 +142,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Send this information to your mobile phone",
+            "children": "Enter your number to get this information sent to you",
             "className": "text-white",
             "htmlFor": "phoneNumber",
           },
           "ref": null,
-          "rendered": "Send this information to your mobile phone",
+          "rendered": "Enter your number to get this information sent to you",
           "type": "label",
         },
         Object {
@@ -162,7 +162,7 @@ ShallowWrapper {
             "name": "phoneNumber",
             "onChange": [Function],
             "onFocus": [MockFunction],
-            "placeholder": "PHONE NUMBER",
+            "placeholder": "MOBILE NUMBER",
             "type": "number",
             "value": "phoneNumber",
           },

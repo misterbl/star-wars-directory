@@ -1,10 +1,10 @@
-import React, { StatelessComponent } from "react";
+import React, { FunctionComponent } from "react";
 import CharacterCard from "./CharacterCard";
 import FilmCard from "./FilmCard";
 import { IResultList } from "./ResultList.d";
 import { ICharacter, IFilm } from "../state";
 
-const ResultList: StatelessComponent<IResultList> = ({
+const ResultList: FunctionComponent<IResultList> = ({
   list,
   type,
   children

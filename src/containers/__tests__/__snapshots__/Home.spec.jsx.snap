@@ -70,7 +70,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="form-group search-form search-form__body"
+          className="search-form search-form__body"
         >
           <Formik
             enableReinitialize={false}
@@ -184,7 +184,7 @@ ShallowWrapper {
           type="Films"
         />,
       ],
-      "className": "form-container p-5",
+      "className": "p-5",
     },
     "ref": null,
     "rendered": Array [
@@ -206,7 +206,7 @@ ShallowWrapper {
             validateOnBlur={true}
             validateOnChange={true}
           />,
-          "className": "form-group search-form search-form__body",
+          "className": "search-form search-form__body",
         },
         "ref": null,
         "rendered": Object {
@@ -655,7 +655,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="form-group search-form search-form__body"
+            className="search-form search-form__body"
           >
             <Formik
               enableReinitialize={false}
@@ -769,7 +769,7 @@ ShallowWrapper {
             type="Films"
           />,
         ],
-        "className": "form-container p-5",
+        "className": "p-5",
       },
       "ref": null,
       "rendered": Array [
@@ -791,7 +791,7 @@ ShallowWrapper {
               validateOnBlur={true}
               validateOnChange={true}
             />,
-            "className": "form-group search-form search-form__body",
+            "className": "search-form search-form__body",
           },
           "ref": null,
           "rendered": Object {

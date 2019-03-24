@@ -47,42 +47,40 @@ export class FilmInfo extends Component<IFilm & IFilmComponent> {
       } = this.props;
       const { displaySentSuccess } = this.state;
       return (
-        <>
+        <main className="p-5">
           <BackButton
             route={ROUTES.INDEX}
             text="Back to search result"
             push={push}
           />
-          <div className="d-flex flex-column ml-5 my-5 pl-5">
-            <div className="info-details w-75 p-3">
-              <h2 className="text-center">{title.toUpperCase()}</h2>
-              <p>{opening_crawl}</p>
-              <p>{`Released the ${formattedDate(release_date)}`}</p>
-              <p>{`Directed by: ${director}`}</p>
-              <p>{`Produced by: ${producer}`}</p>
-            </div>
-            <Formik
-              validationSchema={Yup.object().shape({
-                phoneNumber: Yup.string()
-                  .required("Phone number required")
-                  .length(11)
-                  .matches(phoneRegExp, "Phone number is not valid")
-              })}
-              initialValues={{
-                phoneNumber: ""
-              }}
-              onSubmit={this.handleSubmit}
-              render={formikProps => (
-                <SendInfoSmsForm
-                  sendingInfoSms={sendingInfoSms}
-                  displaySentSuccess={displaySentSuccess}
-                  resetdisplaySentSuccess={this.resetdisplaySentSuccess}
-                  {...formikProps}
-                />
-              )}
-            />
+          <Formik
+            validationSchema={Yup.object().shape({
+              phoneNumber: Yup.string()
+                .required("Phone number required")
+                .length(11)
+                .matches(phoneRegExp, "Phone number is not valid")
+            })}
+            initialValues={{
+              phoneNumber: ""
+            }}
+            onSubmit={this.handleSubmit}
+            render={formikProps => (
+              <SendInfoSmsForm
+                sendingInfoSms={sendingInfoSms}
+                displaySentSuccess={displaySentSuccess}
+                resetdisplaySentSuccess={this.resetdisplaySentSuccess}
+                {...formikProps}
+              />
+            )}
+          />
+          <div className="info-details w-75  ml-5 my-5 p-3">
+            <h2 className="text-center">{title.toUpperCase()}</h2>
+            <p>{opening_crawl}</p>
+            <p>{`Released the ${formattedDate(release_date)}`}</p>
+            <p>{`Directed by: ${director}`}</p>
+            <p>{`Produced by: ${producer}`}</p>
           </div>
-        </>
+        </main>
       );
     } else {
       return <>{this.backHome()}</>;

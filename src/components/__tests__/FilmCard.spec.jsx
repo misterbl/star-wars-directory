@@ -7,7 +7,7 @@ import ROUTES from "../../const/routes";
 
 describe("FilmCard", () => {
   const props = {
-    assignCurrentView: ,
+    assignCurrentView: jest.fn(),
     history,
     film: {
       director: "name",

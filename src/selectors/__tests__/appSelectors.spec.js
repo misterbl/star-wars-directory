@@ -45,7 +45,7 @@ describe("appSelectors", () => {
   });
   describe("fetchingCharacterDetails", () => {
     it("should return the value for fetchingCharacterDetails", () => {
-      const actual = appSelectors.isLoading(state);
+      const actual = appSelectors.fetchingCharacterDetails(state);
       expect(actual).toEqual(false);
     });
   });

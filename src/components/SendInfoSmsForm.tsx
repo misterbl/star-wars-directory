@@ -29,7 +29,7 @@ class SendInfoSmsForm extends React.PureComponent<
     } = this.props;
     const phoneNumberError = Boolean(errors.phoneNumber && touched.phoneNumber);
     return (
-      <form onSubmit={handleSubmit} className="ml-3 mt-3 mb-0 sms-form w-50">
+      <form onSubmit={handleSubmit} className="ml-5 mt-3 mb-0 sms-form w-50">
         <label htmlFor="phoneNumber" className="text-white">
           Enter your number to get this information sent to you
         </label>

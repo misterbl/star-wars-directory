@@ -2,6 +2,8 @@ const generateAppState = () => ({
   app: {
     fetchingPeopleAndFilms: false,
     sendingInfoSms: false,
+    isLoading: false,
+    fetchingSingleInfo: false,
     peopleList: [
       {
         name: "name",

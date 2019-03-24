@@ -4,7 +4,7 @@ exports[`FilmCard matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FilmCard
-    assignCurrentView={Object {}}
+    assignCurrentView={[MockFunction]}
     film={
       Object {
         "director": "name",

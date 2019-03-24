@@ -61,7 +61,7 @@ ShallowWrapper {
           className="d-flex"
         >
           <div
-            className="avatar avatar__default card-img-top"
+            className="avatar avatar__default my-2"
           />
           <div
             className="ml-3"
@@ -109,7 +109,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="avatar avatar__default card-img-top"
+              className="avatar avatar__default my-2"
             />,
             <div
               className="ml-3"
@@ -140,7 +140,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "avatar avatar__default card-img-top",
+              "className": "avatar avatar__default my-2",
             },
             "ref": null,
             "rendered": null,
@@ -233,7 +233,7 @@ ShallowWrapper {
             className="d-flex"
           >
             <div
-              className="avatar avatar__default card-img-top"
+              className="avatar avatar__default my-2"
             />
             <div
               className="ml-3"
@@ -281,7 +281,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="avatar avatar__default card-img-top"
+                className="avatar avatar__default my-2"
               />,
               <div
                 className="ml-3"
@@ -312,7 +312,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "avatar avatar__default card-img-top",
+                "className": "avatar avatar__default my-2",
               },
               "ref": null,
               "rendered": null,
