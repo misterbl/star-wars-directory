@@ -26,15 +26,18 @@ const getCharacterDetails = (
 
     await getSingleInfo(species, saveSpecies, "name", dispatch);
     await getSingleInfo(homeWorld, saveHomeWorld, "name", dispatch);
-    await films.map((url: string) => {
-      getSingleInfo(url, saveCharacterFilms, "title", dispatch);
-    });
-    await vehicles.map((url: string) => {
-      getSingleInfo(url, saveVehicle, "name", dispatch);
-    });
-    await starships.map((url: string) => {
-      getSingleInfo(url, saveStarship, "name", dispatch);
-    });
+    films.map(
+      async (url: string) =>
+        await getSingleInfo(url, saveCharacterFilms, "title", dispatch)
+    );
+    vehicles.map(
+      async (url: string) =>
+        await getSingleInfo(url, saveVehicle, "name", dispatch)
+    );
+    starships.map(
+      async (url: string) =>
+        await getSingleInfo(url, saveStarship, "name", dispatch)
+    );
 
     dispatch(fetchingCharacterDetails(false));
   } catch (error) {
