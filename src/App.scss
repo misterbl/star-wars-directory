@@ -10,26 +10,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./assets/star-background.jpg");
+  background-image: url("./assets/star-background.png");
+  background-position: 0px -300px;
   background-size: contain;
-}
-#root {
-  height: 100%;
-}
-.avatar {
-  background-image: url("./assets/star-war-characters-grid.jpg");
-  height: 90px;
-  width: 90px;
-  border-radius: 15%;
-  &__default {
-    background-image: url("./assets//star-wars_characters.jpg");
-    background-size: cover;
-  }
-  &__film {
-    background-image: url("./assets/star_wars.png");
-    background-size: cover;
-    width: 160px;
-  }
 }
 
 header {
@@ -49,10 +32,48 @@ header {
   }
 }
 
+// input[type="number"]::-webkit-outer-spin-button,
+// input[type="number"]::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+
+.form-control::-webkit-inner-spin-button,
+.form-control::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .fatal-error {
   background-image: url("./assets/error-page.jpg");
   background-size: cover;
   height: 110%;
+}
+
+#root {
+  height: 100%;
+}
+
+.avatar {
+  background-image: url("./assets/star-war-characters-grid.jpg");
+  height: 90px;
+  width: 90px;
+  border-radius: 15%;
+  min-width: 95px;
+
+  &__default {
+    background-image: url("./assets//star-wars_characters.jpg");
+    background-size: cover;
+  }
+  &__film {
+    background-image: url("./assets/star_wars.png");
+    background-size: cover;
+    width: 160px;
+  }
 }
 
 .search-form {
@@ -144,7 +165,10 @@ header {
   background-color: #282727;
   color: white;
   opacity: 0.7;
-  width: 500px;
+  p {
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
 }
 
 .film-image {
@@ -174,4 +198,19 @@ header {
   background-color: #3b3b3b;
   border: none;
   color: #010000;
+}
+
+.info-category {
+  border-left: 2px solid #282727;
+  padding: 0px 15px 0px 15px;
+  margin-top: 15px;
+  div {
+    font-size: 15px;
+    color: white;
+    margin-bottom: 8px;
+  }
+  p {
+    color: #b6687a;
+    font-size: 14px;
+  }
 }

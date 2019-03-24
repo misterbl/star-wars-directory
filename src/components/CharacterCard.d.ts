@@ -1,13 +1,15 @@
 import { RouteComponentProps, StaticContext } from "react-router";
-import singleSearch from "../actions/thunks/singleSearch";
 import { ICharacter, IFilm } from "../state";
+import getCharacterDetails from "../actions/thunks/getCharacterDetails";
+import { assignCurrentView } from "../actions/actionCreators/actions";
 
 export interface ICharacterCard {
   character: ICharacter;
 }
 
 export interface ICharacterCardDispatchToProps {
-  singleSearch: typeof singleSearch;
+  getCharacterDetails: typeof getCharacterDetails;
+  assignCurrentView: typeof assignCurrentView;
 }
 export interface ICharacterCardComponent
   extends ICharacterCard,

@@ -34,7 +34,8 @@ describe("Home", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("update the state on componentWillReceiveProps", () => {
-    expect(wrapper.state().fetchedPeopleList).toEqual(props.peopleList);
+    wrapper.setProps({ filmsList: ["films1", "films2"] });
+    expect(wrapper.state().showResultsCount).toEqual(true);
   });
   it("update the state on showPeople button click", () => {
     const showPeople = wrapper.find("button").at(0);

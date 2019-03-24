@@ -1,45 +1,46 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import "./declaration.d";
+import { bindActionCreators, Dispatch } from "redux";
 import ClipLoader from "react-spinners/ClipLoader";
+import "./declaration.d";
 import ROUTES from "./const/routes";
 import Header from "./components/Header";
 import Home from "./containers/Home";
 import CharacterInfo from "./containers/CharacterInfo";
 import FilmInfo from "./containers/FilmInfo";
-import SpeciesInfo from "./containers/SpeciesInfo";
 import { IAppComponent } from "./App.d";
 import { isLoading, isFatalError } from "./selectors/appSelectors";
 import { IAppState } from "./state";
 import FatalError from "./components/FatalError";
+import { setFatalError } from "./actions/actionCreators/actions";
 export class App extends Component<IAppComponent> {
+  resetFatalError = () => {
+    this.props.setFatalError(false);
+  };
   render() {
-    console.log(this.props.isFatalError);
-
+    const {
+      isLoading,
+      isFatalError,
+      history: { push }
+    } = this.props;
+    if (isFatalError === true) {
+      return <FatalError push={push} resetFatalError={this.resetFatalError} />;
+    } else if (isLoading) {
+      return (
+        <div className="loader">
+          <ClipLoader size={100} color="#9e4f60" loading={isLoading === true} />
+        </div>
+      );
+    }
     return (
       <>
-        <div className="loader">
-          <ClipLoader
-            size={100}
-            color="#9e4f60"
-            loading={this.props.isLoading === true}
-          />
-        </div>
-
-        {this.props.isFatalError === true ? (
-          <FatalError />
-        ) : (
-          <>
-            <Header />
-            <Switch>
-              <Route exact path={ROUTES.INDEX} component={Home} />
-              <Route path={ROUTES.CHARACTER} component={CharacterInfo} />
-              <Route path={ROUTES.FILM} component={FilmInfo} />
-              <Route path={ROUTES.SPECIES} component={SpeciesInfo} />
-            </Switch>
-          </>
-        )}
+        <Header />
+        <Switch>
+          <Route exact path={ROUTES.INDEX} component={Home} />
+          <Route path={ROUTES.CHARACTER} component={CharacterInfo} />
+          <Route path={ROUTES.FILM} component={FilmInfo} />
+        </Switch>
       </>
     );
   }
@@ -50,4 +51,13 @@ export const mapStateToProps = (state: IAppState) => ({
   isFatalError: isFatalError(state)
 });
 
-export default withRouter(connect(mapStateToProps)(App));
+export const mapDispatchToProps = (dispatch: Dispatch) => ({
+  setFatalError: bindActionCreators(setFatalError, dispatch)
+});
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);

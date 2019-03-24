@@ -2,19 +2,19 @@ import React, { PureComponent } from "react";
 import { withRouter, RouteComponentProps } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
-import singleSearch from "../actions/thunks/singleSearch";
 import { IFilmCardComponent, IFilmCard } from "./FilmCard.d";
 import ROUTES from "../const/routes";
 import formattedDate from "../utils/formattedDate";
+import { assignCurrentView } from "../actions/actionCreators/actions";
 
 export class FilmCard extends PureComponent<IFilmCardComponent> {
   onClick = async () => {
     const {
-      singleSearch,
+      assignCurrentView,
       film,
       history: { push }
     } = this.props;
-    await singleSearch(film.url);
+    await assignCurrentView(film);
     push(ROUTES.FILM);
   };
   render() {
@@ -41,7 +41,7 @@ export class FilmCard extends PureComponent<IFilmCardComponent> {
 }
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  singleSearch: bindActionCreators(singleSearch, dispatch)
+  assignCurrentView: bindActionCreators(assignCurrentView, dispatch)
 });
 
 export default withRouter<IFilmCard & RouteComponentProps>(

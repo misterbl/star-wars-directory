@@ -1,7 +1,6 @@
 const generateAppState = () => ({
   app: {
     fetchingPeopleAndFilms: false,
-    fetchingFilm: false,
     fetchingSingleResult: false,
     sendingInfoSms: false,
     peopleList: [
@@ -32,7 +31,14 @@ const generateAppState = () => ({
         title: "title2"
       }
     ],
-    result: {}
+    currentView: {},
+    isFatalError: false,
+    fetchingCharacterDetails: false,
+    species: "species",
+    homeWorld: "homeWorld",
+    characterFilms: "characterFilm",
+    vehicles: [],
+    starships: []
   }
 });
 

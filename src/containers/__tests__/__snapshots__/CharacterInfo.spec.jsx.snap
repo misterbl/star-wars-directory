@@ -58,60 +58,143 @@ ShallowWrapper {
           text="Back to search result"
         />,
         <div
-          className="d-flex ml-5 mt-5 pl-5"
+          className="d-flex justify-content-around ml-5 mt-5 pl-5"
         >
-          <div
-            className="avatar avatar__default card-img-top mr-3"
-          />
-          <div
-            className="info-details p-3"
-          >
+          <div>
             <h2
-              className="text-center"
+              className="text-center text-white p-3"
             >
               NAME
             </h2>
-            <p>
-              Height: 123cm
-            </p>
-            <p>
-              Weight: 12kgs
-            </p>
-            <p>
-              Hair color: hair_color
-            </p>
-            <p>
-              Skin color: undefined
-            </p>
-            <p>
-              Eye color: eye_color
-            </p>
-            <p>
-              Born in 1234
-            </p>
-            <p>
-              Gender: gender
-            </p>
-            <p
-              onClick={[Function]}
-            >
-              Click here for info about their species
-            </p>
+            <div
+              className="avatar avatar__default card-img-top mr-3"
+            />
           </div>
-        </div>,
-        <Formik
-          enableReinitialize={false}
-          initialValues={
-            Object {
-              "phoneNumber": "",
+          <Formik
+            enableReinitialize={false}
+            initialValues={
+              Object {
+                "phoneNumber": "",
+              }
             }
-          }
-          isInitialValid={false}
-          onSubmit={[Function]}
-          render={[Function]}
-          validateOnBlur={true}
-          validateOnChange={true}
-        />,
+            isInitialValid={false}
+            onSubmit={[Function]}
+            render={[Function]}
+            validateOnBlur={true}
+            validateOnChange={true}
+            validationSchema={
+              ObjectSchema {
+                "_blacklist": RefSet {
+                  "list": Set {},
+                  "refs": Map {},
+                },
+                "_conditions": Array [],
+                "_defaultDefault": [Function],
+                "_deps": Array [],
+                "_excludedEdges": Array [],
+                "_exclusive": Object {},
+                "_mutate": undefined,
+                "_nodes": Array [
+                  "phoneNumber",
+                ],
+                "_options": Object {
+                  "abortEarly": true,
+                  "recursive": true,
+                },
+                "_type": "object",
+                "_typeError": [Function],
+                "_whitelist": RefSet {
+                  "list": Set {},
+                  "refs": Map {},
+                },
+                "fields": Object {
+                  "phoneNumber": StringSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "_conditions": Array [],
+                    "_deps": Array [],
+                    "_exclusive": Object {
+                      "length": true,
+                      "required": true,
+                      "undefined": false,
+                    },
+                    "_mutate": undefined,
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "string",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "tests": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "transforms": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "tests": Array [],
+                "transforms": Array [
+                  [Function],
+                ],
+              }
+            }
+          />
+        </div>,
+        <div
+          className="d-flex p-4"
+        >
+          <InfoCategory
+            title="APPARENCIES"
+          />
+          <InfoCategory
+            list={
+              Array [
+                undefined,
+              ]
+            }
+            title="HOMEWORLD"
+          />
+          <InfoCategory
+            list={
+              Array [
+                "gender",
+              ]
+            }
+            title="GENDER"
+          />
+          <InfoCategory
+            list={
+              Array [
+                "Height: 123cm",
+              ]
+            }
+            title="DIMENSION"
+          />
+          <InfoCategory
+            list={
+              Array [
+                undefined,
+              ]
+            }
+            title="SPECIES"
+          />
+          <InfoCategory
+            title="VEHICLES"
+          />
+          <InfoCategory
+            title="STARSHIPS"
+          />
+        </div>,
+        ")",
       ],
     },
     "ref": null,
@@ -135,46 +218,96 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div
-              className="avatar avatar__default card-img-top mr-3"
-            />,
-            <div
-              className="info-details p-3"
-            >
+            <div>
               <h2
-                className="text-center"
+                className="text-center text-white p-3"
               >
                 NAME
               </h2>
-              <p>
-                Height: 123cm
-              </p>
-              <p>
-                Weight: 12kgs
-              </p>
-              <p>
-                Hair color: hair_color
-              </p>
-              <p>
-                Skin color: undefined
-              </p>
-              <p>
-                Eye color: eye_color
-              </p>
-              <p>
-                Born in 1234
-              </p>
-              <p>
-                Gender: gender
-              </p>
-              <p
-                onClick={[Function]}
-              >
-                Click here for info about their species
-              </p>
+              <div
+                className="avatar avatar__default card-img-top mr-3"
+              />
             </div>,
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "phoneNumber": "",
+                }
+              }
+              isInitialValid={false}
+              onSubmit={[Function]}
+              render={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+              validationSchema={
+                ObjectSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "_conditions": Array [],
+                  "_defaultDefault": [Function],
+                  "_deps": Array [],
+                  "_excludedEdges": Array [],
+                  "_exclusive": Object {},
+                  "_mutate": undefined,
+                  "_nodes": Array [
+                    "phoneNumber",
+                  ],
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "object",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "fields": Object {
+                    "phoneNumber": StringSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_deps": Array [],
+                      "_exclusive": Object {
+                        "length": true,
+                        "required": true,
+                        "undefined": false,
+                      },
+                      "_mutate": undefined,
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "string",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "tests": Array [
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                  },
+                  "tests": Array [],
+                  "transforms": Array [
+                    [Function],
+                  ],
+                }
+              }
+            />,
           ],
-          "className": "d-flex ml-5 mt-5 pl-5",
+          "className": "d-flex justify-content-around ml-5 mt-5 pl-5",
         },
         "ref": null,
         "rendered": Array [
@@ -183,51 +316,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "avatar avatar__default card-img-top mr-3",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": Array [
                 <h2
-                  className="text-center"
+                  className="text-center text-white p-3"
                 >
                   NAME
                 </h2>,
-                <p>
-                  Height: 123cm
-                </p>,
-                <p>
-                  Weight: 12kgs
-                </p>,
-                <p>
-                  Hair color: hair_color
-                </p>,
-                <p>
-                  Skin color: undefined
-                </p>,
-                <p>
-                  Eye color: eye_color
-                </p>,
-                <p>
-                  Born in 1234
-                </p>,
-                <p>
-                  Gender: gender
-                </p>,
-                <p
-                  onClick={[Function]}
-                >
-                  Click here for info about their species
-                </p>,
+                <div
+                  className="avatar avatar__default card-img-top mr-3"
+                />,
               ],
-              "className": "info-details p-3",
             },
             "ref": null,
             "rendered": Array [
@@ -237,7 +335,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "NAME",
-                  "className": "text-center",
+                  "className": "text-center text-white p-3",
                 },
                 "ref": null,
                 "rendered": "NAME",
@@ -248,92 +346,96 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Height: 123cm",
+                  "className": "avatar avatar__default card-img-top mr-3",
                 },
                 "ref": null,
-                "rendered": "Height: 123cm",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Weight: 12kgs",
-                },
-                "ref": null,
-                "rendered": "Weight: 12kgs",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Hair color: hair_color",
-                },
-                "ref": null,
-                "rendered": "Hair color: hair_color",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Skin color: undefined",
-                },
-                "ref": null,
-                "rendered": "Skin color: undefined",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Eye color: eye_color",
-                },
-                "ref": null,
-                "rendered": "Eye color: eye_color",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Born in 1234",
-                },
-                "ref": null,
-                "rendered": "Born in 1234",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Gender: gender",
-                },
-                "ref": null,
-                "rendered": "Gender: gender",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Click here for info about their species",
-                  "onClick": [Function],
-                },
-                "ref": null,
-                "rendered": "Click here for info about their species",
-                "type": "p",
+                "rendered": null,
+                "type": "div",
               },
             ],
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "enableReinitialize": false,
+              "initialValues": Object {
+                "phoneNumber": "",
+              },
+              "isInitialValid": false,
+              "onSubmit": [Function],
+              "render": [Function],
+              "validateOnBlur": true,
+              "validateOnChange": true,
+              "validationSchema": ObjectSchema {
+                "_blacklist": RefSet {
+                  "list": Set {},
+                  "refs": Map {},
+                },
+                "_conditions": Array [],
+                "_defaultDefault": [Function],
+                "_deps": Array [],
+                "_excludedEdges": Array [],
+                "_exclusive": Object {},
+                "_mutate": undefined,
+                "_nodes": Array [
+                  "phoneNumber",
+                ],
+                "_options": Object {
+                  "abortEarly": true,
+                  "recursive": true,
+                },
+                "_type": "object",
+                "_typeError": [Function],
+                "_whitelist": RefSet {
+                  "list": Set {},
+                  "refs": Map {},
+                },
+                "fields": Object {
+                  "phoneNumber": StringSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "_conditions": Array [],
+                    "_deps": Array [],
+                    "_exclusive": Object {
+                      "length": true,
+                      "required": true,
+                      "undefined": false,
+                    },
+                    "_mutate": undefined,
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "string",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "tests": Array [
+                      [Function],
+                      [Function],
+                      [Function],
+                    ],
+                    "transforms": Array [
+                      [Function],
+                    ],
+                  },
+                },
+                "tests": Array [],
+                "transforms": Array [
+                  [Function],
+                ],
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
         ],
         "type": "div",
@@ -341,22 +443,151 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "enableReinitialize": false,
-          "initialValues": Object {
-            "phoneNumber": "",
-          },
-          "isInitialValid": false,
-          "onSubmit": [Function],
-          "render": [Function],
-          "validateOnBlur": true,
-          "validateOnChange": true,
+          "children": Array [
+            <InfoCategory
+              title="APPARENCIES"
+            />,
+            <InfoCategory
+              list={
+                Array [
+                  undefined,
+                ]
+              }
+              title="HOMEWORLD"
+            />,
+            <InfoCategory
+              list={
+                Array [
+                  "gender",
+                ]
+              }
+              title="GENDER"
+            />,
+            <InfoCategory
+              list={
+                Array [
+                  "Height: 123cm",
+                ]
+              }
+              title="DIMENSION"
+            />,
+            <InfoCategory
+              list={
+                Array [
+                  undefined,
+                ]
+              }
+              title="SPECIES"
+            />,
+            <InfoCategory
+              title="VEHICLES"
+            />,
+            <InfoCategory
+              title="STARSHIPS"
+            />,
+          ],
+          "className": "d-flex p-4",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": undefined,
+              "title": "APPARENCIES",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": Array [
+                undefined,
+              ],
+              "title": "HOMEWORLD",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": Array [
+                "gender",
+              ],
+              "title": "GENDER",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": Array [
+                "Height: 123cm",
+              ],
+              "title": "DIMENSION",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": Array [
+                undefined,
+              ],
+              "title": "SPECIES",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": undefined,
+              "title": "VEHICLES",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "list": undefined,
+              "title": "STARSHIPS",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
+      ")",
     ],
     "type": Symbol(react.fragment),
   },
@@ -373,60 +604,143 @@ ShallowWrapper {
             text="Back to search result"
           />,
           <div
-            className="d-flex ml-5 mt-5 pl-5"
+            className="d-flex justify-content-around ml-5 mt-5 pl-5"
           >
-            <div
-              className="avatar avatar__default card-img-top mr-3"
-            />
-            <div
-              className="info-details p-3"
-            >
+            <div>
               <h2
-                className="text-center"
+                className="text-center text-white p-3"
               >
                 NAME
               </h2>
-              <p>
-                Height: 123cm
-              </p>
-              <p>
-                Weight: 12kgs
-              </p>
-              <p>
-                Hair color: hair_color
-              </p>
-              <p>
-                Skin color: undefined
-              </p>
-              <p>
-                Eye color: eye_color
-              </p>
-              <p>
-                Born in 1234
-              </p>
-              <p>
-                Gender: gender
-              </p>
-              <p
-                onClick={[Function]}
-              >
-                Click here for info about their species
-              </p>
+              <div
+                className="avatar avatar__default card-img-top mr-3"
+              />
             </div>
-          </div>,
-          <Formik
-            enableReinitialize={false}
-            initialValues={
-              Object {
-                "phoneNumber": "",
+            <Formik
+              enableReinitialize={false}
+              initialValues={
+                Object {
+                  "phoneNumber": "",
+                }
               }
-            }
-            isInitialValid={false}
-            onSubmit={[Function]}
-            render={[Function]}
-            validateOnBlur={true}
-            validateOnChange={true}
-          />,
+              isInitialValid={false}
+              onSubmit={[Function]}
+              render={[Function]}
+              validateOnBlur={true}
+              validateOnChange={true}
+              validationSchema={
+                ObjectSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "_conditions": Array [],
+                  "_defaultDefault": [Function],
+                  "_deps": Array [],
+                  "_excludedEdges": Array [],
+                  "_exclusive": Object {},
+                  "_mutate": undefined,
+                  "_nodes": Array [
+                    "phoneNumber",
+                  ],
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "object",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "fields": Object {
+                    "phoneNumber": StringSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_deps": Array [],
+                      "_exclusive": Object {
+                        "length": true,
+                        "required": true,
+                        "undefined": false,
+                      },
+                      "_mutate": undefined,
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "string",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "tests": Array [
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                  },
+                  "tests": Array [],
+                  "transforms": Array [
+                    [Function],
+                  ],
+                }
+              }
+            />
+          </div>,
+          <div
+            className="d-flex p-4"
+          >
+            <InfoCategory
+              title="APPARENCIES"
+            />
+            <InfoCategory
+              list={
+                Array [
+                  undefined,
+                ]
+              }
+              title="HOMEWORLD"
+            />
+            <InfoCategory
+              list={
+                Array [
+                  "gender",
+                ]
+              }
+              title="GENDER"
+            />
+            <InfoCategory
+              list={
+                Array [
+                  "Height: 123cm",
+                ]
+              }
+              title="DIMENSION"
+            />
+            <InfoCategory
+              list={
+                Array [
+                  undefined,
+                ]
+              }
+              title="SPECIES"
+            />
+            <InfoCategory
+              title="VEHICLES"
+            />
+            <InfoCategory
+              title="STARSHIPS"
+            />
+          </div>,
+          ")",
         ],
       },
       "ref": null,
@@ -450,46 +764,96 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div
-                className="avatar avatar__default card-img-top mr-3"
-              />,
-              <div
-                className="info-details p-3"
-              >
+              <div>
                 <h2
-                  className="text-center"
+                  className="text-center text-white p-3"
                 >
                   NAME
                 </h2>
-                <p>
-                  Height: 123cm
-                </p>
-                <p>
-                  Weight: 12kgs
-                </p>
-                <p>
-                  Hair color: hair_color
-                </p>
-                <p>
-                  Skin color: undefined
-                </p>
-                <p>
-                  Eye color: eye_color
-                </p>
-                <p>
-                  Born in 1234
-                </p>
-                <p>
-                  Gender: gender
-                </p>
-                <p
-                  onClick={[Function]}
-                >
-                  Click here for info about their species
-                </p>
+                <div
+                  className="avatar avatar__default card-img-top mr-3"
+                />
               </div>,
+              <Formik
+                enableReinitialize={false}
+                initialValues={
+                  Object {
+                    "phoneNumber": "",
+                  }
+                }
+                isInitialValid={false}
+                onSubmit={[Function]}
+                render={[Function]}
+                validateOnBlur={true}
+                validateOnChange={true}
+                validationSchema={
+                  ObjectSchema {
+                    "_blacklist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "_conditions": Array [],
+                    "_defaultDefault": [Function],
+                    "_deps": Array [],
+                    "_excludedEdges": Array [],
+                    "_exclusive": Object {},
+                    "_mutate": undefined,
+                    "_nodes": Array [
+                      "phoneNumber",
+                    ],
+                    "_options": Object {
+                      "abortEarly": true,
+                      "recursive": true,
+                    },
+                    "_type": "object",
+                    "_typeError": [Function],
+                    "_whitelist": RefSet {
+                      "list": Set {},
+                      "refs": Map {},
+                    },
+                    "fields": Object {
+                      "phoneNumber": StringSchema {
+                        "_blacklist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "_conditions": Array [],
+                        "_deps": Array [],
+                        "_exclusive": Object {
+                          "length": true,
+                          "required": true,
+                          "undefined": false,
+                        },
+                        "_mutate": undefined,
+                        "_options": Object {
+                          "abortEarly": true,
+                          "recursive": true,
+                        },
+                        "_type": "string",
+                        "_typeError": [Function],
+                        "_whitelist": RefSet {
+                          "list": Set {},
+                          "refs": Map {},
+                        },
+                        "tests": Array [
+                          [Function],
+                          [Function],
+                          [Function],
+                        ],
+                        "transforms": Array [
+                          [Function],
+                        ],
+                      },
+                    },
+                    "tests": Array [],
+                    "transforms": Array [
+                      [Function],
+                    ],
+                  }
+                }
+              />,
             ],
-            "className": "d-flex ml-5 mt-5 pl-5",
+            "className": "d-flex justify-content-around ml-5 mt-5 pl-5",
           },
           "ref": null,
           "rendered": Array [
@@ -498,51 +862,16 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "avatar avatar__default card-img-top mr-3",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": Array [
                   <h2
-                    className="text-center"
+                    className="text-center text-white p-3"
                   >
                     NAME
                   </h2>,
-                  <p>
-                    Height: 123cm
-                  </p>,
-                  <p>
-                    Weight: 12kgs
-                  </p>,
-                  <p>
-                    Hair color: hair_color
-                  </p>,
-                  <p>
-                    Skin color: undefined
-                  </p>,
-                  <p>
-                    Eye color: eye_color
-                  </p>,
-                  <p>
-                    Born in 1234
-                  </p>,
-                  <p>
-                    Gender: gender
-                  </p>,
-                  <p
-                    onClick={[Function]}
-                  >
-                    Click here for info about their species
-                  </p>,
+                  <div
+                    className="avatar avatar__default card-img-top mr-3"
+                  />,
                 ],
-                "className": "info-details p-3",
               },
               "ref": null,
               "rendered": Array [
@@ -552,7 +881,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "NAME",
-                    "className": "text-center",
+                    "className": "text-center text-white p-3",
                   },
                   "ref": null,
                   "rendered": "NAME",
@@ -563,92 +892,96 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Height: 123cm",
+                    "className": "avatar avatar__default card-img-top mr-3",
                   },
                   "ref": null,
-                  "rendered": "Height: 123cm",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Weight: 12kgs",
-                  },
-                  "ref": null,
-                  "rendered": "Weight: 12kgs",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Hair color: hair_color",
-                  },
-                  "ref": null,
-                  "rendered": "Hair color: hair_color",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Skin color: undefined",
-                  },
-                  "ref": null,
-                  "rendered": "Skin color: undefined",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Eye color: eye_color",
-                  },
-                  "ref": null,
-                  "rendered": "Eye color: eye_color",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Born in 1234",
-                  },
-                  "ref": null,
-                  "rendered": "Born in 1234",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Gender: gender",
-                  },
-                  "ref": null,
-                  "rendered": "Gender: gender",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Click here for info about their species",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Click here for info about their species",
-                  "type": "p",
+                  "rendered": null,
+                  "type": "div",
                 },
               ],
               "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "enableReinitialize": false,
+                "initialValues": Object {
+                  "phoneNumber": "",
+                },
+                "isInitialValid": false,
+                "onSubmit": [Function],
+                "render": [Function],
+                "validateOnBlur": true,
+                "validateOnChange": true,
+                "validationSchema": ObjectSchema {
+                  "_blacklist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "_conditions": Array [],
+                  "_defaultDefault": [Function],
+                  "_deps": Array [],
+                  "_excludedEdges": Array [],
+                  "_exclusive": Object {},
+                  "_mutate": undefined,
+                  "_nodes": Array [
+                    "phoneNumber",
+                  ],
+                  "_options": Object {
+                    "abortEarly": true,
+                    "recursive": true,
+                  },
+                  "_type": "object",
+                  "_typeError": [Function],
+                  "_whitelist": RefSet {
+                    "list": Set {},
+                    "refs": Map {},
+                  },
+                  "fields": Object {
+                    "phoneNumber": StringSchema {
+                      "_blacklist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "_conditions": Array [],
+                      "_deps": Array [],
+                      "_exclusive": Object {
+                        "length": true,
+                        "required": true,
+                        "undefined": false,
+                      },
+                      "_mutate": undefined,
+                      "_options": Object {
+                        "abortEarly": true,
+                        "recursive": true,
+                      },
+                      "_type": "string",
+                      "_typeError": [Function],
+                      "_whitelist": RefSet {
+                        "list": Set {},
+                        "refs": Map {},
+                      },
+                      "tests": Array [
+                        [Function],
+                        [Function],
+                        [Function],
+                      ],
+                      "transforms": Array [
+                        [Function],
+                      ],
+                    },
+                  },
+                  "tests": Array [],
+                  "transforms": Array [
+                    [Function],
+                  ],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
           ],
           "type": "div",
@@ -656,22 +989,151 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "enableReinitialize": false,
-            "initialValues": Object {
-              "phoneNumber": "",
-            },
-            "isInitialValid": false,
-            "onSubmit": [Function],
-            "render": [Function],
-            "validateOnBlur": true,
-            "validateOnChange": true,
+            "children": Array [
+              <InfoCategory
+                title="APPARENCIES"
+              />,
+              <InfoCategory
+                list={
+                  Array [
+                    undefined,
+                  ]
+                }
+                title="HOMEWORLD"
+              />,
+              <InfoCategory
+                list={
+                  Array [
+                    "gender",
+                  ]
+                }
+                title="GENDER"
+              />,
+              <InfoCategory
+                list={
+                  Array [
+                    "Height: 123cm",
+                  ]
+                }
+                title="DIMENSION"
+              />,
+              <InfoCategory
+                list={
+                  Array [
+                    undefined,
+                  ]
+                }
+                title="SPECIES"
+              />,
+              <InfoCategory
+                title="VEHICLES"
+              />,
+              <InfoCategory
+                title="STARSHIPS"
+              />,
+            ],
+            "className": "d-flex p-4",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": undefined,
+                "title": "APPARENCIES",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": Array [
+                  undefined,
+                ],
+                "title": "HOMEWORLD",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": Array [
+                  "gender",
+                ],
+                "title": "GENDER",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": Array [
+                  "Height: 123cm",
+                ],
+                "title": "DIMENSION",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": Array [
+                  undefined,
+                ],
+                "title": "SPECIES",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": undefined,
+                "title": "VEHICLES",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "list": undefined,
+                "title": "STARSHIPS",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
+        ")",
       ],
       "type": Symbol(react.fragment),
     },

@@ -40,7 +40,7 @@ const searchFilmsAndPeople = (string: string) => async (
   } catch (error) {
     dispatch(fetchingPeopleAndFilms(false));
     dispatch(setFatalError(true));
-    console.log("couldn't get people and films");
+    console.log("couldn't get people and films: ", error);
   }
 };
 

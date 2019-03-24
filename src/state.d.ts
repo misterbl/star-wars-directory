@@ -36,12 +36,18 @@ export interface IFilm {
 export interface IAppState {
   app: {
     fetchingPeopleAndFilms: boolean;
-    fetchingFilm: boolean;
     fetchingSingleResult: boolean;
     peopleList: ICharacter[];
     filmsList: IFilm[];
-    result: IFilm & ICharacter;
+    currentView: any;
     sendingInfoSms: boolean;
     isFatalError: boolean;
+    fetchingCharacterDetails: boolean;
+    species: string;
+    homeWorld: string;
+    characterFilms: string[];
+    vehicles: string[];
+    starships: string[];
+    fetchingSingleInfo: boolean;
   };
 }

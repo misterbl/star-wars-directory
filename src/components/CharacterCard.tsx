@@ -3,18 +3,30 @@ import charactersPhotos from "../const/charactersPhotos";
 import { withRouter, RouteComponentProps } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
-import singleSearch from "../actions/thunks/singleSearch";
 import { ICharacterCardComponent, ICharacterCard } from "./CharacterCard.d";
 import ROUTES from "../const/routes";
+import getCharacterDetails from "../actions/thunks/getCharacterDetails";
+import { assignCurrentView } from "../actions/actionCreators/actions";
 
 export class CharacterCard extends PureComponent<ICharacterCardComponent> {
   onClick = async () => {
     const {
-      singleSearch,
+      getCharacterDetails,
+      assignCurrentView,
       character,
       history: { push }
     } = this.props;
-    await singleSearch(character.url);
+    const { species, films, vehicles, homeworld, starships } = character;
+    await assignCurrentView(character);
+
+    await getCharacterDetails(
+      species[0],
+      homeworld,
+      films,
+      vehicles,
+      starships
+    );
+
     push(ROUTES.CHARACTER);
   };
   render() {
@@ -51,7 +63,8 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
 }
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  singleSearch: bindActionCreators(singleSearch, dispatch)
+  getCharacterDetails: bindActionCreators(getCharacterDetails, dispatch),
+  assignCurrentView: bindActionCreators(assignCurrentView, dispatch)
 });
 
 export default withRouter<ICharacterCard & RouteComponentProps>(

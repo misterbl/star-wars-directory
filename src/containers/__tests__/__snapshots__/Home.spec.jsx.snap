@@ -90,28 +90,8 @@ ShallowWrapper {
           className="resistance my-5"
           onClick={[Function]}
         />,
-        <div
-          className="result-filter my-4 p-3"
-        >
-          <div
-            className="text-white"
-          >
-            4 RESULTS
-          </div>
-          <button
-            className="btn btn-light"
-            onClick={[Function]}
-          >
-            HIDE PEOPLE
-          </button>
-          <br />
-          <button
-            className="btn btn-light"
-            onClick={[Function]}
-          >
-            HIDE FILMS
-          </button>
-        </div>,
+        " ",
+        false,
         <React.Fragment>
           <ResultList
             list={
@@ -262,85 +242,8 @@ ShallowWrapper {
         "rendered": null,
         "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="text-white"
-            >
-              4 RESULTS
-            </div>,
-            <button
-              className="btn btn-light"
-              onClick={[Function]}
-            >
-              HIDE PEOPLE
-            </button>,
-            <br />,
-            <button
-              className="btn btn-light"
-              onClick={[Function]}
-            >
-              HIDE FILMS
-            </button>,
-          ],
-          "className": "result-filter my-4 p-3",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "4 RESULTS",
-              "className": "text-white",
-            },
-            "ref": null,
-            "rendered": "4 RESULTS",
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "HIDE PEOPLE",
-              "className": "btn btn-light",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "HIDE PEOPLE",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": "br",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "HIDE FILMS",
-              "className": "btn btn-light",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "HIDE FILMS",
-            "type": "button",
-          },
-        ],
-        "type": "div",
-      },
+      " ",
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -772,28 +675,8 @@ ShallowWrapper {
             className="resistance my-5"
             onClick={[Function]}
           />,
-          <div
-            className="result-filter my-4 p-3"
-          >
-            <div
-              className="text-white"
-            >
-              4 RESULTS
-            </div>
-            <button
-              className="btn btn-light"
-              onClick={[Function]}
-            >
-              HIDE PEOPLE
-            </button>
-            <br />
-            <button
-              className="btn btn-light"
-              onClick={[Function]}
-            >
-              HIDE FILMS
-            </button>
-          </div>,
+          " ",
+          false,
           <React.Fragment>
             <ResultList
               list={
@@ -944,85 +827,8 @@ ShallowWrapper {
           "rendered": null,
           "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                className="text-white"
-              >
-                4 RESULTS
-              </div>,
-              <button
-                className="btn btn-light"
-                onClick={[Function]}
-              >
-                HIDE PEOPLE
-              </button>,
-              <br />,
-              <button
-                className="btn btn-light"
-                onClick={[Function]}
-              >
-                HIDE FILMS
-              </button>,
-            ],
-            "className": "result-filter my-4 p-3",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "4 RESULTS",
-                "className": "text-white",
-              },
-              "ref": null,
-              "rendered": "4 RESULTS",
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "HIDE PEOPLE",
-                "className": "btn btn-light",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "HIDE PEOPLE",
-              "type": "button",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": "br",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "HIDE FILMS",
-                "className": "btn btn-light",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "HIDE FILMS",
-              "type": "button",
-            },
-          ],
-          "type": "div",
-        },
+        " ",
+        false,
         Object {
           "instance": null,
           "key": undefined,

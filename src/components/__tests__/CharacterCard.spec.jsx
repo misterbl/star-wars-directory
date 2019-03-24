@@ -8,27 +8,29 @@ import ROUTES from "../../const/routes";
 describe("CharacterCard", () => {
   const props = {
     history,
-    singleSearch: jest.fn(),
+    assignCurrentView: jest.fn(),
     character: {
       name: "name",
       height: "123",
       mass: "12",
       birth_year: "1234",
       gender: "gender"
-    }
+    },
+    getCharacterDetails: jest.fn()
   };
   const wrapper = shallow(<CharacterCard {...props} />);
+
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it("calls singleSearch() onClick ", () => {
+  it("calls assignCurrentView() onClick ", () => {
     const mainDiv = wrapper.find("div").at(0);
     mainDiv.simulate("click");
-    expect(props.singleSearch).toHaveBeenCalled();
+    expect(props.assignCurrentView).toHaveBeenCalled();
   });
-  it("calls push() onClick ", () => {
+  it("calls assignCurrentView() onClick ", () => {
     const mainDiv = wrapper.find("div").at(0);
     mainDiv.simulate("click");
-    expect(props.history.push).toHaveBeenCalledWith(ROUTES.CHARACTER);
+    expect(props.assignCurrentView).toHaveBeenCalledWith(props.character);
   });
 });

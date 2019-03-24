@@ -20,8 +20,8 @@ describe("FilmInfo", () => {
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it("redirect to index if there is no character", () => {
-    wrapper.setProps({ film: null });
+  it("redirect to index if there is no film", () => {
+    wrapper.setProps({ film: { title: null } });
     expect(props.history.push).toHaveBeenCalledWith(ROUTES.INDEX);
   });
 });

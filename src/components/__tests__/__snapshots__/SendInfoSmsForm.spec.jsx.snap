@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SendInfoSmsForm matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SendInfoSmsForm
+    displaySentSuccess={false}
+    errors={
+      Object {
+        "phoneNumber": false,
+      }
+    }
+    handleSubmit={[MockFunction]}
+    resetdisplaySentSuccess={[MockFunction]}
+    sendingInfoSms={false}
+    setFieldValue={[MockFunction]}
+    touched={
+      Object {
+        "phoneNumber": false,
+      }
+    }
+    values={
+      Object {
+        "phoneNumber": "phoneNumber",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          className="text-white"
+          htmlFor="phoneNumber"
+        >
+          Send this information to your mobile phone
+        </label>,
+        <input
+          aria-invalid={false}
+          autoComplete="off"
+          className="form-control"
+          id="phoneNumber"
+          name="phoneNumber"
+          onChange={[Function]}
+          onFocus={[MockFunction]}
+          placeholder="PHONE NUMBER"
+          type="number"
+          value="phoneNumber"
+        />,
+        false,
+        false,
+      ],
+      "className": "ml-3 mt-3 mb-0 sms-form w-50",
+      "onSubmit": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Send this information to your mobile phone",
+          "className": "text-white",
+          "htmlFor": "phoneNumber",
+        },
+        "ref": null,
+        "rendered": "Send this information to your mobile phone",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "aria-invalid": false,
+          "autoComplete": "off",
+          "className": "form-control",
+          "id": "phoneNumber",
+          "name": "phoneNumber",
+          "onChange": [Function],
+          "onFocus": [MockFunction],
+          "placeholder": "PHONE NUMBER",
+          "type": "number",
+          "value": "phoneNumber",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      false,
+      false,
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            className="text-white"
+            htmlFor="phoneNumber"
+          >
+            Send this information to your mobile phone
+          </label>,
+          <input
+            aria-invalid={false}
+            autoComplete="off"
+            className="form-control"
+            id="phoneNumber"
+            name="phoneNumber"
+            onChange={[Function]}
+            onFocus={[MockFunction]}
+            placeholder="PHONE NUMBER"
+            type="number"
+            value="phoneNumber"
+          />,
+          false,
+          false,
+        ],
+        "className": "ml-3 mt-3 mb-0 sms-form w-50",
+        "onSubmit": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Send this information to your mobile phone",
+            "className": "text-white",
+            "htmlFor": "phoneNumber",
+          },
+          "ref": null,
+          "rendered": "Send this information to your mobile phone",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "aria-invalid": false,
+            "autoComplete": "off",
+            "className": "form-control",
+            "id": "phoneNumber",
+            "name": "phoneNumber",
+            "onChange": [Function],
+            "onFocus": [MockFunction],
+            "placeholder": "PHONE NUMBER",
+            "type": "number",
+            "value": "phoneNumber",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        false,
+        false,
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

@@ -23,28 +23,39 @@ class SendInfoSmsForm extends React.PureComponent<
       handleSubmit,
       sendingInfoSms,
       displaySentSuccess,
-      resetdisplaySentSuccess
+      resetdisplaySentSuccess,
+      errors,
+      touched
     } = this.props;
+    const phoneNumberError = Boolean(errors.phoneNumber && touched.phoneNumber);
     return (
-      <form
-        onSubmit={handleSubmit}
-        className="ml-5 pl-5 mt-3 mb-0 sms-form w-50"
-      >
+      <form onSubmit={handleSubmit} className="ml-3 mt-3 mb-0 sms-form w-50">
         <label htmlFor="phoneNumber" className="text-white">
-          Send this information to your phone
+          Send this information to your mobile phone
         </label>
         <input
           placeholder="PHONE NUMBER"
+          autoComplete="off"
           id="phoneNumber"
           className="form-control"
-          type="text"
+          type="number"
           name="phoneNumber"
           value={values.phoneNumber}
           onFocus={resetdisplaySentSuccess}
           onChange={this.onPhoneNumberChange}
+          aria-invalid={phoneNumberError}
         />
+        {phoneNumberError && (
+          <span
+            id="errors-streetNumber"
+            className="text-danger mt-1 d-block mb-4"
+            role="alert"
+          >
+            {errors.phoneNumber}
+          </span>
+        )}
         {sendingInfoSms === false && displaySentSuccess && (
-          <p className="text-success text-center">message sent!</p>
+          <p className="text-success">message sent!</p>
         )}
       </form>
     );

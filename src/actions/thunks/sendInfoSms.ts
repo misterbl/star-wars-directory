@@ -24,7 +24,7 @@ const sendInfoSms = (info: string, number: string) => async (
   } catch (error) {
     dispatch(sendingInfoSms(false));
     dispatch(setFatalError(true));
-    console.log("couldn't send info via sms");
+    console.log("couldn't send info via sms: ", error);
   }
 };
 

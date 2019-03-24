@@ -27,11 +27,9 @@ export class Home extends Component<IHomeComponent> {
   };
 
   componentWillReceiveProps() {
-    if (this.props.peopleList.length > 0) {
-      this.setState({ showResultsCount: true });
-    }
     this.setState({
-      filteredList: this.props.peopleList
+      filteredList: this.props.peopleList,
+      showResultsCount: true
     });
   }
   componentDidMount() {
@@ -103,6 +101,7 @@ export class Home extends Component<IHomeComponent> {
     const foundPeople = filteredList.length > 0;
     const foundFilms = filmsList.length > 0;
     const resultLength = filteredList.length + filmsList.length;
+
     return (
       <main className="form-container p-5">
         <div className="form-group search-form search-form__body">

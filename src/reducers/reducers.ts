@@ -2,19 +2,41 @@ import { IAppState } from "../state";
 import { AnyAction } from "redux";
 import { actionTypes } from "../actions/actionCreators/actionTypes";
 
+const intialState = {
+  fetchingPeopleAndFilms: false,
+  fetchingSingleResult: false,
+  peopleList: [],
+  filmsList: [],
+  currentView: {},
+  sendingInfoSms: false,
+  isFatalError: false,
+  fetchingCharacterDetails: false,
+  species: "",
+  homeWorld: "",
+  characterFilms: [],
+  vehicles: [],
+  starships: [],
+  fetchingSingleInfo: false
+};
+
 export const app = (
-  state: IAppState | {} = {},
+  state: IAppState["app"] = intialState,
   {
     type,
     fetchingPeopleAndFilms,
-    fetchingFilm,
     fetchingSingleResult,
     peopleList,
     filmsList,
-    result,
+    currentView,
     sendingInfoSms,
-    saveSpeciesInfo,
-    isFatalError
+    isFatalError,
+    fetchingCharacterDetails,
+    species,
+    homeWorld,
+    characterFilm,
+    vehicle,
+    starship,
+    fetchingSingleInfo
   }: AnyAction
 ) => {
   switch (type) {
@@ -38,25 +60,62 @@ export const app = (
         ...state,
         filmsList
       };
-    case actionTypes.SAVE_SINGLE_RESULT:
-      return {
-        ...state,
-        result
-      };
     case actionTypes.SENDING_INFO_SMS:
       return {
         ...state,
         sendingInfoSms
       };
-    case actionTypes.SAVE_SPECIES_INFO:
-      return {
-        ...state,
-        saveSpeciesInfo
-      };
     case actionTypes.SET_FATAL_ERROR:
       return {
         ...state,
         isFatalError
+      };
+    case actionTypes.FETCHING_CHARACTER_DETAILS:
+      return {
+        ...state,
+        fetchingCharacterDetails
+      };
+    case actionTypes.SAVE_SPECIES:
+      return {
+        ...state,
+        species
+      };
+    case actionTypes.SAVE_HOMEWORLD:
+      return {
+        ...state,
+        homeWorld
+      };
+    case actionTypes.SAVE_CHARACTER_FILM:
+      return {
+        ...state,
+        characterFilms: [...state.characterFilms, characterFilm]
+      };
+    case actionTypes.SAVE_VEHICLE:
+      return {
+        ...state,
+        vehicles: [...state.vehicles, vehicle]
+      };
+    case actionTypes.SAVE_STARSHIP:
+      return {
+        ...state,
+        starships: [...state.starships, starship]
+      };
+    case actionTypes.ASSIGN_CURRENT_VIEW:
+      return {
+        ...state,
+        currentView
+      };
+    case actionTypes.FETCHING_SINGLE_INFO:
+      return {
+        ...state,
+        fetchingSingleInfo
+      };
+    case actionTypes.RESET_CHARACTER_DETAILS:
+      return {
+        ...state,
+        characterFilms: [],
+        vehicles: [],
+        starships: []
       };
     default:
       return state;

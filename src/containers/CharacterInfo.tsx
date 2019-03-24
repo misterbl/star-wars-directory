@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
+import * as Yup from "yup";
 import { bindActionCreators, Dispatch } from "redux";
-import { getInfo, sendingInfoSms } from "../selectors/appSelectors";
+import {
+  getInfo,
+  sendingInfoSms,
+  getSpecies,
+  getHomeWorld,
+  getCharacterFilms,
+  getVehicles,
+  getStarships
+} from "../selectors/appSelectors";
 import { IAppState } from "../state";
 import { ICharacterInfoComponent } from "./CharacterInfo.d";
 import ROUTES from "../const/routes";
@@ -11,48 +20,44 @@ import charactersPhotos from "../const/charactersPhotos";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
 import sendInfoSms from "../actions/thunks/sendInfoSms";
-
+import { phoneRegExp } from "../const/regex";
+import InfoCategory from "../components/InfoCategory";
 export class CharacterInfo extends Component<ICharacterInfoComponent> {
   state = {
     displaySentSuccess: false
   };
+
   handleSubmit = (e: any) => {
     const {
       sendInfoSms,
       character: { name, height, hair_color, eye_color, birth_year, gender }
     } = this.props;
     const number = e.phoneNumber;
-    const message = `Here is your search result from Star Wars: ${name}, ${gender}, born in ${birth_year}, height:${height}, ${hair_color} hair, ${eye_color} eyes`;
+    const message = `Here is your search result from Star Wars: ${name}, ${gender}, born in ${birth_year}, mass: ${height}cm, ${hair_color} hair, ${eye_color} eyes`;
     sendInfoSms(message, number);
-  };
-
-  resetdisplaySentSuccess = () => {
     this.setState({ displaySentSuccess: true });
   };
 
-  pushToSpecies = () => {
-    this.props.history.push(ROUTES.SPECIES);
+  resetdisplaySentSuccess = () => {
+    this.setState({ displaySentSuccess: false });
   };
 
   render() {
     const {
       character,
       history: { push },
-      sendingInfoSms
+      sendingInfoSms,
+      species,
+      homeworld,
+      characterFilms,
+      vehicles,
+      starShips
     } = this.props;
     const { displaySentSuccess } = this.state;
-    if (character) {
+    if (character.name) {
       const sprite = charactersPhotos[character.name];
-      const {
-        name,
-        height,
-        mass,
-        hair_color,
-        skin_color,
-        eye_color,
-        birth_year,
-        gender
-      } = character;
+      const { name, height, gender } = character;
+      console.log(this.props);
       return (
         <>
           <BackButton
@@ -60,33 +65,31 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
             text="Back to search result"
             push={push}
           />
-          <div className="d-flex ml-5 mt-5 pl-5">
-            {sprite ? (
-              <div
-                style={{
-                  backgroundPosition: `${sprite}`,
-                  zoom: 3
-                }}
-                className="avatar my-2 mr-3"
-              />
-            ) : (
-              <div className="avatar avatar__default card-img-top mr-3" />
-            )}
+          <div className="d-flex justify-content-around ml-5 mt-5 pl-5">
+            <div>
+              <h2 className="text-center text-white p-3">
+                {name.toUpperCase()}
+              </h2>
 
-            <div className="info-details p-3">
-              <h2 className="text-center">{name.toUpperCase()}</h2>
-              <p>{`Height: ${height}cm`}</p>
-              <p>{`Weight: ${mass}kgs`}</p>
-              <p>{`Hair color: ${hair_color}`}</p>
-              <p>{`Skin color: ${skin_color}`}</p>
-              <p>{`Eye color: ${eye_color}`}</p>
-              <p>{`Born in ${birth_year}`}</p>
-              <p>{`Gender: ${gender}`}</p>
-              <p onClick={this.pushToSpecies}>
-                Click here for info about their species
-              </p>
+              {sprite ? (
+                <div
+                  style={{
+                    backgroundPosition: `${sprite}`,
+                    zoom: 3
+                  }}
+                  className="avatar my-2 mr-3"
+                />
+              ) : (
+                <div className="avatar avatar__default card-img-top mr-3" />
+              )}
             </div>
             <Formik
+              validationSchema={Yup.object().shape({
+                phoneNumber: Yup.string()
+                  .required("Phone number required")
+                  .length(11)
+                  .matches(phoneRegExp, "Phone number is not valid")
+              })}
               initialValues={{
                 phoneNumber: ""
               }}
@@ -101,6 +104,16 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
               )}
             />
           </div>
+          <div className="d-flex p-4">
+            <InfoCategory list={characterFilms} title="APPARENCIES" />
+            <InfoCategory list={[homeworld]} title="HOMEWORLD" />
+            <InfoCategory list={[gender]} title="GENDER" />
+            <InfoCategory list={[`Height: ${height}cm`]} title="DIMENSION" />
+            <InfoCategory list={[species]} title="SPECIES" />
+            <InfoCategory list={vehicles} title="VEHICLES" />
+            <InfoCategory list={starShips} title="STARSHIPS" />
+          </div>
+          )
         </>
       );
     } else {
@@ -110,7 +123,12 @@ export class CharacterInfo extends Component<ICharacterInfoComponent> {
 }
 export const mapStateToProps = (state: IAppState) => ({
   character: getInfo(state),
-  sendingInfoSms: sendingInfoSms(state)
+  sendingInfoSms: sendingInfoSms(state),
+  species: getSpecies(state),
+  homeworld: getHomeWorld(state),
+  characterFilms: getCharacterFilms(state),
+  vehicles: getVehicles(state),
+  starShips: getStarships(state)
 });
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({

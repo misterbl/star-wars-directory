@@ -7,8 +7,8 @@ import ROUTES from "../../const/routes";
 
 describe("FilmCard", () => {
   const props = {
+    assignCurrentView: ,
     history,
-    singleSearch: jest.fn(),
     film: {
       director: "name",
       release_date: "1222",
@@ -19,10 +19,10 @@ describe("FilmCard", () => {
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it("calls singleSearch() onClick ", () => {
+  it("calls assignCurrentView() onClick ", () => {
     const mainDiv = wrapper.find("div").at(0);
     mainDiv.simulate("click");
-    expect(props.singleSearch).toHaveBeenCalled();
+    expect(props.assignCurrentView).toHaveBeenCalled();
   });
   it("calls push() onClick ", () => {
     const mainDiv = wrapper.find("div").at(0);

@@ -16,6 +16,7 @@ The app uses:
 - Bootstrap classes and components for faster development.
 - Formik for the forms instead of Redux forms, for performance purposes
 - Jest and Enzyme for testing
+- Twilio api for sending sms to users
 
 ## Getting Started
 

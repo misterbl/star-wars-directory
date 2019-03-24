@@ -15,7 +15,7 @@ export const getFilmsList = createSelector(
 
 export const getInfo = createSelector(
   appSelector,
-  app => app.result
+  app => app.currentView
 );
 
 export const sendingInfoSms = createSelector(
@@ -26,12 +26,42 @@ export const isLoading = createSelector(
   appSelector,
   app =>
     app.fetchingSingleResult ||
-    app.fetchingFilm ||
     app.fetchingPeopleAndFilms ||
-    app.sendingInfoSms
+    app.sendingInfoSms ||
+    app.fetchingSingleInfo
 );
 
 export const isFatalError = createSelector(
   appSelector,
   app => app.isFatalError
+);
+
+export const fetchingCharacterDetails = createSelector(
+  appSelector,
+  app => app.fetchingCharacterDetails
+);
+
+export const getSpecies = createSelector(
+  appSelector,
+  app => app.species
+);
+
+export const getHomeWorld = createSelector(
+  appSelector,
+  app => app.homeWorld
+);
+
+export const getCharacterFilms = createSelector(
+  appSelector,
+  app => app.characterFilms
+);
+
+export const getVehicles = createSelector(
+  appSelector,
+  app => app.vehicles
+);
+
+export const getStarships = createSelector(
+  appSelector,
+  app => app.starships
 );

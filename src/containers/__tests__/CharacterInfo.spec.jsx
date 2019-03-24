@@ -23,7 +23,7 @@ describe("CharacterInfo", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("redirect to index if there is no character", () => {
-    wrapper.setProps({ character: null });
+    wrapper.setProps({ character: { name: null } });
     expect(props.history.push).toHaveBeenCalledWith(ROUTES.INDEX);
   });
 });
