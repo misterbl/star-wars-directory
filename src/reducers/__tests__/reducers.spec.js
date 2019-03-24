@@ -72,7 +72,7 @@ describe("reducers", () => {
       actionTypes.SAVE_CHARACTER_FILM
     } it should update the value of sendingInfoSms`, () => {
       const action = actions.saveCharacterFilms("film");
-      expect(reducers.app({}, action)).toEqual({
+      expect(reducers.app({ characterFilms: [] }, action)).toEqual({
         characterFilms: ["film"]
       });
     });
@@ -80,16 +80,42 @@ describe("reducers", () => {
       actionTypes.SAVE_VEHICLE
     } it should update the value of vehicles`, () => {
       const action = actions.saveVehicle("vehicle");
-      expect(reducers.app({}, action)).toEqual({
-        vehicles: "vehicle"
+      expect(reducers.app({ vehicles: [] }, action)).toEqual({
+        vehicles: ["vehicle"]
       });
     });
     it(`when called with ${
       actionTypes.SAVE_STARSHIP
     } it should update the value of vehicles`, () => {
       const action = actions.saveStarship("starship");
+      expect(reducers.app({ starships: [] }, action)).toEqual({
+        starships: ["starship"]
+      });
+    });
+    it(`when called with ${
+      actionTypes.ASSIGN_CURRENT_VIEW
+    } it should update the value of currentView`, () => {
+      const action = actions.assignCurrentView({});
       expect(reducers.app({}, action)).toEqual({
-        starships: "starship"
+        currentView: {}
+      });
+    });
+    it(`when called with ${
+      actionTypes.FETCHING_SINGLE_INFO
+    } it should update the value of fetchingSingleInfo`, () => {
+      const action = actions.fetchingSingleInfo(true);
+      expect(reducers.app({}, action)).toEqual({
+        fetchingSingleInfo: true
+      });
+    });
+    it(`when called with ${
+      actionTypes.RESET_CHARACTER_DETAILS
+    } it should update the value of vehicles`, () => {
+      const action = actions.resetCharacterDetails();
+      expect(reducers.app({}, action)).toEqual({
+        characterFilms: [],
+        vehicles: [],
+        starships: []
       });
     });
     it("should return the state when called with an UNKNOWN action", () => {
