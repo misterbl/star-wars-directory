@@ -25,7 +25,7 @@ export class FilmCard extends PureComponent<IFilmCardComponent> {
       <div
         role="button"
         onClick={this.onClick}
-        className="pointer m-3 text-white"
+        className="pointer film-card m-3 text-white border border-dark p-3"
       >
         <u className="card-text">{title.toUpperCase()}</u>
         <div className="d-flex">

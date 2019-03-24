@@ -14,7 +14,7 @@ const ResultList: FunctionComponent<IResultList> = ({
     <h3 className="text-white my-3 text-center">{`${type}:`}</h3>
     {children}
     <div className="grey-line mt-3" />
-    <div className="p-2 mt-3">
+    <div className="d-flex flex-wrap p-2 mt-3">
       {list.map(element => {
         if (type === "Characters") {
           const character = element as ICharacter;

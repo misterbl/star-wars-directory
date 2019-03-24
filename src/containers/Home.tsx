@@ -140,9 +140,7 @@ export class Home extends Component<IHomeComponent> {
           <>
             <ResultList type="Characters" list={filteredList}>
               <div className="d-flex flex-wrap justify-content-around text-white">
-                <h4 className="text-white text-center mt-4">
-                  Filter the results
-                </h4>
+                <h4 className="text-white text-center mt-4">Filter results</h4>
                 <div>
                   <p className="text-center m-0">By film</p>
                   <Formik<ISelectFilmForm>
