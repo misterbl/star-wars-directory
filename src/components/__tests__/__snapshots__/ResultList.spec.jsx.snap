@@ -6,8 +6,12 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <ResultList
     list={
       Array [
-        "element1",
-        "element2",
+        Object {
+          "title": "element1",
+        },
+        Object {
+          "title": "element2",
+        },
       ]
     }
     type="type"
@@ -43,10 +47,18 @@ ShallowWrapper {
           className="d-flex flex-wrap p-2 mt-3"
         >
           <withRouter(Connect(FilmCard))
-            film="element1"
+            film={
+              Object {
+                "title": "element1",
+              }
+            }
           />
           <withRouter(Connect(FilmCard))
-            film="element2"
+            film={
+              Object {
+                "title": "element2",
+              }
+            }
           />
         </ul>,
       ],
@@ -95,10 +107,18 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <withRouter(Connect(FilmCard))
-              film="element1"
+              film={
+                Object {
+                  "title": "element1",
+                }
+              }
             />,
             <withRouter(Connect(FilmCard))
-              film="element2"
+              film={
+                Object {
+                  "title": "element2",
+                }
+              }
             />,
           ],
           "className": "d-flex flex-wrap p-2 mt-3",
@@ -107,10 +127,12 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "element1",
             "nodeType": "function",
             "props": Object {
-              "film": "element1",
+              "film": Object {
+                "title": "element1",
+              },
             },
             "ref": null,
             "rendered": null,
@@ -118,10 +140,12 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "element2",
             "nodeType": "function",
             "props": Object {
-              "film": "element2",
+              "film": Object {
+                "title": "element2",
+              },
             },
             "ref": null,
             "rendered": null,
@@ -156,10 +180,18 @@ ShallowWrapper {
             className="d-flex flex-wrap p-2 mt-3"
           >
             <withRouter(Connect(FilmCard))
-              film="element1"
+              film={
+                Object {
+                  "title": "element1",
+                }
+              }
             />
             <withRouter(Connect(FilmCard))
-              film="element2"
+              film={
+                Object {
+                  "title": "element2",
+                }
+              }
             />
           </ul>,
         ],
@@ -208,10 +240,18 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <withRouter(Connect(FilmCard))
-                film="element1"
+                film={
+                  Object {
+                    "title": "element1",
+                  }
+                }
               />,
               <withRouter(Connect(FilmCard))
-                film="element2"
+                film={
+                  Object {
+                    "title": "element2",
+                  }
+                }
               />,
             ],
             "className": "d-flex flex-wrap p-2 mt-3",
@@ -220,10 +260,12 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "element1",
               "nodeType": "function",
               "props": Object {
-                "film": "element1",
+                "film": Object {
+                  "title": "element1",
+                },
               },
               "ref": null,
               "rendered": null,
@@ -231,10 +273,12 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "element2",
               "nodeType": "function",
               "props": Object {
-                "film": "element2",
+                "film": Object {
+                  "title": "element2",
+                },
               },
               "ref": null,
               "rendered": null,

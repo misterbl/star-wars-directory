@@ -5,7 +5,7 @@ import ResultList from "../ResultList";
 
 describe("ResultList", () => {
   const props = {
-    list: ["element1", "element2"],
+    list: [{ title: "element1" }, { title: "element2" }],
     type: "type"
   };
   const wrapper = shallow(<ResultList {...props} />);
