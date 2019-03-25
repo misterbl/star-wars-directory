@@ -110,7 +110,7 @@ export class Home extends Component<IHomeComponent> {
         {(filmsList.length > 0 || peopleList.length > 0) && (
           <div className="result-filter my-4 p-3">
             <div className="text-white">{`${resultLength} RESULT${
-              resultLength > 1 ? "S" : ""
+              resultLength === 1 ? "" : "S"
             } `}</div>
             {foundPeople && foundFilms && (
               <>
