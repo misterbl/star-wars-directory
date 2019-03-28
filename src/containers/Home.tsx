@@ -13,7 +13,7 @@ import { getPeopleList, getFilmsList } from "../selectors/appSelectors";
 import { IAppState, ICharacter } from "../state";
 import SearchForm, { ISearchForm } from "../components/SearchForm";
 import ROUTES from "../const/routes";
-import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
+import { searchFilmsAndPeople as searchFilmsAndPeopleFromAction } from "../actions/actionCreators/actions";
 import { setFatalError } from "../actions/actionCreators/actions";
 
 export class Home extends Component<IHomeComponent> {
@@ -33,12 +33,12 @@ export class Home extends Component<IHomeComponent> {
   componentDidMount() {
     setFatalError(false);
   }
-  handleSubmit = async (data: ISearchForm) => {
+  handleSubmit = (data: ISearchForm) => {
     const {
       searchFilmsAndPeople,
       history: { push }
     } = this.props;
-    await searchFilmsAndPeople(data.searchTerm);
+    searchFilmsAndPeople(data.searchTerm);
     push(ROUTES.INDEX);
   };
 
@@ -171,7 +171,10 @@ export class Home extends Component<IHomeComponent> {
 }
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  searchFilmsAndPeople: bindActionCreators(searchFilmsAndPeople, dispatch)
+  searchFilmsAndPeople: bindActionCreators(
+    searchFilmsAndPeopleFromAction,
+    dispatch
+  )
 });
 
 export const mapStateToProps = (state: IAppState) => ({

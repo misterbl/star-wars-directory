@@ -1,7 +1,7 @@
-import { ActionCreator } from "redux";
+import { ActionCreator, Dispatch } from "redux";
 import { RouteComponentProps, StaticContext } from "react-router";
 import { IAppState, ICharacter } from "../state";
-import sendInfoSms from "../actions/thunks/sendInfoSms";
+import sendInfoSms from "../sagas/sendInfoSms";
 import getCharacterDetails from "../actions/thunks/getCharacterDetails";
 
 export interface ICharacterInfo {
@@ -14,7 +14,7 @@ export interface ICharacterInfo {
   starShips: string[];
 }
 export interface ICharacterInfoDispatchToProps {
-  sendInfoSms: typeof sendInfoSms;
+  sendInfoSms: ActionCreator;
 }
 export interface ICharacterInfoComponent
   extends ICharacterInfo,

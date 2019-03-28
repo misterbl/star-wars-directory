@@ -25,7 +25,10 @@ export const sendingInfoSms = createSelector(
 export const isLoading = createSelector(
   appSelector,
   app =>
-    app.fetchingPeopleAndFilms || app.sendingInfoSms || app.fetchingSingleInfo
+    app.fetchingPeopleAndFilms ||
+    app.sendingInfoSms ||
+    app.fetchingSingleInfo ||
+    app.fetchingCharacterDetails
 );
 
 export const isFatalError = createSelector(

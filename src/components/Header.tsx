@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Formik } from "formik";
 import { IHeaderComponent } from "./Header.d";
-import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
+import { searchFilmsAndPeople } from "../actions/actionCreators/actions";
 import SearchForm, { ISearchForm } from "./SearchForm";
 import ROUTES from "../const/routes";
 

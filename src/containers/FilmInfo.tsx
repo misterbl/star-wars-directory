@@ -11,7 +11,7 @@ import ROUTES from "../const/routes";
 import formattedDate from "../utils/formattedDate";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
-import sendInfoSms from "../actions/thunks/sendInfoSms";
+import { sendInfoSms } from "../actions/actionCreators/actions";
 import { phoneRegExp } from "../const/regex";
 import InfoCategory from "../components/InfoCategory";
 export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {

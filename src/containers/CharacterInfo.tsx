@@ -18,9 +18,9 @@ import ROUTES from "../const/routes";
 import charactersPhotos from "../const/charactersPhotos";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
-import sendInfoSms from "../actions/thunks/sendInfoSms";
 import { phoneRegExp } from "../const/regex";
 import InfoCategory from "../components/InfoCategory";
+import { sendInfoSms as sendInfoSmsFromActions } from "../actions/actionCreators/actions";
 export class CharacterInfo extends PureComponent<ICharacterInfoComponent> {
   componentDidMount() {
     const {
@@ -115,7 +115,7 @@ export const mapStateToProps = (state: IAppState) => ({
 });
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  sendInfoSms: bindActionCreators(sendInfoSms, dispatch)
+  sendInfoSms: bindActionCreators(sendInfoSmsFromActions, dispatch)
 });
 
 export default withRouter(
