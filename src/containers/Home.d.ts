@@ -4,7 +4,7 @@ import searchFilmsAndPeople from "../actions/thunks/searchFilmsAndPeople";
 import { IAppState } from "../state";
 
 export interface IHomeDispatchToProps {
-  searchFilmsAndPeople: typeof searchFilmsAndPeople;
+  searchFilmsAndPeople: ActionCreator;
 }
 
 export interface IHomeMapStateToProps {

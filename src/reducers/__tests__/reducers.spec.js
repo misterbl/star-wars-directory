@@ -1,6 +1,6 @@
 import * as reducers from "../reducers";
 import * as actions from "../../actions/actionCreators/actions";
-import { actionTypes } from "../../actions/actionCreators/actionTypes";
+import actionTypes from "../../actions/actionCreators/actionTypes";
 
 describe("reducers", () => {
   describe("app", () => {

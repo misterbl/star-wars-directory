@@ -1,5 +1,10 @@
+import actionTypes from "./actionTypes";
 import makeActionCreator from "../../utils/actionCreator";
-import { actionTypes } from "./actionTypes";
+
+export const searchFilmsAndPeople = makeActionCreator(
+  actionTypes.SEARCH_FILMS_AND_PEOPLE,
+  "query"
+);
 
 export const fetchingPeopleAndFilms = makeActionCreator(
   actionTypes.FETCHING_PEOPLE_AND_FILMS,
@@ -12,6 +17,12 @@ export const savePeople = makeActionCreator(
 );
 
 export const saveFilms = makeActionCreator(actionTypes.SAVE_FILMS, "filmsList");
+
+export const sendInfoSms = makeActionCreator(
+  actionTypes.SEND_INFO_SMS,
+  "info",
+  "number"
+);
 
 export const sendingInfoSms = makeActionCreator(
   actionTypes.SENDING_INFO_SMS,
@@ -36,6 +47,15 @@ export const saveSpecies = makeActionCreator(
 export const saveHomeWorld = makeActionCreator(
   actionTypes.SAVE_HOMEWORLD,
   "homeWorld"
+);
+
+export const getCharacterDetails = makeActionCreator(
+  actionTypes.GET_CHARACTER_DETAILS,
+  "species",
+  "homeworld",
+  "films",
+  "vehicles",
+  "starships"
 );
 
 export const saveCharacterFilms = makeActionCreator(

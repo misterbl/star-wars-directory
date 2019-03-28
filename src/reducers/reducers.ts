@@ -1,6 +1,6 @@
 import { IAppState } from "../state";
 import { AnyAction } from "redux";
-import { actionTypes } from "../actions/actionCreators/actionTypes";
+import actionTypes from "../actions/actionCreators/actionTypes";
 
 const intialState = {
   fetchingPeopleAndFilms: false,

@@ -1,6 +1,15 @@
 import * as actions from "../actions";
-import { actionTypes } from "../actionTypes";
+import actionTypes from "../actionTypes";
 describe("actions", () => {
+  describe("fetchingPeopleAndFilms", () => {
+    it("should return the query value", () => {
+      const actual = actions.searchFilmsAndPeople("query");
+      expect(actual).toEqual({
+        type: actionTypes.SEARCH_FILMS_AND_PEOPLE,
+        query: "query"
+      });
+    });
+  });
   describe("fetchingPeopleAndFilms", () => {
     it("should return the fetchingPeopleAndFilms value", () => {
       const actual = actions.fetchingPeopleAndFilms(true);
@@ -25,6 +34,16 @@ describe("actions", () => {
       expect(actual).toEqual({
         type: actionTypes.SAVE_FILMS,
         filmsList: "filmsList"
+      });
+    });
+  });
+  describe("sendInfoSms", () => {
+    it("should return the valye for info and number", () => {
+      const actual = actions.sendInfoSms("info", "number");
+      expect(actual).toEqual({
+        type: actionTypes.SEND_INFO_SMS,
+        info: "info",
+        number: "number"
       });
     });
   });

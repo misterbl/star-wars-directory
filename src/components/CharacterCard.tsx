@@ -4,8 +4,7 @@ import { withRouter, RouteComponentProps, StaticContext } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
 import { ICharacterCardComponent, ICharacterCard } from "./CharacterCard.d";
-import ROUTES from "../const/routes";
-import getCharacterDetails from "../actions/thunks/getCharacterDetails";
+import { getCharacterDetails as getCharacterDetailsFromAction } from "../actions/actionCreators/actions";
 import { assignCurrentView } from "../actions/actionCreators/actions";
 
 export class CharacterCard extends PureComponent<ICharacterCardComponent> {
@@ -17,8 +16,7 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
       history: { push }
     } = this.props;
     const { species, films, vehicles, homeworld, starships } = character;
-    await assignCurrentView(character);
-
+    assignCurrentView(character);
     await getCharacterDetails(
       species[0],
       homeworld,
@@ -26,8 +24,6 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
       vehicles,
       starships
     );
-
-    push(ROUTES.CHARACTER);
   };
   render() {
     const { character } = this.props;
@@ -64,7 +60,10 @@ export class CharacterCard extends PureComponent<ICharacterCardComponent> {
 }
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  getCharacterDetails: bindActionCreators(getCharacterDetails, dispatch),
+  getCharacterDetails: bindActionCreators(
+    getCharacterDetailsFromAction,
+    dispatch
+  ),
   assignCurrentView: bindActionCreators(assignCurrentView, dispatch)
 });
 
