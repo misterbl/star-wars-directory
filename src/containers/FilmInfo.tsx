@@ -15,7 +15,7 @@ import sendInfoSms from "../actions/thunks/sendInfoSms";
 import { phoneRegExp } from "../const/regex";
 import InfoCategory from "../components/InfoCategory";
 export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
-  componentWillReceiveProps() {
+  componentDidMount() {
     const {
       film: { title },
       history: { push }
