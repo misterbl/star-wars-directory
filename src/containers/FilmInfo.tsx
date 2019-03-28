@@ -32,7 +32,7 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
     } = this.props;
     const summary = `${opening_crawl.substring(0, 100)}...`;
     const number = e.phoneNumber;
-    const message = `Here is your search result from Star Wars: ${title}, directed by ${director}, produced by in ${producer}, released the :${formattedDate(
+    const message = `Here is your search result from Star Wars: ${title}, directed by ${director}, produced by ${producer}, released the :${formattedDate(
       release_date
     )}, brief summary: ${summary}`;
     console.log("tick");
