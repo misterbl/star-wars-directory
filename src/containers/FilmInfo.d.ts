@@ -7,6 +7,9 @@ export interface IFilm {
   film: IFilm;
 }
 
+export interface IFilmDispatchToProps {
+  sendInfoSms: ActionCreator;
+}
 export interface IFilmComponent
   extends IFilm,
     IFilmDispatchToProps,
