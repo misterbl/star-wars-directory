@@ -1,5 +1,5 @@
 import * as actions from "../actions";
-import { actionTypes } from "../actionTypes";
+import actionTypes from "../actionTypes";
 describe("actions", () => {
   describe("fetchingPeopleAndFilms", () => {
     it("should return the fetchingPeopleAndFilms value", () => {
