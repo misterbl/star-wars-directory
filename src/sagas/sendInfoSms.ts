@@ -4,8 +4,9 @@ import {
   sendingInfoSms,
   setFatalError
 } from "../actions/actionCreators/actions";
+import { AnyAction } from "redux";
 
-export default function* sendInfoSms({ info, number }: any) {
+export default function* sendInfoSms({ info, number }: AnyAction) {
   try {
     yield put(sendingInfoSms(true));
     const response = yield call(fetch, "http://localhost:8000/info", {

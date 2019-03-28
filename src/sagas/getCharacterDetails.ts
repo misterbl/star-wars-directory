@@ -11,10 +11,11 @@ import {
 import { put, all } from "redux-saga/effects";
 import getSingleInfo from "./getSingleInfo";
 import { History } from "history";
+import { AnyAction } from "redux";
 
 function* getCharacterDetails(
-  history: any,
-  { species, homeworld, films, vehicles, starships }: any
+  history: History,
+  { species, homeworld, films, vehicles, starships }: AnyAction
 ) {
   try {
     yield put(resetCharacterDetails());

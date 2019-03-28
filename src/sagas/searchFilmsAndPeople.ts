@@ -8,8 +8,9 @@ import {
 } from "../actions/actionCreators/actions";
 
 import { call, put } from "redux-saga/effects";
+import { AnyAction } from "redux";
 
-export default function* searchFilmsAndPeople({ query }: any) {
+export default function* searchFilmsAndPeople({ query }: AnyAction) {
   try {
     yield put(fetchingPeopleAndFilms(true));
     const filmsResponse = yield call(

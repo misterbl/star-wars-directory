@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import { setFatalError } from "../actions/actionCreators/actions";
 import { call, put } from "redux-saga/effects";
+import { Action } from "redux";
 
 export default function* getSingleInfo(
   url: string,
@@ -14,7 +15,7 @@ export default function* getSingleInfo(
       console.log(new Error("couldn't get info"));
     }
     const data = yield response.json();
-    const result = (data as any)[search];
+    const result = data[search];
     yield put(action(result));
   } catch (error) {
     yield put(setFatalError(true));

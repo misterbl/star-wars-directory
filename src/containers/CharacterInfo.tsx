@@ -32,7 +32,7 @@ export class CharacterInfo extends PureComponent<ICharacterInfoComponent> {
     }
   }
 
-  handleSubmit = async (e: any) => {
+  handleSubmit = (e: any) => {
     const {
       sendInfoSms,
       character: { name, height, hair_color, eye_color, birth_year, gender }
