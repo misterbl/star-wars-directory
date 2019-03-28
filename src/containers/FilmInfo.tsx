@@ -11,7 +11,7 @@ import ROUTES from "../const/routes";
 import formattedDate from "../utils/formattedDate";
 import BackButton from "../components/BackButton";
 import SendInfoSmsForm from "../components/SendInfoSmsForm";
-import sendInfoSms from "../actions/thunks/sendInfoSms";
+import { sendInfoSms as sendInfoSmsFromActions } from "../actions/actionCreators/actions";
 import { phoneRegExp } from "../const/regex";
 import InfoCategory from "../components/InfoCategory";
 export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
@@ -25,8 +25,9 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
     }
   }
 
-  handleSubmit = async (e: any) => {
+  handleSubmit = (e: any) => {
     const {
+      sendInfoSms,
       film: { release_date, director, opening_crawl, producer, title }
     } = this.props;
     const summary = `${opening_crawl.substring(0, 100)}...`;
@@ -34,7 +35,8 @@ export class FilmInfo extends PureComponent<IFilm & IFilmComponent> {
     const message = `Here is your search result from Star Wars: ${title}, directed by ${director}, produced by in ${producer}, released the :${formattedDate(
       release_date
     )}, brief summary: ${summary}`;
-    await sendInfoSms(message, number);
+    console.log("tick");
+    sendInfoSms(message, number);
   };
 
   render() {
@@ -87,7 +89,7 @@ export const mapStateToProps = (state: IAppState) => ({
 });
 
 export const mapDispatchToProps = (dispatch: Dispatch) => ({
-  sendInfoSms: bindActionCreators(sendInfoSms, dispatch)
+  sendInfoSms: bindActionCreators(sendInfoSmsFromActions, dispatch)
 });
 
 export default withRouter(
