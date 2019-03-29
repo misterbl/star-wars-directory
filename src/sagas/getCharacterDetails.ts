@@ -34,7 +34,6 @@ function* getCharacterDetails(
     yield all(
       starships.map((url: string) => getSingleInfo(url, saveStarship, "name"))
     );
-
     history.push("/character");
   } catch (error) {
     yield put(setFatalError(true));

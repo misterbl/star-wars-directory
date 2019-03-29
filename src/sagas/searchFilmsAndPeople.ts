@@ -7,20 +7,16 @@ import {
   setFatalError
 } from "../actions/actionCreators/actions";
 
-import { call, put } from "redux-saga/effects";
+import { call, put, all } from "redux-saga/effects";
 import { AnyAction } from "redux";
 
 export default function* searchFilmsAndPeople({ query }: AnyAction) {
   try {
     yield put(fetchingPeopleAndFilms(true));
-    const filmsResponse = yield call(
-      fetch,
-      `https://swapi.co/api/films/?search=${query}`
-    );
-    const peopleResponse = yield call(
-      fetch,
-      `https://swapi.co/api/people/?search=${query}`
-    );
+    const [filmsResponse, peopleResponse] = yield all([
+      call(fetch, `https://swapi.co/api/films/?search=${query}`),
+      call(fetch, `https://swapi.co/api/people/?search=${query}`)
+    ]);
     if (filmsResponse && filmsResponse.status === 404) {
       yield put(fetchingPeopleAndFilms(false));
       yield put(setFatalError(true));
