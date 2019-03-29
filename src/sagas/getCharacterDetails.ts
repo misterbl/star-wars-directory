@@ -35,13 +35,13 @@ function* getCharacterDetails(
       starships.map((url: string) => getSingleInfo(url, saveStarship, "name"))
     );
 
-    yield put(fetchingCharacterDetails(false));
     history.push("/character");
   } catch (error) {
     yield put(setFatalError(true));
     console.log(new Error("couldn't get character details"), error);
     throw error;
   }
+  yield put(fetchingCharacterDetails(false));
 }
 
 export default getCharacterDetails;

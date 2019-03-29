@@ -17,14 +17,12 @@ export default function* sendInfoSms({ info, number }: AnyAction) {
       body: JSON.stringify({ info, number })
     });
     if (response && response.status === 400) {
-      yield put(sendingInfoSms(false));
       yield put(setFatalError(true));
       console.log("couldn't send info via sms");
     }
-    yield put(sendingInfoSms(false));
   } catch (error) {
-    yield put(sendingInfoSms(false));
     yield put(setFatalError(true));
     console.log("couldn't send info via sms: ", error);
   }
+  yield put(sendingInfoSms(false));
 }

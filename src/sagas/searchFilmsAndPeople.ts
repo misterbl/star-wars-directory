@@ -27,7 +27,6 @@ export default function* searchFilmsAndPeople({ query }: AnyAction) {
       console.log("couldn't get films");
     }
     if (peopleResponse && peopleResponse.status === 404) {
-      yield put(fetchingPeopleAndFilms(false));
       yield put(setFatalError(true));
       console.log("couldn't get people");
     }
@@ -37,11 +36,9 @@ export default function* searchFilmsAndPeople({ query }: AnyAction) {
     const people = yield peopleResponse.text();
     const peopleData = JSON.parse(people);
     yield put(savePeople(peopleData.results));
-
-    yield put(fetchingPeopleAndFilms(false));
   } catch (error) {
-    yield put(fetchingPeopleAndFilms(false));
     yield put(setFatalError(true));
     console.log("couldn't get people and films: ", error);
   }
+  yield put(fetchingPeopleAndFilms(false));
 }
